@@ -1,0 +1,41 @@
+.bk{
+   background-color: rgb(7, 6, 1); 
+}
+
+.bk-an:hover{
+    background-color: rgba(7, 6, 1, 0.8); 
+}
+
+.gy{
+    background-color: rgb(41, 34, 30);
+}
+
+.gy-an{
+    background-color: rgba(41, 34, 30, 0.8);
+}
+
+.rd{
+    background-color: rgb(238, 28, 37);
+}
+
+.rd-an{
+    background-color: rgba(238, 28, 37, 0.8);
+}
+
+.bk-rd{
+    background: linear-gradient(to left, rgb(238, 28, 37) 75%, rgb(255, 245, 236) 25%);
+}
+
+.wt{
+    background-color: rgb(255, 245, 236);
+}
+
+.wt-an{
+    background-color: rgba(255, 245, 236, 0.8);
+}
+
+*{
+    font-family: 'Raleway';
+    color: rgb(7, 6, 1) !important;
+}
+
