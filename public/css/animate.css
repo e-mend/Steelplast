@@ -37,8 +37,16 @@
 .massive{
     font-size: 24px !important;
 }
+.contain{
+    max-width: 100%;
+    max-height: 100%;
+}
 
-.flat{
+#logo{
+    width: 25%;
+}
+
+.slidee{
     width: 100px;
-    height: 300px;
+    height: 400px;  
 }

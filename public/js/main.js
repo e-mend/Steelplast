@@ -18,13 +18,9 @@ Vue.component('header-component', {
 
   Vue.component('carousel-component', {
     template: '#carousel-template',
-    components: {
-      'carousel': VueCarousel.Carousel,
-      'slide': VueCarousel.Slide
-    },
     data() {
       return {
-        images: [],
+        images: []
       };
     },
     methods: {
@@ -36,13 +32,17 @@ Vue.component('header-component', {
           } catch (error) {
             console.error('Error fetching data:', error);
         }
-      }
+      },
+      isFirstElement(index) {
+        // Return true for the first element, false for the rest
+        return index === 0;
+      },
     },
-    mounted(){
+    beforeMount(){
       this.fetchData();
     }
   });
-
+  
   Vue.component('main-component', {
     template: '#main-template',
     data(){

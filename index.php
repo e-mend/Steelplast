@@ -14,7 +14,6 @@
 
     <!-- Vue.js -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-    <script src="https://ssense.github.io/vue-carousel/js/vue-carousel.min.js"></script>
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +39,7 @@
             <nav class="navbar navbar-expand-lg navbar-light py-4 rd big">
                 <div class="container">
                     <a class="navbar-brand massive" href="#">
-                        {{ title }}
+                        <img class="" id="logo" src="public\images\logo\Logotipo_Vertical-05-removebg.png">
                         <div id="gear-container">
                             <i class="bi bi-gear-wide spin" id="gear"></i>
                         </div>
@@ -59,13 +58,13 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 {{ productsTitle }}
-                                <i class="bi bi-gear-wide-connected"></i>
+                                <!-- <i class="bi bi-gear-wide-connected"></i> -->
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 {{ contactTitle }}
-                                <i class="bi bi-journal-bookmark"></i>
+                                <!-- <i class="bi bi-journal-bookmark"></i> -->
                             </a>
                         </li>
                     </ul>
@@ -76,11 +75,20 @@
     </script>
 
     <script type="text/x-template" id="carousel-template">
-        <carousel>
-            <slide class="flat rounded" v-for="(image, index) in images" :key="index">
-                <img :src="image.image_url" :alt="image.alt">
-            </slide>
-        </carousel>
+        <div id="carousel_" class="d-flex">
+            <div class="slidee bg-light rounded col">
+                www
+            </div>
+            <div class="slidee bg-light rounded col">
+                www
+            </div>
+            <div class="slidee bg-light rounded col">
+                www
+            </div>
+            <div class="slidee bg-light rounded col">
+                www
+            </div>
+        </div>
     </script>
 
     <script type="text/x-template" id="main-template">
