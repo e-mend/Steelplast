@@ -22,8 +22,20 @@
     background-color: rgba(238, 28, 37, 0.8);
 }
 
+.rd-bk{
+    background: linear-gradient(to bottom, rgb(238, 28, 37) 75%, rgb(7, 6, 1) 25%);
+}
+
+.rd-gy{
+    background: linear-gradient(to bottom, rgb(238, 28, 37) 75%, rgb(41, 34, 30) 25%);
+}
+
 .bk-rd{
-    background: linear-gradient(to left, rgb(238, 28, 37) 75%, rgb(255, 245, 236) 25%);
+    background: linear-gradient(to bottom, rgb(7, 6, 1) 75%, rgb(238, 28, 37) 25%);
+}
+
+.bk-gy{
+    background: linear-gradient(to bottom, rgb(7, 6, 1) 75%, rgb(41, 34, 30) 25%);
 }
 
 .wt{

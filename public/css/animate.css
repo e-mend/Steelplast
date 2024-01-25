@@ -5,7 +5,7 @@
 }
 
 #header{
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #gear-container{
@@ -14,10 +14,13 @@
     right: 0;
     bottom: 0px;
     top: 80px;
+    font-size: 100px;
+    z-index: 100;
 }
 
 #gear{
     font-size: 100px;
+    z-index: 100;
     color: rgb(238, 28, 37);
 }
 
@@ -48,5 +51,49 @@
 
 .slidee{
     width: 100px;
-    height: 400px;  
+    height: 450px;  
+    position: relative;
 }
+
+.inner{
+    width: 90%;
+    height: 400px;  
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    margin: 0 auto;
+
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    filter: blur(0.5px)
+}
+
+.inner:hover{
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,1);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,1);
+    filter: blur(0px)
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+}
+
+.mirrored-image {
+    transform: scaleX(-1);
+}
+
+#pt2{
+    object-position: 60% 80%;
+}
+
+#pt4{
+    object-position: 100% 80%;
+}
+

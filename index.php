@@ -36,7 +36,7 @@
 
     <script type="text/x-template" id="header-template">
         <header id="header">
-            <nav class="navbar navbar-expand-lg navbar-light py-4 rd big">
+            <nav class="navbar navbar-expand-lg navbar-light py-4 bk big">
                 <div class="container">
                     <a class="navbar-brand massive" href="#">
                         <img class="" id="logo" src="public\images\logo\Logotipo_Vertical-05-removebg.png">
@@ -52,7 +52,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 {{ homeTitle }}
-                                <i class="bi bi-house-door-fill"></i>
+                                <!-- <i class="bi bi-house-door-fill"></i> -->
                             </a>
                         </li>
                         <li class="nav-item">
@@ -76,17 +76,25 @@
 
     <script type="text/x-template" id="carousel-template">
         <div id="carousel_" class="d-flex">
-            <div class="slidee bg-light rounded col">
-                www
+            <div class="slidee rd-bk col">
+                <div class="inner bk bk-an mx-auto rounded">
+                    <img class="img mirrored-image rounded" src="public/images/products/A1B.png" alt="">
+                </div>
             </div>
-            <div class="slidee bg-light rounded col">
-                www
+            <div class="slidee rd-bk col">
+                <div class="inner bk bk-an mx-auto rounded">
+                    <img class="img rounded" id="pt2" src="public\images\products\A1T.jpeg" alt="">
+                </div>
             </div>
-            <div class="slidee bg-light rounded col">
-                www
+            <div class="slidee col rd-bk">
+                <div class="inner bk bk-an mx-auto rounded">
+                    <img class="img mirrored-image rounded" src="public\images\products\B3.png" alt="">
+                </div>
             </div>
-            <div class="slidee bg-light rounded col">
-                www
+            <div class="slidee col rd-bk">
+                <div class="inner bk bk-an mx-auto rounded">
+                    <img class="img mirrored-image rounded" id="pt4" src="public\images\products\B2.png" alt="">
+                </div>
             </div>
         </div>
     </script>
