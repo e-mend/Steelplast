@@ -4,8 +4,29 @@
     animation-play-state: running; 
 }
 
-#header{
-    /* overflow: hidden; */
+.spin-slow {
+    animation: spin 30s linear infinite;
+    display: inline-block;
+    animation-play-state: running; 
+}
+
+
+.spin-reverse{
+    animation: spin 10s linear infinite;
+    animation-direction: reverse;
+    display: inline-block;
+    animation-play-state: running; 
+    animation-delay: 500ms;
+}
+
+#carousel_{
+    overflow: hidden;
+}
+
+.gear{
+    font-size: 200px;
+    z-index: 1 !important;
+    color: rgba(238, 28, 37,0.7) !important;
 }
 
 #gear-container{
@@ -13,15 +34,55 @@
     left: -60px;
     right: 0;
     bottom: 0px;
-    top: 80px;
     font-size: 100px;
     z-index: 100;
+    top: 80px;
 }
 
-#gear{
+#gear-2-container{
+    position: absolute;
+    left: -60px;
+    right: 0;
+    bottom: 0px;
     font-size: 100px;
     z-index: 100;
-    color: rgb(238, 28, 37);
+    top: 280px;
+}
+
+#gear-3-container{
+    position: absolute;
+    left: -60px;
+    right: 0;
+    bottom: 0px;
+    font-size: 100px;
+    z-index: 100;
+    top: 280px;
+}
+
+#gear-4-container{
+    position: absolute;
+    left: -60px;
+    right: 0;
+    bottom: 0px;
+    font-size: 100px;
+    z-index: 100;
+    top: 380px;
+}
+
+#gear-5-container{
+    position: absolute;
+    left: 500px;
+    right: 0;
+    bottom: 0px;
+    font-size: 80px;
+    z-index: 5;
+    top: 0px;
+}
+
+#gear-5{
+    font-size: 500px;
+    z-index: 1 !important;
+    color: rgba(238, 28, 37,1) !important;
 }
 
 @keyframes spin {
@@ -46,7 +107,7 @@
 }
 
 #logo{
-    width: 25%;
+    width: 45%;
 }
 
 .slidee{
@@ -63,6 +124,7 @@
     right: 0;
     bottom: 10px;
     margin: 0 auto;
+    z-index: 100;
 
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);

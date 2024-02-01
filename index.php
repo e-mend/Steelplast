@@ -39,9 +39,15 @@
             <nav class="navbar navbar-expand-lg navbar-light py-4 bk big">
                 <div class="container">
                     <a class="navbar-brand massive" href="#">
-                        <img class="" id="logo" src="public\images\logo\Logotipo_Vertical-05-removebg.png">
+                        <img class="gear-container" id="logo" src="public/images/logo/Logotipo Horizontal-04-modified.png">
                         <div id="gear-container">
-                            <i class="bi bi-gear-wide spin" id="gear"></i>
+                            <i class="bi bi-gear-wide spin gear" id="gear"></i>
+                        </div>
+                        <div class="gear-container shine" id="gear-2-container">
+                            <i class="bi bi-gear-wide-connected spin-reverse gear" id="gear-2"></i>
+                        </div>
+                        <div class="gear-container" id="gear-5-container">
+                            <i class="bi bi-gear-wide-connected spin-slow" id="gear-5"></i>
                         </div>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,22 +82,22 @@
 
     <script type="text/x-template" id="carousel-template">
         <div id="carousel_" class="d-flex">
-            <div class="slidee rd-bk col">
+            <div class="slidee bk-rd col">
                 <div class="inner bk bk-an mx-auto rounded">
                     <img class="img mirrored-image rounded" src="public/images/products/A1B.png" alt="">
                 </div>
             </div>
-            <div class="slidee rd-bk col">
+            <div class="slidee bk-rd col">
                 <div class="inner bk bk-an mx-auto rounded">
                     <img class="img rounded" id="pt2" src="public\images\products\A1T.jpeg" alt="">
                 </div>
             </div>
-            <div class="slidee col rd-bk">
+            <div class="slidee col bk-rd">
                 <div class="inner bk bk-an mx-auto rounded">
                     <img class="img mirrored-image rounded" src="public\images\products\B3.png" alt="">
                 </div>
             </div>
-            <div class="slidee col rd-bk">
+            <div class="slidee col bk-rd">
                 <div class="inner bk bk-an mx-auto rounded">
                     <img class="img mirrored-image rounded" id="pt4" src="public\images\products\B2.png" alt="">
                 </div>
@@ -100,13 +106,13 @@
     </script>
 
     <script type="text/x-template" id="main-template">
-        <div class="container mx-auto text-black my-5">
-            <div class='row'>
+        <div class="container mx-auto text-black my-5" id='presentation_'>
+            <div class='row my-5' v-for="item in items" :key="item.id">
                 <div class="col-3 massive">
-                    {{ aboutTitle }}
+                    {{ item.title }}
                 </div>
                 <div class="col-9">
-                    {{ emptyBody }}
+                    {{ item.empty }}
                 </div>
             </div>
         </div>

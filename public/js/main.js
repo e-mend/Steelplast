@@ -47,27 +47,49 @@ Vue.component('header-component', {
     template: '#main-template',
     data(){
       return {
-        aboutTitle: 'SOBRE',
-        aboutBody: 'Bem-vindo à Steelplast, uma organização dedicada à excelência e à inovação. Desde a nossa fundação em 2000, temos trabalhado incansavelmente para oferecer soluções excepcionais e construir \
-        relacionamentos sólidos com nossos clientes, colaboradores e parceiros.',
-        emptyBody: ''
+        items: [
+          {
+            id: 1,
+            title: 'SOBRE',
+            body: 'Bem-vindo à Steelplast, uma organização dedicada à excelência e à inovação. Desde a nossa fundação em 2000, temos trabalhado incansavelmente para oferecer soluções excepcionais e construir \
+            relacionamentos sólidos com nossos clientes, colaboradores e parceiros.',
+            empty: ''
+          },
+          {
+            id: 2,
+            title: 'VALORES',
+            body: `Qualidade Intransigente: Comprometemo-nos a oferecer apenas materiais de engenharia que atendam aos mais altos padrões de qualidade, assegurando a satisfação e confiança de nossos clientes.
+
+            Inovação Contínua: Estimulamos a criatividade e a busca constante por soluções inovadoras, visando aprimorar nossos processos e antecipar as necessidades do mercado.
+            
+            Conexão Global: Acreditamos na força das conexões globais e na importância de integrar o Brasil ao cenário internacional, promovendo um intercâmbio de conhecimentos e tecnologias.
+            
+            Relações de Confiança: Valorizamos a transparência e integridade em todas as nossas relações, cultivando parcerias de longo prazo baseadas na confiança mútua e no respeito.
+            
+            Atendimento Personalizado: Priorizamos a satisfação do cliente, oferecendo um atendimento personalizado e consultivo, adaptando-nos às necessidades específicas de cada projeto.`,
+            empty: ''
+          },
+        ]
       }
     },
     methods: {
-      writeText() {
+      writeText(item) {
         let currentIndex = 0;
         const intervalId = setInterval(() => {
-          this.emptyBody += this.aboutBody[currentIndex];
+          item.empty += item.body[currentIndex];
           currentIndex++;
   
-          if (currentIndex === this.aboutBody.length) {
+          if (currentIndex === item.body.length) {
             clearInterval(intervalId);
           }
         }, 50);
       }
     },
     mounted(){
-      this.writeText();
+      for(let i = 0; i < this.items.length; i++){
+        this.writeText(this.items[i]);
+      }
+      
     }
   });
 

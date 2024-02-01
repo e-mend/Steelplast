@@ -31,7 +31,7 @@
 }
 
 .bk-rd{
-    background: linear-gradient(to bottom, rgb(7, 6, 1) 75%, rgb(238, 28, 37) 25%);
+    background: linear-gradient(to bottom, rgb(7, 6, 1) 85%, rgb(238, 28, 37) 15%);
 }
 
 .bk-gy{
@@ -44,6 +44,24 @@
 
 .wt-an{
     background-color: rgba(255, 245, 236, 0.8);
+}
+
+.shine{
+    animation: shine 10s infinite;
+    animation-play-state: running; 
+}
+
+#presentation_{
+    z-index: 10;
+}
+
+@keyframes shine{
+    0%{
+        background-color: rgb(255, 245, 236) !important;
+    }
+    100%{
+        background-color: rgba(255, 245, 236, 0.5) !important;
+    }
 }
 
 *{
