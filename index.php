@@ -82,37 +82,60 @@
 
     <script type="text/x-template" id="carousel-template">
         <div id="carousel_" class="d-flex">
-            <div class="slidee bk-rd col">
+            <div class="slidee bk-rd col" v-for="(image, key) in images">
                 <div class="inner bk bk-an mx-auto rounded">
-                    <img class="img mirrored-image rounded" src="public/images/products/A1B.png" alt="">
+                    <img class="img mirrored-image rounded blur" :src="image.src" :style="image.styles" alt="">
+                    <div class="inner-label text-center py-3 fs-5 shine">
+                    {{ key }} - {{ materials[image.m][image.sub] }}
+                    </div>
+                    
                 </div>
             </div>
-            <div class="slidee bk-rd col">
+            <!-- <div class="slidee bk-rd col">
                 <div class="inner bk bk-an mx-auto rounded">
                     <img class="img rounded" id="pt2" src="public\images\products\A1T.jpeg" alt="">
+                    <div class="inner-label wt text-center py-3">
+                        Geomembrana
+                    </div>
                 </div>
             </div>
             <div class="slidee col bk-rd">
                 <div class="inner bk bk-an mx-auto rounded">
                     <img class="img mirrored-image rounded" src="public\images\products\B3.png" alt="">
+                    <div class="inner-label wt text-center py-3">
+                        Geomembrana
+                    </div>
                 </div>
             </div>
             <div class="slidee col bk-rd">
                 <div class="inner bk bk-an mx-auto rounded">
                     <img class="img mirrored-image rounded" id="pt4" src="public\images\products\B2.png" alt="">
+                    <div class="inner-label wt text-center py-3">
+                        Silicone
+                    </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </script>
 
     <script type="text/x-template" id="main-template">
         <div class="container mx-auto text-black my-5" id='presentation_'>
-            <div class='row my-5' v-for="item in items" :key="item.id">
-                <div class="col-3 massive">
-                    {{ item.title }}
+            <div v-for="(item, key) in items" :key="item.id">
+                <div class='row' :style="item.styles" v-if="key % 2 === 0">
+                    <div class="col-3 massive my-5">
+                        {{ item.title }}
+                    </div>
+                    <div class="col-9 my-5">
+                        {{ item.empty }}
+                    </div>
                 </div>
-                <div class="col-9">
-                    {{ item.empty }}
+                <div class='row' :style="item.styles" v-else>
+                    <div class="col-9">
+                        {{ item.empty }}
+                    </div>
+                    <div class="col-3 massive">
+                        {{ item.title }}
+                    </div>
                 </div>
             </div>
         </div>
