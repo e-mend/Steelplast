@@ -167,8 +167,6 @@ function getCookie(name) {
   return null;
 }
 
-setCookie('language', 'en_US', 365);
-
 var language;
 var cookie = getCookie('language');
 
@@ -361,11 +359,11 @@ Vue.component('header-component', {
     };
   },
   methods: {
-
-  },
-  mounted() {
-
-  },
+    changeLanguage(language){
+      setCookie('language', language, 30);
+      window.location.reload();
+    }
+  }
 });
 
 Vue.component('carousel-component', {
@@ -414,6 +412,24 @@ Vue.component('main-component', {
           id: 2,
           title: translate[language].values,
           body: translate[language].companyValues,
+          empty: '',
+          styles: {
+            height: '200px',
+          }
+        },
+        {
+          id: 3,
+          title: '',
+          body: translate[language].companyValues2,
+          empty: '',
+          styles: {
+            height: '200px',
+          }
+        },
+        {
+          id: 4,
+          title: '',
+          body: translate[language].companyValues3,
           empty: '',
           styles: {
             height: '200px',

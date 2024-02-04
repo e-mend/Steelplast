@@ -103,7 +103,34 @@
 }
 
 #logo{
-    width: 45%;
+    width: 65%;
+}
+
+#logo-container{
+    max-width: 50%;
+}
+
+#navbarNav{
+    z-index: 200;
+    text-align: center;
+    width: 100%;
+}
+
+.nav-link{
+    font-size: 18px;
+    color: rgba(238, 28, 37, 0.8) !important;
+}
+
+#lang-container{
+    z-index: 201;
+}
+
+.lang{
+    cursor: pointer !important;
+}
+
+.icon{
+    width: 18% !important;
 }
 
 .slidee{
