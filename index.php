@@ -85,10 +85,10 @@
             <div class="slidee bk-rd col" v-for="(image, key) in images">
                 <div class="inner bk bk-an mx-auto rounded">
                     <img class="img mirrored-image rounded blur" :src="image.src" :style="image.styles" alt="">
-                    <div class="inner-label text-center py-3 fs-5 shine">
-                    {{ key }} - {{ materials[image.m][image.sub] }}
+                    <div class="inner-label text-center py-3 text-white fs-5 shine" @click="reloadImage(item)">
+                    {{ key }} - {{ materials[image.m][image.sub] }} <i class="arrow bi bi-arrow-down-short"></i>
+
                     </div>
-                    
                 </div>
             </div>
             <!-- <div class="slidee bk-rd col">

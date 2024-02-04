@@ -19,10 +19,6 @@
     animation-delay: 500ms;
 }
 
-#carousel_{
-    overflow: hidden;
-}
-
 .gear{
     font-size: 200px;
     z-index: 1 !important;
@@ -143,6 +139,7 @@
 .inner:hover .inner-label{
     display: block;
     z-index: 200;
+    cursor: pointer;
 }
 
 .blur{
@@ -167,6 +164,16 @@
     object-fit: cover;
     display: block;
     position: absolute;
+}
+
+#carousel_{
+    overflow: hidden;
+}
+
+.arrow{
+    font-size: 50px;
+    color: rgb(255, 245, 236) !important;
+    vertical-align: middle;
 }
 
 .mirrored-image {

@@ -215,6 +215,16 @@ const images = {
       objectPosition: '70% 30%',
     }
   },
+  // P2R: {
+  //   m: 'P',
+  //   sub: '2',
+  //   plus: 'R',
+  //   src: `public/images/products/P2R.jpeg`,
+  //   styles: {
+  //     objectPosition: '70% 30%',
+  //   }
+  // },
+
 };
 
 var materials = {
@@ -248,8 +258,6 @@ var materials = {
   }
 };
 
-console.log(materials);
-
 Vue.component('header-component', {
   template: '#header-template',
   data() {
@@ -277,7 +285,9 @@ Vue.component('carousel-component', {
     };
   },
   methods: {
+    carouselClick(){
 
+    }
   },
   beforeMount() {
   }
