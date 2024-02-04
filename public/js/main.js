@@ -179,52 +179,144 @@ if(cookie && availableLanguages.includes(cookie)){
 }
 
 const images = {
-  A1B: {
+  A: {
+    A1B : {
+      src: `public/images/products/A1B.png`,
+      styles: {
+        objectPosition: '0% 50%',
+      }
+    },
+    A1B : {
+      src: `public/images/products/A1B.png`,
+      styles: {
+        objectPosition: '50% 50%',
+      }
+    },
+    A3B6 : {
+      src: `public/images/products/A3B6.jpeg`,
+      styles: {
+        objectPosition: '50% 50%',
+        transform: 'scaleX(1)'
+      }
+    },
+    A2TQ3 : {
+      src: `public/images/products/A2TQ31.jpeg`,
+      styles: {
+        objectPosition: '50% 50%',
+      }
+    },
+  },
+  B: {
+    B1: {
+      src: `public/images/products/B1.png`,
+      styles: {
+        objectPosition: '0% 50%',
+        transform: 'scaleX(1)'
+      }
+    },
+    B2: {
+      src: `public/images/products/B2.png`,
+      styles: {
+        objectPosition: '100% 50%',
+      }
+    },
+    B3: {
+      src: `public/images/products/B3.png`,
+      styles: {
+        objectPosition: '100% 50%',
+      }
+    },
+    B4: {
+      src: `public/images/products/B4.png`,
+      styles: {
+        objectPosition: '0% 50%',
+      }
+    },
+  },
+  M: {
+    M2R: {
+      src: `public/images/products/M2R.png`,
+      styles: {
+        objectPosition: '50% 50%',
+      }
+    },
+    M1B: {
+      src: `public/images/products/M1B.jpeg`,
+      styles: {
+        objectPosition: '100% 50%',
+      }
+    },
+    M4C: {
+      src: `public/images/products/M4C.png`,
+      styles: {
+        objectPosition: '100% 0%',
+      }
+    },
+  },
+  P: {
+    P1R: {
+      src: `public/images/products/P1R.png`,
+      styles: {
+        objectPosition: '100% 50%',
+      }
+    },
+    P2R: {
+      src: `public/images/products/P2R.jpeg`,
+      styles: {
+        objectPosition: '100% 50%',
+      }
+    },
+    P3R: {
+      src: `public/images/products/P3R.png`,
+      styles: {
+        objectPosition: '100% 50%',
+        transform: 'scaleX(1)'
+      }
+    },
+  },
+};
+
+const initial = {
+  A: {
     m: 'A',
     sub: '1',
     plus: 'B',
+    type: 'A1B',
     src: `public/images/products/A1B.png`,
     styles: {
-      objectPosition: '100% 50%',
+      objectPosition: '0% 50%',
     }
   },
-  B2: {
+  B: {
     m: 'B',
     sub: '2',
     plus: '',
+    type: 'B2',
     src: `public/images/products/B2.png`,
     styles: {
       objectPosition: '100% 50%',
     }
   },
-  M1T: {
+  M: {
     m: 'M',
     sub: '1',
     plus: 'T',
+    type: 'M1T',
     src: `public/images/products/M1T.png`,
     styles: {
       objectPosition: '50% 30%',
     }
   },
-  P1R: {
+  P: {
     m: 'P',
     sub: '1',
     plus: 'R',
+    type: 'P1R',
     src: `public/images/products/P1R.png`,
     styles: {
       objectPosition: '70% 30%',
     }
   },
-  // P2R: {
-  //   m: 'P',
-  //   sub: '2',
-  //   plus: 'R',
-  //   src: `public/images/products/P2R.jpeg`,
-  //   styles: {
-  //     objectPosition: '70% 30%',
-  //   }
-  // },
-
 };
 
 var materials = {
@@ -280,16 +372,27 @@ Vue.component('carousel-component', {
   template: '#carousel-template',
   data() {
     return {
-      images: images,
+      images: initial,
       materials: materials
     };
   },
   methods: {
-    carouselClick(){
+    nextImage(item){
 
+      const keys = Object.keys(images[item.m]);
+      const currentIndex = keys.indexOf(item.type);
+      const nextIndex = (currentIndex + 1) % keys.length;
+      const nextKey = keys[nextIndex];
+
+      if(nextKey){
+        initial[item.m].src = images[item.m][nextKey].src;
+        initial[item.m].m = nextKey[0];
+        initial[item.m].sub = nextKey[1];
+        initial[item.m].plus = nextKey[2] === undefined ? '' : nextKey[2];
+        initial[item.m].type = nextKey;
+        initial[item.m].styles = images[item.m][nextKey].styles;
+      }
     }
-  },
-  beforeMount() {
   }
 });
 
@@ -334,7 +437,6 @@ Vue.component('main-component', {
   },
   mounted() {
     for (let i = 0; i < this.items.length; i++) {
-      console.log(this.items[i]);
       this.writeText(this.items[i]);
     }
 

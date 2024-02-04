@@ -82,12 +82,12 @@
 
     <script type="text/x-template" id="carousel-template">
         <div id="carousel_" class="d-flex">
-            <div class="slidee bk-rd col" v-for="(image, key) in images">
+            <div class="slidee bk-rd col" v-for="(image, key) in images"  :class="{ transitioning: image.transitioning }">
                 <div class="inner bk bk-an mx-auto rounded">
                     <img class="img mirrored-image rounded blur" :src="image.src" :style="image.styles" alt="">
-                    <div class="inner-label text-center py-3 text-white fs-5 shine" @click="reloadImage(item)">
-                    {{ key }} - {{ materials[image.m][image.sub] }} <i class="arrow bi bi-arrow-down-short"></i>
-
+                    <div class="inner-label text-center py-3 text-white fs-5" @click="nextImage(image)">
+                    {{ image.m + image.sub + image.plus }} - {{ materials[image.m][image.sub] }}
+                    <i class="arrow bi bi-arrow-down-short"></i>
                     </div>
                 </div>
             </div>
@@ -123,7 +123,7 @@
             <div v-for="(item, key) in items" :key="item.id">
                 <div class='row' :style="item.styles" v-if="key % 2 === 0">
                     <div class="col-3 massive my-5">
-                        {{ item.title }}
+                        {{ item.title }}<i class="bi bi-buildings-fill"></i>
                     </div>
                     <div class="col-9 my-5">
                         {{ item.empty }}
@@ -134,7 +134,7 @@
                         {{ item.empty }}
                     </div>
                     <div class="col-3 massive">
-                        {{ item.title }}
+                        {{ item.title }}<i class="bi bi-building-check"></i>
                     </div>
                 </div>
             </div>

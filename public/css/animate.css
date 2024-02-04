@@ -134,6 +134,7 @@
     right: 0;
     bottom: 10px;
     display: none;
+    user-select: none;
 }
 
 .inner:hover .inner-label{
@@ -173,6 +174,7 @@
 .arrow{
     font-size: 50px;
     color: rgb(255, 245, 236) !important;
+    border-radius: 50%;
     vertical-align: middle;
 }
 
