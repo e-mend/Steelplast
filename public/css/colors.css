@@ -6,6 +6,14 @@
     background-color: rgba(7, 6, 1, 0.8); 
 }
 
+.bkw{
+    background-color: rgb(7, 6, 0.3); 
+ }
+ 
+ .bkw-an:hover{
+     background-color: rgba(7, 6, 1, 0.3); 
+ }
+
 .gy{
     background-color: rgb(41, 34, 30);
 }
@@ -24,6 +32,15 @@
 
 .rd-bk{
     background: linear-gradient(to bottom, rgb(238, 28, 37) 75%, rgb(7, 6, 1) 25%);
+}
+
+.red-btn{
+    color: rgba(238, 28, 37, 0.7) !important;
+    font-style: normal;
+}
+
+.red-btn-h:hover{
+    color: black !important;
 }
 
 .rd-gy{
@@ -51,7 +68,7 @@
     animation-play-state: running; 
 }
 
-#presentation_{
+.presentation{
     z-index: 10;
 }
 

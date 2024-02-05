@@ -41,6 +41,8 @@
         <header-component></header-component>
         <carousel-component></carousel-component>
         <main-component></main-component>
+        <form-component></form-component>
+        <!-- <footer-component></footer-component> -->
     </div>
 
     <script type="text/x-template" id="header-template">
@@ -110,7 +112,7 @@
                 <div class="inner bk bk-an mx-auto rounded">
                     <img class="img mirrored-image rounded blur" :src="image.src" :style="image.styles" alt="">
                     <div class="inner-label text-center py-3 text-white fs-5" @click="nextImage(image)">
-                    {{ image.m + image.sub + image.plus }} - {{ materials[image.m][image.sub] }}
+                        {{ image.m + image.sub + image.plus }} - {{ materials[image.m][image.sub] }}
                     <i class="arrow bi bi-arrow-down-short"></i>
                     </div>
                 </div>
@@ -119,29 +121,84 @@
     </script>
 
     <script type="text/x-template" id="main-template">
-        <div class="container mx-auto text-black my-5" id='presentation_'>
-            <div v-for="(item, key) in items" :key="item.id">
+        <div class="container mx-auto text-black my-5 presentation" id='presentation_'>
+            <div v-for="(item, key) in items" class="" :key="item.id">
                 <div class='row' :style="item.styles">
-                    <div class="col-3 massive my-5">
-                    <img src="public\images\logo\Icone 02.jpg" class="icon" alt="">
+                    <div class="col-3 massive mt-5">
+                        <img src="public\images\logo\Icone 02.jpg" class="icon" alt="">
                         {{ item.title }}
                     </div>
-                    <div class="col-9 my-5">
+                    <div class="col-9 mt-5">
                         {{ item.empty }}
                     </div>
                 </div>
-            </div>
-            <!-- <div v-for="(item, key) in items" :key="item.id">
-                <div class='row' :style="item.styles" v-else>
+            </div>  
+            <div class='row border-top rd mt-5'></div>
+            <div class="mx-auto text-black d-flex mt-5">
+                <div class='row'>
                     <div class="col-9">
-                        {{ item.empty }}
-                    </div>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos delectus voluptate ullam error harum. Voluptas harum culpa dolore odit quasi explicabo, cum possimus doloremque at itaque? Nostrum eos eius quo.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos delectus voluptate ullam error harum. Voluptas harum culpa dolore odit quasi explicabo, cum possimus doloremque at itaque? Nostrum eos eius quo.
+                    </div>  
                     <div class="col-3 massive">
-                        {{ item.title }}
                         <img src="public\images\logo\Icone-01.jpg" class="icon" alt="">
                     </div>
                 </div>
-            </div> -->
+            </div>
+            <div class='row border-top rd mt-5'></div>
+            <div class="mx-auto text-black d-flex mt-5">
+                <div class='row'>
+                    <div class="col-3 massive">
+                        <img src="public\images\logo\Icone 02.jpg" class="icon" alt="">
+                    </div>
+                    <div class="col-9">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos delectus voluptate ullam error harum. Voluptas harum culpa dolore odit quasi explicabo, cum possimus doloremque at itaque? Nostrum eos eius quo.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos delectus voluptate ullam error harum. Voluptas harum culpa dolore odit quasi explicabo, cum possimus doloremque at itaque? Nostrum eos eius quo.
+                    </div>  
+                </div>
+            </div>
+
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header">
+                            <img src="public\images\logo\Icone-01.jpg" class="rounded me-2 small-icon" alt="...">
+                            <strong class="me-auto">{{ toast.title }}</strong>
+                            <small>{{ toast.time }}</small>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                            {{ toast.body }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </script>
+
+    <script type="text/x-template" id="form-template">
+        <div class="bk py-5 rounded">
+            <div class="d-flex">
+                <div class="row mt-5 mx-auto col-12">
+                    <div class="btn btn-danger mx-auto col-3" @click='showQuestion()'>
+                        {{ formBtn }}
+                    </div>
+                </div>
+            </div>
+            <div class="row my-3 mx-auto fs-3 justify-content-center red-btn" :class="{ fade: hideQuestion }">
+                {{ formQuestion }}
+            </div>
+            <div class="row mt-2 mx-auto justify-content-center red-btn" :class="{ fade: hideQuestion }">
+                <div class="btn btn-outline-danger red-btn red-btn-h col-3" @click="showResponse(1)">
+                    {{ translation.yes }}
+                </div>
+                <div class="btn btn-outline-danger red-btn red-btn-h col-3"  @click="showResponse(2)">
+                    {{ translation.no }}
+                </div>
+            </div>
+            <div class="row mt-2 mx-auto justify-content-center" :class="{ fade: hideResponse, dNone: hideResponse }">
+                <div class="btn btn-danger col-6">
+                    {{ translation.response }}
+                </div>
+            </div>
         </div>
     </script>
 </body>

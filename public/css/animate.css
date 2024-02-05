@@ -81,6 +81,10 @@
     color: rgba(238, 28, 37,1) !important;
 }
 
+#app{
+    overflow: hidden;
+}
+
 @keyframes spin {
     0% {
       transform: rotate(0deg);
@@ -121,6 +125,11 @@
     color: rgba(238, 28, 37, 0.8) !important;
 }
 
+.nav-link:hover{
+    color: black !important;
+    background-color: rgba(238, 28, 37, 0.8) !important;
+}
+
 #lang-container{
     z-index: 201;
 }
@@ -130,8 +139,25 @@
 }
 
 .icon{
-    width: 18% !important;
+    width:60% !important;
+    margin-left: 50px;
 }
+
+.small-icon{
+    width: 10% !important;
+}
+
+.toast-container{
+    z-index: 1000 !important;
+}
+
+/* .toaster-body{
+    background-color: ;
+}
+
+.toaster-header{
+
+} */
 
 .slidee{
     width: 100px;

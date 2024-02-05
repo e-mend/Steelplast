@@ -47,6 +47,15 @@ const translate = {
     companyValues5: `Atendimento Personalizado: Priorizamos a satisfação do cliente, 
     oferecendo um atendimento personalizado e consultivo, 
     adaptando-nos às necessidades específicas de cada projeto.`,
+    toastTime: 'agora',
+    toastTitle: 'Oi, eu sou o Steel-bot! 👨‍🔧🔧',
+    toastBody: 'Acessando o site, você concorda com as regras de privacidade. 😊',
+    formBtn: 'Interessado? Contate-nos! 👨‍🔧🔧',
+    formQuestion: 'Sua empresa já faz importação?',
+    formAnswer: 'Sim, estou já faço importação! 🚚✈️',
+    formAnswer2: 'Não, não faco importação! ❌',
+    formResponse: `Sentimos muito, mas no momento só atendemos empresas que são habilitadas junto à Receita Federal
+    para importação de materiais. 😢`
   },
   en_US: {
     steel: 'STEEL',
@@ -91,7 +100,15 @@ const translate = {
     companyValues4: `Trustworthy Relationships: We value transparency and integrity in all 
     our relationships, cultivating long-term partnerships based on mutual trust and respect.`,
     companyValues5: `Personalized Service: We prioritize customer satisfaction, 
-    offering personalized and consultative service, adapting to the specific needs of each project.`
+    offering personalized and consultative service, adapting to the specific needs of each project.`,
+    toastTime: 'now',
+    toastTitle: 'Hi, I am the Steel-bot! 👨‍🔧🔧',
+    toastBody: 'Accessing the site, you agree with the privacy rules. 😊',
+    formBtn: 'Interested? Contact us! 👨‍🔧🔧',
+    formQuestion: 'Your company already imports?',
+    formAnswer: 'Yes, I am importing! 🚚✈️',
+    formAnswer2: 'No, I do not import! ❌',
+    formResponse: `Sorry, but at the moment we only serve businesses that are licensed with the Federal Revenue Administration to import materials. 😢`
   },
   es_ES: {
     steel: 'ACERO',
@@ -140,7 +157,15 @@ const translate = {
     mutua y el respeto.`,
     companyValues5: `Atención Personalizada: Priorizamos la satisfacción del cliente, 
     ofreciendo un servicio personalizado y consultivo, adaptándonos a las necesidades 
-    específicas de cada proyecto.`
+    específicas de cada proyecto.`,
+    toastTime: 'ahora',
+    toastTitle: 'Hola, soy el Steel-bot! 👨‍🔧🔧',
+    toastBody: 'Accediendo al sitio, aceptas las normas de privacidad. 😊',
+    formBtn: 'Interesado? Contactanos! 👨‍🔧🔧',
+    formQuestion: 'Tu empresa ya importó?',
+    formAnswer: 'Si, estoy importando! 🚚✈️',
+    formAnswer2: 'No, no importo! ❌',
+    formResponse: `Lo siento, pero en este momento solo atendemos empresas que son habilitadas junto a la Recepcion Federal para importar materiales. 😢`
   }
 }
 
@@ -401,41 +426,20 @@ Vue.component('main-component', {
       items: [
         {
           id: 1,
-          title: translate[language].about,
+          title: '',
           body: translate[language].aboutBody,
           empty: '',
           styles: {
-            height: '200px',
+            height: '200px'
           }
-        },
-        {
-          id: 2,
-          title: translate[language].values,
-          body: translate[language].companyValues,
-          empty: '',
-          styles: {
-            height: '200px',
-          }
-        },
-        {
-          id: 3,
-          title: '',
-          body: translate[language].companyValues2,
-          empty: '',
-          styles: {
-            height: '200px',
-          }
-        },
-        {
-          id: 4,
-          title: '',
-          body: translate[language].companyValues3,
-          empty: '',
-          styles: {
-            height: '200px',
-          }
-        },
-      ]
+        }
+      ],
+      translation: materials,
+      toast: {
+        title: translate[language].toastTitle,
+        body: translate[language].toastBody,
+        time: translate[language].toastTime
+      }
     }
   },
   methods: {
@@ -456,8 +460,53 @@ Vue.component('main-component', {
       this.writeText(this.items[i]);
     }
 
+    const toastTrigger = document.getElementById('liveToastBtn')
+    const toastLiveExample = document.getElementById('liveToast')
+
+    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+    toastBootstrap.show()
+
   }
 });
+
+Vue.component('form-component', {
+  template: '#form-template',
+  data() {
+    return {
+      formBtn: '',
+      formQuestion: '',
+      translation: {
+        no: translate[language].formAnswer2,
+        yes: translate[language].formAnswer,
+        response: ''
+      },
+      formAnswer: '',
+      hideQuestion: true,
+      hideResponse: true,
+      formOk: false
+    }
+  },
+  methods: {
+    showQuestion(){
+      this.hideQuestion = false;
+    },
+    showResponse(option){
+      this.hideResponse = false;
+
+      if(option === 2){
+        this.translation.response = translate[language].formResponse;
+      }
+
+      if(option === 1){
+        this.formOk = true;
+      }
+    }
+  },
+  mounted() {
+    this.formBtn = translate[language].formBtn;
+    this.formQuestion = translate[language].formQuestion + '🤔';
+  }
+})
 
 new Vue({
   el: '#app',
