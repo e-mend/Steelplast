@@ -48,14 +48,14 @@ const translate = {
     oferecendo um atendimento personalizado e consultivo, 
     adaptando-nos às necessidades específicas de cada projeto.`,
     toastTime: 'agora',
-    toastTitle: 'Oi, eu sou o Steel-bot! 👨‍🔧🔧',
-    toastBody: 'Acessando o site, você concorda com as regras de privacidade. 😊',
-    formBtn: 'Interessado? Contate-nos! 👨‍🔧🔧',
+    toastTitle: 'Oi, eu sou o Steel-bot!',
+    toastBody: 'Acessando o site, você concorda com as regras de privacidade.',
+    formBtn: 'Cotação',
     formQuestion: 'Sua empresa já faz importação?',
-    formAnswer: 'Sim, estou já faço importação! 🚚✈️',
-    formAnswer2: 'Não, não faco importação! ❌',
-    formResponse: `Sentimos muito, mas no momento só atendemos empresas que são habilitadas junto à Receita Federal
-    para importação de materiais. 😢`
+    formAnswer: 'Sim, estou já faço importação!',
+    formAnswer2: 'Não, não faco importação!',
+    formResponse: `Sentimos muito, mas no momento só atendemos empresas que são habilitadas 
+    junto à Receita Federal para importação de materiais.`
   },
   en_US: {
     steel: 'STEEL',
@@ -102,13 +102,14 @@ const translate = {
     companyValues5: `Personalized Service: We prioritize customer satisfaction, 
     offering personalized and consultative service, adapting to the specific needs of each project.`,
     toastTime: 'now',
-    toastTitle: 'Hi, I am the Steel-bot! 👨‍🔧🔧',
-    toastBody: 'Accessing the site, you agree with the privacy rules. 😊',
-    formBtn: 'Interested? Contact us! 👨‍🔧🔧',
+    toastTitle: 'Hi, I am the Steel-bot!',
+    toastBody: 'Accessing the site, you agree with the privacy rules.',
+    formBtn: 'Budget',
     formQuestion: 'Your company already imports?',
-    formAnswer: 'Yes, I am importing! 🚚✈️',
-    formAnswer2: 'No, I do not import! ❌',
-    formResponse: `Sorry, but at the moment we only serve businesses that are licensed with the Federal Revenue Administration to import materials. 😢`
+    formAnswer: 'Yes, I am importing!',
+    formAnswer2: 'No, I do not import!',
+    formResponse: `Sorry, but at the moment we only serve businesses that are 
+    licensed with the Federal Revenue Administration to import materials.`
   },
   es_ES: {
     steel: 'ACERO',
@@ -159,13 +160,14 @@ const translate = {
     ofreciendo un servicio personalizado y consultivo, adaptándonos a las necesidades 
     específicas de cada proyecto.`,
     toastTime: 'ahora',
-    toastTitle: 'Hola, soy el Steel-bot! 👨‍🔧🔧',
-    toastBody: 'Accediendo al sitio, aceptas las normas de privacidad. 😊',
-    formBtn: 'Interesado? Contactanos! 👨‍🔧🔧',
+    toastTitle: 'Hola, soy el Steel-bot!',
+    toastBody: 'Accediendo al sitio, aceptas las normas de privacidad.',
+    formBtn: 'Cotización',
     formQuestion: 'Tu empresa ya importó?',
-    formAnswer: 'Si, estoy importando! 🚚✈️',
-    formAnswer2: 'No, no importo! ❌',
-    formResponse: `Lo siento, pero en este momento solo atendemos empresas que son habilitadas junto a la Recepcion Federal para importar materiales. 😢`
+    formAnswer: 'Si, estoy importando!',
+    formAnswer2: 'No, no importo!',
+    formResponse: `Lo siento, pero en este momento solo atendemos empresas que 
+    son habilitadas junto a la Recepcion Federal para importar materiales.`
   }
 }
 
@@ -400,22 +402,7 @@ Vue.component('carousel-component', {
     };
   },
   methods: {
-    nextImage(item){
 
-      const keys = Object.keys(images[item.m]);
-      const currentIndex = keys.indexOf(item.type);
-      const nextIndex = (currentIndex + 1) % keys.length;
-      const nextKey = keys[nextIndex];
-
-      if(nextKey){
-        initial[item.m].src = images[item.m][nextKey].src;
-        initial[item.m].m = nextKey[0];
-        initial[item.m].sub = nextKey[1];
-        initial[item.m].plus = nextKey[2] === undefined ? '' : nextKey[2];
-        initial[item.m].type = nextKey;
-        initial[item.m].styles = images[item.m][nextKey].styles;
-      }
-    }
   }
 });
 
@@ -483,7 +470,8 @@ Vue.component('form-component', {
       formAnswer: '',
       hideQuestion: true,
       hideResponse: true,
-      formOk: false
+      formOk: false,
+      showModal: false
     }
   },
   methods: {
@@ -504,7 +492,7 @@ Vue.component('form-component', {
   },
   mounted() {
     this.formBtn = translate[language].formBtn;
-    this.formQuestion = translate[language].formQuestion + '🤔';
+    this.formQuestion = translate[language].formQuestion;
   }
 })
 

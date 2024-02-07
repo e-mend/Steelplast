@@ -151,6 +151,10 @@
     z-index: 1000 !important;
 }
 
+.modal1{
+    z-index: 2000 !important;
+}
+
 /* .toaster-body{
     background-color: ;
 }

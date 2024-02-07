@@ -25,9 +25,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
 
     <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/2ece2ca570f9b741d03cd6305ce9f8d5?family=Noyh+R+W01+SemiLight" rel="stylesheet">
 
     <!-- Javascript -->
     <script defer src="public/js/main.js"></script>
@@ -108,20 +106,22 @@
 
     <script type="text/x-template" id="carousel-template">
         <div id="carousel_" class="d-flex">
-            <div class="slidee bk-rd col" v-for="(image, key) in images"  :class="{ transitioning: image.transitioning }">
+            <div class="slidee bk-rd col" v-for="(image, key) in images">
                 <div class="inner bk bk-an mx-auto rounded">
-                    <img class="img mirrored-image rounded blur" :src="image.src" :style="image.styles" alt="">
-                    <div class="inner-label text-center py-3 text-white fs-5" @click="nextImage(image)">
-                        {{ image.m + image.sub + image.plus }} - {{ materials[image.m][image.sub] }}
-                    <i class="arrow bi bi-arrow-down-short"></i>
-                    </div>
+                    <a href="#item">
+                        <img class="img mirrored-image rounded blur" :src="image.src" :style="image.styles" alt="">
+                        <div class="inner-label text-center py-3 text-white fs-5">
+                            {{ materials[image.m].name }}
+                        <i class="arrow bi bi-arrow-down-short"></i>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
     </script>
 
     <script type="text/x-template" id="main-template">
-        <div class="container mx-auto text-black my-5 presentation" id='presentation_'>
+        <div class="container mx-auto text-black my-5 presentation"  id="item">
             <div v-for="(item, key) in items" class="" :key="item.id">
                 <div class='row' :style="item.styles">
                     <div class="col-3 massive mt-5">
@@ -133,8 +133,8 @@
                     </div>
                 </div>
             </div>  
-            <div class='row border-top rd mt-5'></div>
-            <div class="mx-auto text-black d-flex mt-5">
+            <div class='row border-top rd my-0'></div>
+            <div class="mx-auto text-black d-flex">
                 <div class='row'>
                     <div class="col-9">
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos delectus voluptate ullam error harum. Voluptas harum culpa dolore odit quasi explicabo, cum possimus doloremque at itaque? Nostrum eos eius quo.
@@ -145,8 +145,8 @@
                     </div>
                 </div>
             </div>
-            <div class='row border-top rd mt-5'></div>
-            <div class="mx-auto text-black d-flex mt-5">
+            <div class='row border-top rd my-0'></div>
+            <div class="mx-auto text-black d-flex">
                 <div class='row'>
                     <div class="col-3 massive">
                         <img src="public\images\logo\Icone 02.jpg" class="icon" alt="">
@@ -178,28 +178,47 @@
         <div class="bk py-5 rounded">
             <div class="d-flex">
                 <div class="row mt-5 mx-auto col-12">
-                    <div class="btn btn-danger mx-auto col-3" @click='showQuestion()'>
+                    <div class="btn btn-danger mx-auto col-3" data-bs-toggle="modal" data-bs-target="#budgetModal">
                         {{ formBtn }}
                     </div>
                 </div>
             </div>
-            <div class="row my-3 mx-auto fs-3 justify-content-center red-btn" :class="{ fade: hideQuestion }">
-                {{ formQuestion }}
-            </div>
-            <div class="row mt-2 mx-auto justify-content-center red-btn" :class="{ fade: hideQuestion }">
-                <div class="btn btn-outline-danger red-btn red-btn-h col-3" @click="showResponse(1)">
-                    {{ translation.yes }}
-                </div>
-                <div class="btn btn-outline-danger red-btn red-btn-h col-3"  @click="showResponse(2)">
-                    {{ translation.no }}
-                </div>
-            </div>
-            <div class="row mt-2 mx-auto justify-content-center" :class="{ fade: hideResponse, dNone: hideResponse }">
-                <div class="btn btn-danger col-6">
-                    {{ translation.response }}
+
+                <!-- Modal -->
+            <div class="modal fade" id="budgetModal" tabindex="-1" aria-labelledby="budgetModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="budgetModalLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row my-3 mx-auto fs-3 justify-content-center red-btn">
+                                {{ formQuestion }}
+                            </div>
+                            <div class="row mt-2 mx-auto justify-content-center red-btn"">
+                                <div class="btn btn-outline-dark col-6" @click="showResponse(1)">
+                                    {{ translation.yes }}
+                                </div>
+                                <div class="btn btn-outline-dark col-6"  @click="showResponse(2)">
+                                    {{ translation.no }}
+                                </div>
+                            </div>
+                            <div class="row mt-2 mx-auto justify-content-center" :class="{ fade: hideResponse, dNone: hideResponse }">
+                                <div class="btn btn-danger col-6">
+                                    {{ translation.response }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </script>
 </body>
 </html>
+
