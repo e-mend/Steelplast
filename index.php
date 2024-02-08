@@ -66,12 +66,12 @@
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
-                                    {{ homeTitle }} -teste
+                                    {{ homeTitle }}
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
-                                    {{ productsTitle }}
+                                    {{ productsTitle }} -teste
                                 </a>
                             </li>
                             <li class="nav-item">
