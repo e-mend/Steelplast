@@ -92,7 +92,7 @@
         </header>
     </script>
 
-    <script type="text/x-template" id="carousel-template">
+    <script type="text/x-template" id="carousel-template" data-bs-ride="carousel">
         <div id="carousel_" class="bk-rd">
             <div id="carouselExample" class="carousel rounded slide">
                 <div class="carousel-inner rounded">
