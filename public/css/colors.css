@@ -81,7 +81,17 @@
     }
 }
 
+
+@font-face {
+    font-family: 'Noyh';
+    src: url('../images/WebFonts/2ece2ca570f9b741d03cd6305ce9f8d5.eot'); /* IE9 Compat Modes */
+    src: url('../images/WebFonts/2ece2ca570f9b741d03cd6305ce9f8d5.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../images/WebFonts/2ece2ca570f9b741d03cd6305ce9f8d5.woff') format('woff'), /* Modern Browsers */
+         url('../images/WebFonts/2ece2ca570f9b741d03cd6305ce9f8d5.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../images/WebFonts/2ece2ca570f9b741d03cd6305ce9f8d5.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
 *{
-    font-family: "Noyh R W01 SemiLight";
+    font-family: "Noyh" !important;
     color: rgb(7, 6, 1) !important;
 }

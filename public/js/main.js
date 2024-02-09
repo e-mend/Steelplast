@@ -52,8 +52,8 @@ const translate = {
     toastBody: 'Acessando o site, você concorda com as regras de privacidade.',
     formBtn: 'Cotação',
     formQuestion: 'Sua empresa já faz importação?',
-    formAnswer: 'Sim, estou já faço importação!',
-    formAnswer2: 'Não, não faco importação!',
+    formAnswer: 'Sim, já faço importação!',
+    formAnswer2: 'Não, não faço importação!',
     formResponse: `Sentimos muito, mas no momento só atendemos empresas que são habilitadas 
     junto à Receita Federal para importação de materiais.`
   },
@@ -105,7 +105,7 @@ const translate = {
     toastTitle: 'Hi, I am the Steel-bot!',
     toastBody: 'Accessing the site, you agree with the privacy rules.',
     formBtn: 'Budget',
-    formQuestion: 'Your company already imports?',
+    formQuestion: 'Does your company already imports?',
     formAnswer: 'Yes, I am importing!',
     formAnswer2: 'No, I do not import!',
     formResponse: `Sorry, but at the moment we only serve businesses that are 
