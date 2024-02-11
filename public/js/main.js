@@ -53,9 +53,18 @@ const translate = {
     formBtn: 'Cotação',
     formQuestion: 'Sua empresa já faz importação?',
     formAnswer: 'Sim, já faço importação!',
-    formAnswer2: 'Não, não faço importação!',
+    formAnswer2: 'Não faço importação!',
     formResponse: `Sentimos muito, mas no momento só atendemos empresas que são habilitadas 
-    junto à Receita Federal para importação de materiais.`
+    junto à Receita Federal para importação de materiais.`,
+    form: 'Formulário',
+    close: 'Fechar',
+    loading: 'Carregando...',
+    thanks: 'Obrigado!',
+    error: 'Ocorreu um erro ao enviar o formulário. Tente novamente mais tarde.',
+    send: 'Enviar',
+    companyName: 'Nome da empresa',
+    companyPhone: 'Telefone da empresa',
+    message: 'Mensagem',
   },
   en_US: {
     steel: 'STEEL',
@@ -107,9 +116,18 @@ const translate = {
     formBtn: 'Budget',
     formQuestion: 'Does your company already imports?',
     formAnswer: 'Yes, I am importing!',
-    formAnswer2: 'No, I do not import!',
+    formAnswer2: 'I do not import!',
     formResponse: `Sorry, but at the moment we only serve businesses that are 
-    licensed with the Federal Revenue Administration to import materials.`
+    licensed with the Federal Revenue Administration to import materials.`,
+    form: 'Form',
+    close: 'Close',
+    loading: 'Loading...',
+    thanks: 'Thank you!',
+    error: 'An error occurred while sending the form. Please try again later.',
+    send: 'Send',
+    companyName: 'Company name',
+    companyPhone: 'Company phone',
+    message: 'Message',
   },
   es_ES: {
     steel: 'ACERO',
@@ -165,9 +183,18 @@ const translate = {
     formBtn: 'Cotización',
     formQuestion: 'Tu empresa ya importó?',
     formAnswer: 'Si, estoy importando!',
-    formAnswer2: 'No, no importo!',
+    formAnswer2: 'No importo!',
     formResponse: `Lo siento, pero en este momento solo atendemos empresas que 
-    son habilitadas junto a la Recepcion Federal para importar materiales.`
+    son habilitadas junto a la Recepcion Federal para importar materiales.`,
+    form: 'Formular',
+    close: 'Cerrar',
+    loading: 'Cargando...',
+    thanks: 'Gracias!',
+    error: 'Ocurrio un error al enviar el formulario. Por favor, vuelve a intentarlo.',
+    send: 'Enviar',
+    companyName: 'Nombre de la empresa',
+    companyPhone: 'Telefono de la empresa',
+    message: 'Mensaje',
   }
 }
 
@@ -398,7 +425,13 @@ Vue.component('carousel-component', {
   data() {
     return {
       images: initial,
-      materials: materials
+      materials: materials,
+      translate: {
+        steel: translate[language].steel,
+        rubber: translate[language].rubber,
+        metal: translate[language].metal,
+        plastic: translate[language].plastic
+      }
     };
   },
   methods: {
@@ -410,14 +443,39 @@ Vue.component('main-component', {
   template: '#main-template',
   data() {
     return {
-      items: [
-        {
+      activeItens: {
+        1: {
           id: 1,
           title: '',
+          src: 'public/images/logo/Icone 02.jpg',
           body: translate[language].aboutBody,
-          empty: '',
           styles: {
             height: '200px'
+          }
+        },
+        2: {
+          id: 2,
+          title: '',
+          src: 'public/images/logo/Icone 02.jpg',
+          body: translate[language].aboutBody,
+          styles: {
+            height: '200px'
+          }
+        },
+        3: {
+          id: 3,
+          title: '',
+          src: 'public/images/logo/Icone 02.jpg',
+          body: translate[language].aboutBody,
+          styles: {
+            height: '200px'
+          }
+        }
+      },
+      items: [
+        {
+          metal: {
+            
           }
         }
       ],
@@ -430,23 +488,11 @@ Vue.component('main-component', {
     }
   },
   methods: {
-    writeText(item) {
-      let currentIndex = 0;
-      const intervalId = setInterval(() => {
-        item.empty += item.body[currentIndex];
-        currentIndex++;
-
-        if (currentIndex === item.body.length) {
-          clearInterval(intervalId);
-        }
-      }, 50);
+    changeItens(itens){
+      this.activeItens = itens;
     }
   },
   mounted() {
-    for (let i = 0; i < this.items.length; i++) {
-      this.writeText(this.items[i]);
-    }
-
     const toastTrigger = document.getElementById('liveToastBtn')
     const toastLiveExample = document.getElementById('liveToast')
 
@@ -465,13 +511,20 @@ Vue.component('form-component', {
       translation: {
         no: translate[language].formAnswer2,
         yes: translate[language].formAnswer,
-        response: ''
+        response: '',
+        form: translate[language].form,
+        close: translate[language].close,
+        send: translate[language].send,
+        companyName: translate[language].companyName,
+        companyPhone: translate[language].companyPhone,
+        message: translate[language].message,
       },
       formAnswer: '',
       hideQuestion: true,
       hideResponse: true,
       formOk: false,
-      showModal: false
+      showModal: false,
+      choice: 0
     }
   },
   methods: {
@@ -480,13 +533,10 @@ Vue.component('form-component', {
     },
     showResponse(option){
       this.hideResponse = false;
+      this.choice = option;
 
       if(option === 2){
         this.translation.response = translate[language].formResponse;
-      }
-
-      if(option === 1){
-        this.formOk = true;
       }
     }
   },

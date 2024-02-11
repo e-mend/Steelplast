@@ -10,9 +10,9 @@
     background-color: rgb(7, 6, 0.3); 
  }
  
- .bkw-an:hover{
-     background-color: rgba(7, 6, 1, 0.3); 
- }
+.bkw-an:hover{
+    background-color: rgba(7, 6, 1, 0.3); 
+}
 
 .gy{
     background-color: rgb(41, 34, 30);
@@ -70,6 +70,7 @@
 
 .presentation{
     z-index: 10;
+    padding-bottom: 50px;
 }
 
 @keyframes shine{

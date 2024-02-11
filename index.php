@@ -53,22 +53,22 @@
                     <div class="collapse navbar-collapse d-flex" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link fs-4" href="#">
+                                <a class="nav-link fs-4" href="#item">
                                     {{ homeTitle }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fs-4" href="#">
+                                <a class="nav-link fs-4" href="#item">
                                     {{ productsTitle }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fs-4" href="#">
+                                <a class="nav-link fs-4" href="#item">
                                     {{ aboutTitle }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fs-4" href="#">
+                                <a class="nav-link fs-4" href="#item">
                                     {{ contactTitle }}
                                 </a>
                             </li>
@@ -93,20 +93,40 @@
     </script>
 
     <script type="text/x-template" id="carousel-template" data-bs-ride="carousel">
-        <div id="carousel_" class="bk-rd">
+        <div id="carousel_" class="bk-rd rounded-bottom">
             <div id="carouselExample" class="carousel rounded slide">
                 <div class="carousel-inner rounded">
                     <div class="carousel-item active">
-                        <img src="public/images/products/M1T.png" class="d-block w-100" alt="..." style="top: 30%;left: 50%;">
+                        <img src="public/images/products/M1T.png" class="d-block w-100" alt="..." style="top: 40%;left: 50%;">
+                        <a href="#item">
+                            <div class="carousel-inner-inner rounded text-center">
+                                {{ translate.metal }}
+                            </div>
+                        </a>
                     </div>
                     <div class="carousel-item">
-                        <img src="public/images/products/B2.png" class="d-block w-100" alt="..." style="top: 50%;left: 50%;">
+                        <img src="public/images/products/rubber/C9.png" class="d-block w-100" alt="..." style="transform: scaleX(-1);">
+                        <a href="#item">
+                            <div class="carousel-inner-inner text-center">
+                                {{ translate.rubber }}
+                            </div>
+                        </a>
                     </div>
                     <div class="carousel-item rounded">
                         <img src="public/images/products/A1T.jpg" class="d-block w-100" alt="..." style="top: 70%;left: 50%;">
+                        <a href="#item">
+                            <div class="carousel-inner-inner text-center">
+                                {{ translate.steel }}
+                            </div>
+                        </a>
                     </div>
                     <div class="carousel-item rounded">
-                        <img src="public/images/products/P2T.jpeg" class="d-block w-100" alt="..." style="top: 70%;left: 50%;">
+                        <img src="public/images/products/plast/P3.webp" class="d-block w-100" alt="..." style="top: 50%;left: 50%;">
+                        <a href="#item">
+                            <div class="carousel-inner-inner text-center">
+                                {{ translate.plastic }}
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -122,42 +142,19 @@
     </script>
 
     <script type="text/x-template" id="main-template">
-        <div class="container mx-auto text-black my-5 presentation fs-5"  id="item">
-            <div v-for="(item, key) in items" class="" :key="item.id">
+        <div class="container mx-auto text-black presentation fs-5"  id="item">
+            <div v-for="(item, key) in activeItens" class="" :key="item.id">
                 <div class='row' :style="item.styles">
                     <div class="col-3 massive mt-5">
-                        <img src="public\images\logo\Icone 02.jpg" class="icon" alt="">
+                        <img src=" {{ item.src }} " class="icon" alt="">
                         {{ item.title }}
                     </div>
                     <div class="col-9 mt-5">
-                        {{ item.empty }}
+                        {{ item.body }}
                     </div>
                 </div>
+                <div class='row border-top rd my-0'></div>
             </div>  
-            <div class='row border-top rd my-0'></div>
-            <div class="mx-auto text-black d-flex">
-                <div class='row'>
-                    <div class="col-9">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos delectus voluptate ullam error harum. Voluptas harum culpa dolore odit quasi explicabo, cum possimus doloremque at itaque? Nostrum eos eius quo.
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos delectus voluptate ullam error harum. Voluptas harum culpa dolore odit quasi explicabo, cum possimus doloremque at itaque? Nostrum eos eius quo.
-                    </div>  
-                    <div class="col-3 massive">
-                        <img src="public\images\logo\Icone-01.jpg" class="icon" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class='row border-top rd my-0'></div>
-            <div class="mx-auto text-black d-flex">
-                <div class='row'>
-                    <div class="col-3 massive">
-                        <img src="public\images\logo\Icone 02.jpg" class="icon" alt="">
-                    </div>
-                    <div class="col-9">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos delectus voluptate ullam error harum. Voluptas harum culpa dolore odit quasi explicabo, cum possimus doloremque at itaque? Nostrum eos eius quo.
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos delectus voluptate ullam error harum. Voluptas harum culpa dolore odit quasi explicabo, cum possimus doloremque at itaque? Nostrum eos eius quo.
-                    </div>  
-                </div>
-            </div>
 
             <div class="toast-container position-fixed bottom-0 end-0 p-3">
                 <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -189,33 +186,81 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="budgetModalLabel">Modal title</h1>
+                            <h1 class="modal-title fs-5" id="budgetModalLabel">
+                                {{ translation.form }}
+                            </h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <div class="row mb-3 mx-auto fs-3 justify-content-center red-btn">
+                            <div class="row mb-3 mx-auto fs-3 justify-content-center">
                                 {{ formQuestion }}
                             </div>
-                            <div class="row mt-2 mx-auto justify-content-center red-btn"">
-                                <div class="btn btn-outline-danger col-6 fs-5" @click="showResponse(1)">
+                            <div class="row mt-2 mx-auto justify-content-center red-btn">
+                                <div class="btn btn-danger col-6 fs-5" @click="showResponse(1)">
                                     {{ translation.yes }}
                                 </div>
                                 <div class="btn btn-outline-danger col-6 fs-5"  @click="showResponse(2)">
                                     {{ translation.no }}
                                 </div>
                             </div>
-                            <div class="row mt-2 mx-auto justify-content-center" :class="{ fade: hideResponse, dNone: hideResponse }">
+                            <div class="row mt-2 mx-auto justify-content-center" v-if="choice == 2">
                                 <div class="btn btn-danger col-12 fs-5">
                                     {{ translation.response }}
+                                </div>
+                            </div>
+                            <div class="row mt-2 mx-auto justify-content-center" v-if="choice == 1">
+                                <div class="row rounded mx-auto justify-content-center">
+                                    <div class="col-12">
+                                        <label for="companyName" class="form-label fs-5">
+                                            {{ translation.companyName }}:
+                                        </label>
+                                        <input id="companyName" type="text" class="form-control fs-5">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="email" class="form-label fs-5">
+                                            EMAIL:
+                                        </label>
+                                        <input id="email" type="text" class="form-control fs-5">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="cellphone" class="form-label fs-5">
+                                            {{ translation.companyPhone }}:
+                                        </label>
+                                        <input id="cellphone" type="text" class="form-control fs-5">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="taxId" class="form-label fs-5">
+                                            CNPJ/ TAX ID:
+                                        </label>
+                                        <input id="taxId" type="text" class="form-control fs-5">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="website" class="form-label fs-5">
+                                            WEBSITE:
+                                        </label>
+                                        <input id="website" type="text" class="form-control fs-5">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="material" class="form-label fs-5">
+                                            MATERIAL:
+                                        </label>
+                                        <input id="material" type="text" class="form-control fs-5">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label fs-5">
+                                            {{ translation.message }}:
+                                        </label>
+                                        <input id="message" type="text" class="form-control fs-5">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                Close
+                                {{ translation.close }}
                             </button>
                             <button type="button" class="btn btn-danger">
-                                Save changes
+                                {{ translation.send }}
                             </button>
                         </div>
                     </div>
