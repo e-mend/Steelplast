@@ -146,7 +146,7 @@
             <div v-for="(item, key) in activeItens" class="" :key="item.id">
                 <div class='row' :style="item.styles">
                     <div class="col-3 massive mt-5">
-                        <img src=" {{ item.src }} " class="icon" alt="">
+                        <img :src="item.src" class="icon" alt="">
                         {{ item.title }}
                     </div>
                     <div class="col-9 mt-5">
