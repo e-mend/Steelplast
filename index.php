@@ -138,15 +138,16 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
+            <button class="btn btn-danger" @click="myMixin.changeItens()"></button>
         </div>
     </script>
 
     <script type="text/x-template" id="main-template">
-        <div class="container mx-auto text-black presentation fs-5"  id="item">
-            <div v-for="(item, key) in activeItens" class="" :key="item.id">
+        <div class="container mx-auto text-black presentation fs-5" id="item">
+            <div v-for="(item, key) in activeItens" class="">
                 <div class='row' :style="item.styles">
-                    <div class="col-3 massive mt-5">
-                        <img :src="item.src" class="icon" alt="">
+                    <div class="col-3 massive mt-5 text-center">
+                        <img :src="item.src" :style="item.img.styles" class="icon rounded" alt="">
                         {{ item.title }}
                     </div>
                     <div class="col-9 mt-5">

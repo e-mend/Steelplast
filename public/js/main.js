@@ -159,9 +159,13 @@ const translate = {
     celeronBody: `The engineered Celeron, synonymous with electrical and mechanical strength, stands out as a premium choice for thermal insulation and electrical applications. With its composition of phenolic resin-impregnated fibers, our Celeron offers exceptional durability and dimensional stability, providing reliable solutions for challenging environments. Discover the innovation and reliability encapsulated in the engineering Celeron, driving excellence in insulation and electrical components.`,
     rubber: 'RUBBER',
     nbr: 'NBR',
+    nbrBody: `Engineered NBR, the embodiment of strength and durability, stands out as a premium choice for applications that demand exceptional performance in challenging environments. With its robust mechanical properties and resistance to various environmental factors, our engineered NBR offers reliable solutions for sealing, insulation and industrial components. Discover the excellence encapsulated in NBR engineering, driving reliability and efficiency in your projects.`,
     silicone: 'SILICONE',
+    siliconeBody: `Engineering silicone, synonymous with versatility and thermal resistance, stands out as the leading choice for industrial and medical applications. With exceptional extreme temperature resistance and flexibility properties, our engineered silicone provides reliable solutions for sealing, insulation and advanced medical devices. Discover the innovation encapsulated in engineering silicone, elevating excellence in design and performance.`,
     geomembrane: 'GEOMEMBRANE',
+    geomembraneBody: `The engineering geomembrane, a symbol of efficient waterproofing and durability, stands out as the primary choice for geotechnical and containment projects. With its exceptional resistance to chemical agents and weathering, our geomembrane offers reliable solutions for lining ponds, landfills and reservoirs. Discover the trust and security built into engineered geomembrane, driving quality and sustainability in your applications.`,
     neoprene: 'NEOPRENE',
+    neopreneBody: `Neoprene for industrial use, synonymous with resistance and versatility, stands out as the ideal choice for demanding applications. With its exceptional durability and resistance to oils, solvents and weathering, our industrial neoprene offers reliable solutions for sealing, insulation and wear-resistant components. Discover excellence encapsulated in industrial grade neoprene, boosting performance and reliability in industrial environments`,
     title: 'STEELPLAST',
     home: 'HOME',
     products: 'PRODUCTS',
@@ -247,18 +251,22 @@ const translate = {
     brassBody: `Engineering brass, a symbol of versatility and resistance, stands out as the premium choice for applications that demand durability and refined aesthetics. Combining the durability of copper and the malleability of zinc, our engineering brass offers exceptional solutions for precise, elegant components. Discover the unparalleled sophistication and performance of engineering brass, taking your projects to a new level.`,
     plastic: 'PLÁSTICO',
     teflon: 'TEFLON',
-    teflonBody: `O politetrafluoretileno (PTFE), que é comumente conhecido pelo nome comercial, é sinônimo de resistência excepcional e baixo coeficiente de atrito, destaca-se como a escolha premium para aplicações industriais e tecnológicas exigentes. Com sua capacidade única de resistir a altas temperaturas e substâncias químicas agressivas, nosso teflon de engenharia oferece soluções de ponta para componentes que demandam durabilidade e desempenho superior. Descubra a inovação encapsulada no teflon de engenharia, impulsionando a excelência em engenharia avançada.`,
+    teflonBody: `El politetrafluoroetileno (PTFE), conocido comúnmente por su nombre comercial, es sinónimo de resistencia excepcional y bajo coeficiente de fricción, y se destaca como la mejor opción para aplicaciones industriales y tecnológicas exigentes. Con su capacidad única para resistir altas temperaturas y productos químicos agresivos, nuestro teflón diseñado ofrece soluciones de vanguardia para componentes que exigen durabilidad y rendimiento superior. Descubra la innovación contenida en el teflón de ingeniería, que impulsa la excelencia en ingeniería avanzada.`,
     pa6g: 'PA6G',
-    pa6gBody: `O nylon fundido PA6G, personificando durabilidade e versatilidade, destaca-se como a escolha robusta para aplicações industriais exigentes. Com propriedades mecânicas excepcionais, nosso nylon fundido oferece resistência ao desgaste, absorção de impactos e estabilidade dimensional, proporcionando soluções de alto desempenho para componentes precisos. Descubra a confiabilidade e inovação encapsuladas no nylon fundido PA6G, impulsionando a excelência em engenharia avançada.`,
+    pa6gBody: `El nailon fundido PA6G, que incorpora durabilidad y versatilidad, se destaca como la opción resistente para aplicaciones industriales exigentes. Con propiedades mecánicas excepcionales, nuestro nailon fundido ofrece resistencia al desgaste, absorción de impactos y estabilidad dimensional, proporcionando soluciones de alto rendimiento para componentes precisos. Descubra la confiabilidad y la innovación encapsuladas en el nailon fundido PA6G, que impulsa la excelencia en ingeniería avanzada.`,
     pu: 'PU',
-    puBody: `O poliuretano de engenharia, símbolo de versatilidade e resistência, destaca-se como a escolha inovadora para aplicações que demandam durabilidade e desempenho superior. Com sua adaptabilidade excepcional, nosso poliuretano de engenharia oferece soluções personalizadas para componentes precisos em diversos setores industriais. Descubra a flexibilidade e resistência excepcionais do poliuretano, impulsionando a eficiência e a inovação em seus projetos.`,
+    puBody: `El poliuretano de ingeniería, símbolo de versatilidad y resistencia, se destaca como la opción innovadora para aplicaciones que exigen durabilidad y rendimiento superior. Con su excepcional adaptabilidad, nuestro poliuretano diseñado ofrece soluciones personalizadas para componentes precisos en diversos sectores industriales. Descubra la excepcional flexibilidad y resistencia del poliuretano, impulsando la eficiencia y la innovación en sus proyectos..`,
     celeron: 'CELERON',
-    celeronBody: `O Celeron de engenharia, sinônimo de resistência elétrica e mecânica, destaca-se como uma escolha premium para isolamento térmico e aplicações elétricas. Com sua composição de fibras impregnadas em resina fenólica, nosso Celeron oferece durabilidade excepcional e estabilidade dimensional, proporcionando soluções confiáveis para ambientes desafiadores. Descubra a inovação e confiabilidade encapsuladas no Celeron de engenharia, impulsionando a excelência em isolamento e componentes elétricos.`,
+    celeronBody: `El Celeron de ingeniería, sinónimo de resistencia eléctrica y mecánica, se destaca como una opción premium para aislamiento térmico y aplicaciones eléctricas. Con su composición de fibras impregnadas de resina fenólica, nuestro Celeron ofrece una durabilidad y estabilidad dimensional excepcionales, proporcionando soluciones confiables para entornos desafiantes. Descubra la innovación y la confiabilidad contenidas en la ingeniería Celeron, que impulsa la excelencia en aislamiento y componentes eléctricos.`,
     rubber: 'GOMA',
     nbr: 'NBR',
+    nbr: `El NBR diseñado, la encarnación de la resistencia y la durabilidad, se destaca como una opción premium para aplicaciones que exigen un rendimiento excepcional en entornos desafiantes. Con sus robustas propiedades mecánicas y resistencia a diversos factores ambientales, nuestro NBR diseñado ofrece soluciones confiables para sellado, aislamiento y componentes industriales. Descubra la excelencia encapsulada en la ingeniería NBR, impulsando confiabilidad y eficiencia en sus proyectos.`,
     silicone: 'SILICONA',
+    siliconeBody: `La silicona de ingeniería, sinónimo de versatilidad y resistencia térmica, se destaca como la opción líder para aplicaciones industriales y médicas. Con propiedades excepcionales de flexibilidad y resistencia a temperaturas extremas, nuestra silicona diseñada proporciona soluciones confiables para sellado, aislamiento y dispositivos médicos avanzados. Descubra la innovación encapsulada en silicona de ingeniería, que eleva la excelencia en diseño y rendimiento.`,
     geomembrane: 'GEOMEMBRANA',
+    geomembraneBody: `La geomembrana de ingeniería, símbolo de impermeabilización eficiente y durabilidad, se destaca como la opción principal para proyectos geotécnicos y de contención. Con su excepcional resistencia a los agentes químicos y a la intemperie, nuestra geomembrana ofrece soluciones confiables para revestir estanques, vertederos y embalses. Descubra la confianza y la seguridad integradas en la geomembrana diseñada, impulsando la calidad y la sostenibilidad en sus aplicaciones.`,
     neoprene: 'NEOPRENE',
+    neopreneBody: `El neopreno de uso industrial, sinónimo de resistencia y versatilidad, destaca como la opción ideal para aplicaciones exigentes. Con su excepcional durabilidad y resistencia a aceites, solventes y a la intemperie, nuestro neopreno industrial ofrece soluciones confiables para sellar, aislar y componentes resistentes al desgaste. Descubra la excelencia encapsulada en neopreno de grado industrial, aumentando el rendimiento y la confiabilidad en entornos industriales.`,
     title: 'STEELPLAST',
     home: 'INICIO',
     products: 'PRODUCTOS',
@@ -526,6 +534,10 @@ Vue.component('header-component', {
       setCookie('language', language, 30);
       window.location.reload();
     }
+  },
+  mounted(){
+    alert();
+    console.log(this.sharedData);
   }
 });
 
@@ -560,6 +572,11 @@ Vue.component('main-component', {
           body: translate[language].aboutBody,
           styles: {
             height: '200px'
+          },
+          img: {
+            styles: {
+
+            }
           }
         },
         2: {
@@ -569,6 +586,11 @@ Vue.component('main-component', {
           body: translate[language].aboutBody,
           styles: {
             height: '200px'
+          },
+          img: {
+            styles: {
+              
+            }
           }
         },
         3: {
@@ -578,22 +600,32 @@ Vue.component('main-component', {
           body: translate[language].aboutBody,
           styles: {
             height: '200px'
-          }
-        }
-      },
-      items: [
-        {
-          steel: {
-            1: {
-              src: `public/images/products/A1B.png`,
-              styles: {
-                objectPosition: '0% 50%',
-              },
-              text: translate[language].steelBody
+          },
+          img: {
+            styles: {
+              
             }
           }
         }
-      ],
+      },
+      items: {
+        steel: {
+          bronze: {
+            title: translate[language].bronze,
+            body: translate[language].bronzeBody,
+            id: 1,
+            src: `public/images/products/A1B.png`,
+            styles: {
+              objectPosition: '50% 50%',
+            },
+            img: {
+              styles: {
+                
+              }
+            }
+          }
+        }
+      },
       translation: materials,
       toast: {
         title: translate[language].toastTitle,
@@ -603,8 +635,10 @@ Vue.component('main-component', {
     }
   },
   methods: {
-    changeItens(itens){
-      this.activeItens = itens;
+    changeItens(){
+
+      console.log(this.items.steel);
+      this.activeItens = this.items.steel;
     }
   },
   mounted() {
