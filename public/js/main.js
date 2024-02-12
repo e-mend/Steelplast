@@ -536,8 +536,6 @@ Vue.component('header-component', {
     }
   },
   mounted(){
-    alert();
-    console.log(this.sharedData);
   }
 });
 
