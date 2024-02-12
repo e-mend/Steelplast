@@ -138,7 +138,6 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-            <button class="btn btn-danger" @click="myMixin.changeItens()"></button>
         </div>
     </script>
 
@@ -156,6 +155,8 @@
                 </div>
                 <div class='row border-top rd my-0'></div>
             </div>  
+
+            <button class="btn btn-danger" @click="changeItens()"></button>
 
             <div class="toast-container position-fixed bottom-0 end-0 p-3">
                 <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
