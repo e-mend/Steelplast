@@ -60,7 +60,7 @@ const translate = {
     geomembrane: 'GEOMEMBRANA',
     geomembraneBody: `A geomembrana de engenharia, símbolo de impermeabilização eficiente e durabilidade, destaca-se como a escolha primordial para projetos geotécnicos e de contenção. Com sua resistência excepcional a agentes químicos e intempéries, nossa geomembrana oferece soluções confiáveis para revestimento de lagoas, aterros sanitários e reservatórios. Descubra a confiança e segurança embutidas na geomembrana de engenharia, impulsionando a qualidade e sustentabilidade em suas aplicações.`,
     neoprene: 'NEOPRENE',
-    neopremeBody: `O neoprene de uso industrial, sinônimo de resistência e versatilidade, destaca-se como a escolha ideal para aplicações exigentes. Com sua durabilidade excepcional e resistência a óleos, solventes e intempéries, nosso neoprene industrial oferece soluções confiáveis para vedação, isolamento e componentes resistentes ao desgaste. Descubra a excelência encapsulada no neoprene de uso industrial, impulsionando a performance e confiabilidade em ambientes industriais`,
+    neopreneBody: `O neoprene de uso industrial, sinônimo de resistência e versatilidade, destaca-se como a escolha ideal para aplicações exigentes. Com sua durabilidade excepcional e resistência a óleos, solventes e intempéries, nosso neoprene industrial oferece soluções confiáveis para vedação, isolamento e componentes resistentes ao desgaste. Descubra a excelência encapsulada no neoprene de uso industrial, impulsionando a performance e confiabilidade em ambientes industriais`,
     title: 'STEELPLAST',
     home: 'HOME',
     products: 'PRODUTOS',
@@ -432,7 +432,7 @@ const images = {
     P2R: {
       src: `public/images/products/P2R.jpeg`,
       styles: {
-        objectPosition: '100% 50%',
+        objectPosition: '100% 50%'
       }
     },
     P3R: {
@@ -554,12 +554,17 @@ Vue.component('carousel-component', {
     };
   },
   methods: {
-
+    changeItens(item){
+      this.$root.$refs.main_component.changeItens(item);
+    }
   }
 });
 
 Vue.component('main-component', {
   template: '#main-template',
+  created(){
+    this.$root.$refs.main_component = this; // root component
+  },
   data() {
     return {
       activeItens: {
@@ -607,18 +612,240 @@ Vue.component('main-component', {
         }
       },
       items: {
-        steel: {
+        metal: {
           bronze: {
             title: translate[language].bronze,
             body: translate[language].bronzeBody,
             id: 1,
-            src: `public/images/products/A1B.png`,
+            src: `public/images/products/M1B.jpeg`,
+            styles: {
+
+            },
+            img: {
+              styles: {
+                ObjectPosition: '100% 100%',
+                objectFit: 'cover',
+              }
+            }
+          },
+          copper: {
+            title: translate[language].copper,
+            body: translate[language].copperBody,
+            id: 2,
+            src: `public/images/products/M2R.png`,
+            styles: {
+              objectPosition: '50% 50%',
+            },
+            img: {
+              styles: {
+                transform: 'scaleX(-1)'
+              }
+            }
+          },
+          aluminum: {
+            title: translate[language].aluminum,
+            body: translate[language].aluminumBody,
+            id: 3,
+            src: `public/images/products/M3R.jpg`,
+            styles: {
+              objectPosition: '50% 50%',
+            },
+            img: {
+              styles: {
+                transform: 'scaleX(-1)'
+              }
+            }
+          },
+          brass: {
+            title: translate[language].brass,
+            body: translate[language].brassBody,
+            id: 4,
+            src: `public/images/products/M4C2.png`,
             styles: {
               objectPosition: '50% 50%',
             },
             img: {
               styles: {
                 
+              }
+            }
+          },
+        },
+        rubber: {
+          nbr:{
+            title: translate[language].nbr,
+            body: translate[language].nbrBody,
+            id: 1,
+            src: `public/images/products/b1.png`,
+            styles: {
+              objectPosition: '50% 50%',
+            },
+            img: {
+              styles: {
+                objectFit: 'cover',
+              }
+            }
+          },
+          silicone: {
+            title: translate[language].silicone,
+            body: translate[language].siliconeBody,
+            id: 2,
+            src: `public/images/products/rubber/C15.png`,
+            styles: {
+              objectPosition: '50% 50%',
+            },
+            img: {
+              styles: {
+                objectFit: 'cover',
+              }
+            }
+          },
+          geomembrane: {
+            title: translate[language].geomembrane,
+            body: translate[language].geomembraneBody,
+            id: 3,
+            src: `public/images/products/rubber/c4.png`,
+            styles: {
+              objectPosition: '50% 50%',
+            },
+            img: {
+              styles: {
+                objectFit: 'cover',
+                transform: 'scaleX(-1)'
+              }
+            }
+          },
+          neoprene: {
+            title: translate[language].neoprene,
+            body: translate[language].neopreneBody,
+            id: 4,
+            src: `public/images/products/B4.png`,
+            styles: {
+              objectPosition: '0% 50%',
+            },
+            img: {
+              styles: {
+                objectFit: 'cover',
+                transform: 'scaleX(-1)'
+              }
+            }
+          }
+        },
+        plastic: {
+          teflon: {
+            title: translate[language].teflon,
+            body: translate[language].teflonBody,
+            id: 1,
+            src: `public/images/products/P1R.png`,
+            styles: {
+              objectPosition: '50% 50%',
+            },
+            img: {
+              styles: {
+                objectFit: 'cover',
+              }
+            }
+          },
+          pa6g: {
+            title: translate[language].pa6g,
+            body: translate[language].pa6gBody,
+            id: 2,
+            src: `public/images/products/P2R.jpeg`,
+            styles: {
+              objectPosition: '50% 50%',
+            },
+            img: {
+              styles: {
+                objectFit: 'cover',
+              }
+            }
+          },
+          pu: {
+            title: translate[language].pu,
+            body: translate[language].puBody,
+            id: 3,
+            src: `public/images/products/P3R.png`,
+            styles: {
+              objectPosition: '50% 50%',
+            },
+            img: {
+              styles: {
+                objectFit: 'cover',
+                transform: 'scaleX(-1)'
+              }
+            }
+          },
+          celeron: {
+            title: translate[language].celeron,
+            body: translate[language].celeronBody,
+            id: 4,
+            src: `public/images/products/P4R.png`,
+            styles: {
+              objectPosition: '50% 50%',
+            },
+            img: {
+              styles: {
+                objectFit: 'cover',
+                transform: 'scaleX(-1)'
+              }
+            }
+          }
+        },
+        steel: {
+          stainlessSteel: {
+            title: translate[language].stainlessSteel,
+            body: translate[language].stainlessSteelBody,
+            id: 5,
+            src: `public/images/products/A1B.png`,
+            styles: {
+              objectPosition: '50% 50%',
+            },
+            img: {
+              styles: {
+                transform: 'scaleX(1)'
+              }
+            }
+          },
+          carbon: {
+            title: translate[language].carbon,
+            body: translate[language].carbonBody,
+            id: 6,
+            src: `public/images/products/A2TQ31.jpeg`,
+            styles: {
+              objectPosition: '50% 50%',
+            },
+            img: {
+              styles: {
+                transform: 'scaleX(-1)',
+                objectFit: 'cover',
+              }
+            }
+          },
+          galvanized: {
+            title: translate[language].galvanized,
+            body: translate[language].galvanizedBody,
+            id: 7,
+            src: `public/images/products/A3B6.jpeg`,
+            styles: {
+              objectPosition: '50% 50%',
+            },
+            img: {
+              styles: {
+                transform: 'scaleX(-1)'
+              }
+            }
+          },
+          flanges: {
+            title: translate[language].flanges,
+            body: translate[language].flangesBody,
+            id: 8,
+            src: `public/images/products/B2.png`,
+            styles: {
+              objectPosition: '50% 50%',
+            },
+            img: {
+              styles: {
+                transform: 'scaleX(1)'
               }
             }
           }
@@ -633,18 +860,15 @@ Vue.component('main-component', {
     }
   },
   methods: {
-    changeItens(){
-
-      console.log(this.items.steel);
-      this.activeItens = this.items.steel;
+    changeItens(item){
+      this.activeItens = this.items[item];
     }
   },
   mounted() {
-    const toastTrigger = document.getElementById('liveToastBtn')
-    const toastLiveExample = document.getElementById('liveToast')
+    const toastLiveExample = document.getElementById('liveToast');
 
-    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-    toastBootstrap.show()
+    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+    toastBootstrap.show();
 
   }
 });

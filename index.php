@@ -99,7 +99,7 @@
                     <div class="carousel-item active">
                         <img src="public/images/products/M1T.png" class="d-block w-100" alt="..." style="top: 40%;left: 50%;">
                         <a href="#item">
-                            <div class="carousel-inner-inner rounded text-center">
+                            <div class="carousel-inner-inner rounded text-center" @click="changeItens('metal')">
                                 {{ translate.metal }}
                             </div>
                         </a>
@@ -107,7 +107,7 @@
                     <div class="carousel-item">
                         <img src="public/images/products/rubber/C9.png" class="d-block w-100" alt="..." style="transform: scaleX(-1);">
                         <a href="#item">
-                            <div class="carousel-inner-inner text-center">
+                            <div class="carousel-inner-inner text-center" @click="changeItens('rubber')">
                                 {{ translate.rubber }}
                             </div>
                         </a>
@@ -115,7 +115,7 @@
                     <div class="carousel-item rounded">
                         <img src="public/images/products/A1T.jpg" class="d-block w-100" alt="..." style="top: 70%;left: 50%;">
                         <a href="#item">
-                            <div class="carousel-inner-inner text-center">
+                            <div class="carousel-inner-inner text-center" @click="changeItens('steel')">
                                 {{ translate.steel }}
                             </div>
                         </a>
@@ -123,7 +123,7 @@
                     <div class="carousel-item rounded">
                         <img src="public/images/products/plast/P3.webp" class="d-block w-100" alt="..." style="top: 50%;left: 50%;">
                         <a href="#item">
-                            <div class="carousel-inner-inner text-center">
+                            <div class="carousel-inner-inner text-center" @click="changeItens('plastic')">
                                 {{ translate.plastic }}
                             </div>
                         </a>
@@ -147,7 +147,7 @@
                 <div class='row' :style="item.styles">
                     <div class="col-3 massive mt-5 text-center">
                         <img :src="item.src" :style="item.img.styles" class="icon rounded" alt="">
-                        {{ item.title }}
+                        <p>{{ item.title }}</p>
                     </div>
                     <div class="col-9 mt-5">
                         {{ item.body }}
@@ -155,8 +155,6 @@
                 </div>
                 <div class='row border-top rd my-0'></div>
             </div>  
-
-            <button class="btn btn-danger" @click="changeItens()"></button>
 
             <div class="toast-container position-fixed bottom-0 end-0 p-3">
                 <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">

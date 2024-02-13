@@ -139,8 +139,9 @@
 }
 
 .icon{
-    max-width:80% !important;
-    max-height: 300px;
+    width:200px !important;
+    height: 140px !important;
+    overflow: hidden;
 }
 
 .small-icon{
