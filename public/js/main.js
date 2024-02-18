@@ -533,6 +533,9 @@ Vue.component('header-component', {
     changeLanguage(language){
       setCookie('language', language, 30);
       window.location.reload();
+    },
+    changeItens(item){
+      this.$root.$refs.main_component.changeItens(item);
     }
   },
   mounted(){
@@ -567,50 +570,7 @@ Vue.component('main-component', {
   },
   data() {
     return {
-      activeItens: {
-        1: {
-          id: 1,
-          title: '',
-          src: 'public/images/logo/Icone 02.jpg',
-          body: translate[language].aboutBody,
-          styles: {
-            height: '200px'
-          },
-          img: {
-            styles: {
-
-            }
-          }
-        },
-        2: {
-          id: 2,
-          title: '',
-          src: 'public/images/logo/Icone 02.jpg',
-          body: translate[language].aboutBody,
-          styles: {
-            height: '200px'
-          },
-          img: {
-            styles: {
-              
-            }
-          }
-        },
-        3: {
-          id: 3,
-          title: '',
-          src: 'public/images/logo/Icone 02.jpg',
-          body: translate[language].aboutBody,
-          styles: {
-            height: '200px'
-          },
-          img: {
-            styles: {
-              
-            }
-          }
-        }
-      },
+      activeItens: {},
       items: {
         metal: {
           bronze: {
@@ -849,6 +809,102 @@ Vue.component('main-component', {
               }
             }
           }
+        },
+        about: {
+          1: {
+            id: 1,
+            title: translate[language].about,
+            src: 'public/images/logo/Icone 02.jpg',
+            body: translate[language].aboutBody,
+            styles: {
+              height: '200px'
+            },
+            img: {
+              styles: {
+                maxWidth: '100px',
+                maxHeight: '100px'
+              }
+            }
+          },
+          2: {
+            id: 2,
+            title: translate[language].values,
+            src: 'public/images/logo/Icone-01.jpg',
+            body: translate[language].companyValues,
+            styles: {
+              height: '150px'
+            },
+            img: {
+              styles: {
+                maxWidth: '100px',
+                maxHeight: '100px'
+              }
+            },
+            bodyClass: [],
+            noLine: true
+          },
+          3: {
+            id: 3,
+            title: '',
+            src: '',
+            body: translate[language].companyValues2,
+            styles: {
+              height: '150px'
+            },
+            img: {
+              styles: {
+                maxWidth: '100px',
+                maxHeight: '100px'
+              }
+            },
+            noLine: true
+          },
+          4: {
+            id: 4,
+            title: '',
+            src: '',
+            body: translate[language].companyValues3,
+            styles: {
+              height: '150px'
+            },
+            img: {
+              styles: {
+                
+              }
+            },
+            noLine: true
+          },
+          5: {
+            id: 5,
+            title: '',
+            src: '',
+            body: translate[language].companyValues4,
+            styles: {
+              height: '150px'
+            },
+            img: {
+              styles: {
+                
+              }
+            },
+            noLine: true
+          },
+          6: {
+            id: 6,
+            title: '',
+            src: 'public/images/logo/QR_CODE.png',
+            body: translate[language].companyValues5,
+            styles: {
+              height: '150px'
+            },
+            img: {
+              styles: {
+                maxWidth: '100px',
+                maxHeight: '100px'
+              }
+            },
+            noLine: true
+          }
         }
       },
       translation: materials,
@@ -865,6 +921,8 @@ Vue.component('main-component', {
     }
   },
   mounted() {
+    this.activeItens = this.items['about'];
+
     const toastLiveExample = document.getElementById('liveToast');
 
     const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);

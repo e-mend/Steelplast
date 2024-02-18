@@ -1,37 +1,37 @@
 .bk{
-   background-color: rgb(7, 6, 1); 
+   background-color: rgb(7, 6, 1) !important; 
 }
 
 .bk-an:hover{
-    background-color: rgba(7, 6, 1, 0.8); 
+    background-color: rgba(7, 6, 1, 0.8) !important; 
 }
 
 .bkw{
-    background-color: rgb(7, 6, 0.3); 
+    background-color: rgb(7, 6, 0.3) !important; 
  }
  
 .bkw-an:hover{
-    background-color: rgba(7, 6, 1, 0.3); 
+    background-color: rgba(7, 6, 1, 0.3) !important; 
 }
 
 .gy{
-    background-color: rgb(41, 34, 30);
+    background-color: rgb(41, 34, 30) !important;
 }
 
 .gy-an{
-    background-color: rgba(41, 34, 30, 0.8);
+    background-color: rgba(41, 34, 30, 0.8) !important;
 }
 
 .rd{
-    background-color: rgb(238, 28, 37);
+    background-color: rgb(238, 28, 37) !important;
 }
 
 .rd-an{
-    background-color: rgba(238, 28, 37, 0.8);
+    background-color: rgba(238, 28, 37, 0.8) !important;
 }
 
 .rd-bk{
-    background: linear-gradient(to bottom, rgb(238, 28, 37) 75%, rgb(7, 6, 1) 25%);
+    background: linear-gradient(to bottom, rgb(238, 28, 37) 75%, rgb(7, 6, 1) 25%) !important;
 }
 
 .red-btn{

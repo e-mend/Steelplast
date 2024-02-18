@@ -63,12 +63,12 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fs-4" href="#item">
+                                <a class="nav-link fs-4" href="#item" @click="changeItens('about')">
                                     {{ aboutTitle }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fs-4" href="#item">
+                                <a class="nav-link fs-4" href="#btn" data-bs-toggle="modal" data-bs-target="#budgetModal">
                                     {{ contactTitle }}
                                 </a>
                             </li>
@@ -142,19 +142,19 @@
     </script>
 
     <script type="text/x-template" id="main-template">
-        <div class="container mx-auto text-black presentation fs-5" id="item">
-            <div v-for="(item, key) in activeItens" class="">
+        <div class="container mx-auto text-black presentation fs-4" id="item">
+            <div v-for="(item, key) in activeItens" class="" :class="item.class">
                 <div class='row' :style="item.styles">
                     <div class="col-3 massive mt-5 text-center">
-                        <img :src="item.src" :style="item.img.styles" class="icon rounded" alt="">
+                        <img :src="item.src" v-if="item.src != '' " :style="item.img.styles" class="icon rounded" alt="">
                         <p>{{ item.title }}</p>
                     </div>
-                    <div class="col-9 mt-5">
+                    <div class="col-9 mt-5" :class="item.bodyClass">
                         {{ item.body }}
                     </div>
                 </div>
-                <div class='row border-top rd my-0'></div>
-            </div>  
+                <div v-if="!item.noLine" class='row border-top rd my-0'></div>
+            </div>   height: '200px'
 
             <div class="toast-container position-fixed bottom-0 end-0 p-3">
                 <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -173,7 +173,7 @@
     </script>
 
     <script type="text/x-template" id="form-template">
-        <div class="bk py-5 rounded">
+        <div class="bk py-5 rounded" id="btn">
             <div class="d-flex">
                 <div class="row mt-5 mx-auto col-12">
                     <div class="btn btn-danger mx-auto col-3 fs-4" data-bs-toggle="modal" data-bs-target="#budgetModal">
