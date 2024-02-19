@@ -106,6 +106,10 @@ const translate = {
     companyName: 'Nome da empresa',
     companyPhone: 'Telefone da empresa',
     message: 'Mensagem',
+    mission: `Fornecer soluções de engenharia inovadoras e materiais de alta qualidade, 
+    conectando o Brasil ao mundo. Buscamos impulsionar o sucesso de nossos clientes, 
+    promovendo a excelência em todos os aspectos de nossas operações.`,
+    missionTitle: 'Nossa Missão',
   },
   en_US: {
     steel: 'STEEL',
@@ -207,6 +211,10 @@ const translate = {
     companyName: 'Company name',
     companyPhone: 'Company phone',
     message: 'Message',
+    mission: `Provide innovative engineering solutions and high-quality materials, 
+    connecting Brazil to the world. We seek to drive the success of our customers by
+     promoting excellence in all aspects of our operations.`,
+    missionTitle: 'Our Mission',
   },
   es_ES: {
     steel: 'ACERO',
@@ -312,6 +320,10 @@ const translate = {
     companyName: 'Nombre de la empresa',
     companyPhone: 'Telefono de la empresa',
     message: 'Mensaje',
+    mission: `Proporcionar soluciones de ingeniería innovadoras y materiales de alta calidad, 
+    conectando Brasil con el mundo. Buscamos impulsar el éxito de nuestros clientes promoviendo 
+    la excelencia en todos los aspectos de nuestras operaciones.`,
+    missionTitle: 'Nuestra Mision',
   }
 }
 
@@ -479,9 +491,9 @@ const initial = {
   P: {
     m: 'P',
     sub: '1',
-    plus: 'R',
-    type: 'P1R',
-    src: `public/images/products/P1R.png`,
+    plus: '',
+    type: 'P1',
+    src: `public/images/products/plast2/p1.webp`,
     styles: {
       objectPosition: '70% 30%',
     }
@@ -576,6 +588,7 @@ Vue.component('main-component', {
           bronze: {
             title: translate[language].bronze,
             body: translate[language].bronzeBody,
+            type: 'metal',
             id: 1,
             src: `public/images/products/M1B.jpeg`,
             styles: {
@@ -591,6 +604,7 @@ Vue.component('main-component', {
           copper: {
             title: translate[language].copper,
             body: translate[language].copperBody,
+            type: 'metal',
             id: 2,
             src: `public/images/products/M2R.png`,
             styles: {
@@ -605,6 +619,7 @@ Vue.component('main-component', {
           aluminum: {
             title: translate[language].aluminum,
             body: translate[language].aluminumBody,
+            type: 'metal',
             id: 3,
             src: `public/images/products/M3R.jpg`,
             styles: {
@@ -619,6 +634,7 @@ Vue.component('main-component', {
           brass: {
             title: translate[language].brass,
             body: translate[language].brassBody,
+            type: 'metal',
             id: 4,
             src: `public/images/products/M4C2.png`,
             styles: {
@@ -635,6 +651,7 @@ Vue.component('main-component', {
           nbr:{
             title: translate[language].nbr,
             body: translate[language].nbrBody,
+            type: 'rubber',
             id: 1,
             src: `public/images/products/b1.png`,
             styles: {
@@ -649,6 +666,7 @@ Vue.component('main-component', {
           silicone: {
             title: translate[language].silicone,
             body: translate[language].siliconeBody,
+            type: 'rubber',
             id: 2,
             src: `public/images/products/rubber/C15.png`,
             styles: {
@@ -663,6 +681,7 @@ Vue.component('main-component', {
           geomembrane: {
             title: translate[language].geomembrane,
             body: translate[language].geomembraneBody,
+            type: 'rubber',
             id: 3,
             src: `public/images/products/rubber/c4.png`,
             styles: {
@@ -678,6 +697,7 @@ Vue.component('main-component', {
           neoprene: {
             title: translate[language].neoprene,
             body: translate[language].neopreneBody,
+            type: 'rubber',
             id: 4,
             src: `public/images/products/B4.png`,
             styles: {
@@ -695,6 +715,7 @@ Vue.component('main-component', {
           teflon: {
             title: translate[language].teflon,
             body: translate[language].teflonBody,
+            type: 'plastic',
             id: 1,
             src: `public/images/products/P1R.png`,
             styles: {
@@ -709,6 +730,7 @@ Vue.component('main-component', {
           pa6g: {
             title: translate[language].pa6g,
             body: translate[language].pa6gBody,
+            type: 'plastic',
             id: 2,
             src: `public/images/products/P2R.jpeg`,
             styles: {
@@ -723,6 +745,7 @@ Vue.component('main-component', {
           pu: {
             title: translate[language].pu,
             body: translate[language].puBody,
+            type: 'plastic',
             id: 3,
             src: `public/images/products/P3R.png`,
             styles: {
@@ -738,6 +761,7 @@ Vue.component('main-component', {
           celeron: {
             title: translate[language].celeron,
             body: translate[language].celeronBody,
+            type: 'plastic',
             id: 4,
             src: `public/images/products/P4R.png`,
             styles: {
@@ -755,6 +779,7 @@ Vue.component('main-component', {
           stainlessSteel: {
             title: translate[language].stainlessSteel,
             body: translate[language].stainlessSteelBody,
+            type: 'steel',
             id: 5,
             src: `public/images/products/A1B.png`,
             styles: {
@@ -769,6 +794,7 @@ Vue.component('main-component', {
           carbon: {
             title: translate[language].carbon,
             body: translate[language].carbonBody,
+            type: 'steel',
             id: 6,
             src: `public/images/products/A2TQ31.jpeg`,
             styles: {
@@ -784,6 +810,7 @@ Vue.component('main-component', {
           galvanized: {
             title: translate[language].galvanized,
             body: translate[language].galvanizedBody,
+            type: 'steel',
             id: 7,
             src: `public/images/products/A3B6.jpeg`,
             styles: {
@@ -798,6 +825,7 @@ Vue.component('main-component', {
           flanges: {
             title: translate[language].flanges,
             body: translate[language].flangesBody,
+            type: 'steel',
             id: 8,
             src: `public/images/products/B2.png`,
             styles: {
@@ -817,14 +845,16 @@ Vue.component('main-component', {
             src: 'public/images/logo/Icone 02.jpg',
             body: translate[language].aboutBody,
             styles: {
-              height: '200px'
+              
             },
             img: {
               styles: {
                 maxWidth: '100px',
                 maxHeight: '100px'
               }
-            }
+            },
+            btn: true,
+            noLine: true,
           },
           2: {
             id: 2,
@@ -841,7 +871,8 @@ Vue.component('main-component', {
               }
             },
             bodyClass: [],
-            noLine: true
+            noLine: true,
+            btn: true
           },
           3: {
             id: 3,
@@ -857,7 +888,8 @@ Vue.component('main-component', {
                 maxHeight: '100px'
               }
             },
-            noLine: true
+            noLine: true,
+            disabled: true
           },
           4: {
             id: 4,
@@ -872,7 +904,8 @@ Vue.component('main-component', {
                 
               }
             },
-            noLine: true
+            noLine: true,
+            disabled: true
           },
           5: {
             id: 5,
@@ -887,7 +920,8 @@ Vue.component('main-component', {
                 
               }
             },
-            noLine: true
+            noLine: true,
+            disabled: true
           },
           6: {
             id: 6,
@@ -903,7 +937,9 @@ Vue.component('main-component', {
                 maxHeight: '100px'
               }
             },
-            noLine: true
+            noLine: true,
+            btn: true,
+            disabled: true
           }
         }
       },
@@ -918,6 +954,40 @@ Vue.component('main-component', {
   methods: {
     changeItens(item){
       this.activeItens = this.items[item];
+    },
+    loadProdukt(material, type){
+
+      this.activeItens = {
+        1: {
+          id: 1,
+          title: this.items[type][material].title,
+          src: this.items[type][material].src,
+          body: 'podutr',
+          styles: this.items[type][material].styles,
+          img: {
+            styles: this.items[type][material].img.styles
+          },
+          btn: true,
+          noLine: true
+        },
+        2: {
+          id: 2,
+          title: '',
+          src: '',
+          body: '',
+          styles: {
+            
+          },
+          img: {
+            styles: {
+              maxWidth: '100px',
+              maxHeight: '100px'
+            }
+          },
+          btn: true,
+          noLine: true
+        }
+      };
     }
   },
   mounted() {

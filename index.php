@@ -121,7 +121,7 @@
                         </a>
                     </div>
                     <div class="carousel-item rounded">
-                        <img src="public/images/products/plast/P3.webp" class="d-block w-100" alt="..." style="top: 50%;left: 50%;">
+                        <img src="public/images/products/plast2/P5.jpg" class="d-block w-100 mirrored-image" alt="..." style="top: 0%;left: 0%;">
                         <a href="#item">
                             <div class="carousel-inner-inner text-center" @click="changeItens('plastic')">
                                 {{ translate.plastic }}
@@ -146,15 +146,17 @@
             <div v-for="(item, key) in activeItens" class="" :class="item.class">
                 <div class='row' :style="item.styles">
                     <div class="col-3 massive mt-5 text-center">
-                        <img :src="item.src" v-if="item.src != '' " :style="item.img.styles" class="icon rounded" alt="">
-                        <p>{{ item.title }}</p>
+                        <img :src="item.src" v-if="item.src != '' " :style="item.img.styles" 
+                        class="icon rounded" alt="">
+                        <button v-if="!item.btn" @click="loadProdukt(key, item.type)" :class="{disabled: item.disabled}" class="btn btn-danger w-100">{{ item.title }}</button>
+                        <p v-else>{{ item.title }}</p>
                     </div>
                     <div class="col-9 mt-5" :class="item.bodyClass">
                         {{ item.body }}
                     </div>
                 </div>
                 <div v-if="!item.noLine" class='row border-top rd my-0'></div>
-            </div>   height: '200px'
+            </div>
 
             <div class="toast-container position-fixed bottom-0 end-0 p-3">
                 <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
