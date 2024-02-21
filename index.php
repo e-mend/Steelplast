@@ -159,6 +159,38 @@
                         {{ item.body }}
                     </div>
                 </div>
+
+                <div v-if="item.extra" class='row mx-auto text-center text-black presentation fs-4'>
+                    <div class="col-12">
+                        {{ item.extra['workWith'] }}
+                    </div>
+                    <div class="col-12">
+                        {{ item.extra['norms'] }}
+                    </div>
+                    <div v-if="item.extra['normsLoop']">
+                        <div class="col-12" v-for="a as item.extra['normsLoop']">
+                            {{ a }}
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        {{ item.extra['connectionsTitle'] }}
+                    </div>
+                    <div v-if="item.extra['connections']">
+                        <div class="col-12" v-for="b as item.extra['connections']">
+                            {{ b }}
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        {{ item.extra['barsTitle'] }} {{ item.extra['bars'] }}
+                    </div>
+                    <div class="col-12">
+                        {{ item.extra['tubeTitle'] }} {{ item.extra['tube'] }}
+                    </div>
+                    <div class="col-12">
+                        {{ item.extra['plateTitle'] }} {{ item.extra['plate'] }}
+                    </div>
+                </div>
+
                 <div v-if="!item.noLine" class='row border-top rd my-0'></div>
             </div>
 
