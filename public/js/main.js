@@ -111,6 +111,77 @@ const translate = {
     promovendo a excelência em todos os aspectos de nossas operações.`,
     missionTitle: 'Nossa Missão',
   },
+  fr_FR: {
+    steel: 'ACIER',
+    stainlessSteel: 'ACIER INOXYDABLE',
+    stainlessSteelBody: `L'acier inoxydable, connu pour sa durabilité et sa résistance à la corrosion, est le choix idéal pour les applications industrielles et les usages domestiques. Avec son élégance intemporelle et sa faible maintenance, l'inox offre une solution fiable et élégante pour une large gamme de besoins, garantissant qualité et longévité dans chaque application. Découvrez l'excellence de l'inox - la combinaison parfaite de robustesse et de simplicité.`,
+    carbon: 'CARBONE',
+    carbonBody: `L'acier au carbone, synonyme de polyvalence et de robustesse, se distingue comme un matériel fondamental dans diverses applications industrielles. Avec la capacité d'offrir une résistance exceptionnelle et une facilité de moulage, l'acier au carbone est le choix de confiance pour les structures robustes et les composants critiques. Découvrez la force et l'adaptabilité de l'acier au carbone, moteur d'excellence dans divers secteurs.`,
+    galvanized: 'GALVANISÉ',
+    galvanizedBody: `L'acier galvanisé, synonyme de durabilité et de résistance à la corrosion, se distingue comme un choix privilégié pour une variété d'applications. Sa couche de zinc fournit une barrière protectrice efficace, assurant une longévité même dans des environnements difficiles. Découvrez la fiabilité de l'acier galvanisé, la solution idéale pour des structures robustes et durables.`,
+    flanges: 'BRIDES ET RACCORDS',
+    flangesBody: `Rehaussant la robustesse de vos opérations, nos brides et raccords en acier sont le choix ultime pour assurer l'intégrité structurelle et une performance supérieure. Conçus pour résister aux exigences industrielles les plus exigeantes, nos solutions offrent une durabilité exceptionnelle et une précision millimétrique, assurant une connexion fiable dans chaque application. Découvrez la force de la qualité dans les brides et raccords en acier, fondamentaux pour le succès continu de vos projets.`,
+    metal: 'MÉTAL',
+    bronze: 'BRONZE',
+    bronzeBody: `Le bronze d'ingénierie, la fusion parfaite de résistance et de précision, est le choix supérieur pour des applications industrielles exigeantes. Reconnu pour sa résistance à l'usure, à la corrosion et ses excellentes propriétés de usinage, notre bronze d'ingénierie offre des solutions solides pour des composants critiques. Découvrez le pouvoir de l'innovation des matériaux avec le bronze d'ingénierie, façonnant l'avenir de l'excellence industrielle.`,
+    copper: 'CUIVRE',
+    copperBody: `Le cuivre d'ingénierie, l'incarnation de la conduction efficace et de la durabilité, se distingue comme le meilleur choix pour des applications électriques et mécaniques de haute performance. Reconnu pour sa conductivité exceptionnelle et sa résistance à la corrosion, notre cuivre d'ingénierie offre des solutions fiables pour les défis les plus exigeants. Découvrez l'excellence du cuivre d'ingénierie, propulsant l'innovation et l'efficacité dans vos projets.`,
+    aluminum: 'ALUMINIUM',
+    aluminumBody: `L'aluminium d'ingénierie, personnifiant la légèreté et la résistance, se distingue comme un choix idéal pour les innovations en matière de conception et de durabilité. Reconnu pour sa versatilité, notre aluminium d'ingénierie offre des solutions exceptionnelles pour des applications aérospatiales, automobiles et structurelles. Découvrez le potentiel illimité de l'aluminium d'ingénierie, propulsant l'efficacité et la performance de nos projets.`,
+    brass: 'LAITON',
+    brassBody: `Le laiton d'ingénierie, symbole de versatilité et de résistance, se distingue comme le choix premium pour des applications exigeant durabilité et esthétique raffinée. Combinant la durabilité du cuivre et la malléabilité du zinc, notre laiton d'ingénierie offre des solutions exceptionnelles pour des composants précis, élégants. Découvrez la sophistication et la performance incomparables du laiton d'ingénierie, élevant vos projets à un nouveau niveau.`,
+    plastic: 'PLASTIQUE',
+    teflon: 'TEFLON',
+    teflonBody: `Le politétrafluoroéthylène (PTFE), communément connu sous son nom commercial, est synonyme de résistance exceptionnelle et de faible coefficient de friction, et se distingue comme le meilleur choix pour des applications industrielles et technologiques exigeantes. Avec sa capacité unique à résister à des températures élevées et à des produits chimiques agressifs, notre teflon conçu offre des solutions d'avant-garde pour des composants exigeant durabilité et performance supérieure. Découvrez l'innovation contenue dans le teflon d'ingénierie, propulsant l'excellence en ingénierie avancée.`,
+    pa6g: 'PA6G',
+    pa6gBody: `Le nylon coulé PA6G, incorporant durabilité et versatilité, se distingue comme le choix résistant pour des applications industrielles exigeantes. Avec des propriétés mécaniques exceptionnelles, notre nylon coulé offre résistance à l'usure, absorption des chocs et stabilité dimensionnelle, fournissant des solutions de haute performance pour des composants précis. Découvrez la fiabilité et l'innovation encapsulées dans le nylon coulé PA6G, propulsant l'excellence en ingénierie avancée.`,
+    pu: 'PU',
+    puBody: `Le polyuréthane d'ingénierie, symbole de versatilité et de résistance, se distingue comme l'option innovante pour des applications exigeant durabilité et performance supérieure. Avec son adaptabilité exceptionnelle, notre polyuréthane conçu offre des solutions personnalisées pour des composants précis dans divers secteurs industriels. Découvrez l'exceptionnelle flexibilité et résistance du polyuréthane, propulsant l'efficacité et l'innovation dans vos projets.`,
+    celeron: 'CÉLÉRON',
+    celeronBody: `Le Celeron d'ingénierie, synonyme de résistance électrique et mécanique, se distingue comme une option premium pour l'isolation thermique et des applications électriques. Avec sa composition de fibres imprégnées de résine phénolique, notre Celeron offre une durabilité et une stabilité dimensionnelle exceptionnelles, fournissant des solutions fiables pour des environnements exigeants. Découvrez l'innovation et la fiabilité contenues dans le Celeron d'ingénierie, propulsant l'excellence dans l'isolation et les composants électriques.`,
+    rubber: 'CAOUTCHOUC',
+    nbr: 'NBR',
+    nbrBody: `Le NBR d'ingénierie, l'incarnation de la force et de la durabilité, se distingue comme un choix premium pour des applications exigeant une performance exceptionnelle dans des environnements difficiles. Avec ses propriétés mécaniques robustes et sa résistance à divers facteurs environnementaux, notre NBR d'ingénierie offre des solutions fiables pour l'étanchéité, l'isolation et les composants industriels. Découvrez l'excellence encapsulée dans l'ingénierie NBR, conduisant la fiabilité et l'efficacité dans vos projets.`,
+    silicone: 'SILICONE',
+    siliconeBody: `Le silicone d'ingénierie, synonyme de polyvalence et de résistance thermique, se distingue comme le choix principal pour les applications industrielles et médicales. Avec une résistance exceptionnelle aux températures extrêmes et des propriétés de flexibilité, notre silicone d'ingénierie offre des solutions fiables pour l'étanchéité, l'isolation et les dispositifs médicaux avancés. Découvrez l'innovation encapsulée dans le silicone d'ingénierie, élevant l'excellence dans la conception et la performance.`,
+    geomembrane: 'GÉOMEMBRANE',
+    geomembraneBody: `La géomembrane d'ingénierie, un symbole d'imperméabilisation efficace et de durabilité, se distingue comme le choix principal pour les projets géotechniques et de confinement. Avec sa résistance exceptionnelle aux agents chimiques et aux intempéries, notre géomembrane offre des solutions fiables pour le revêtement d'étangs, de décharges et de réservoirs. Découvrez la confiance et la sécurité intégrées dans la géomembrane d'ingénierie, conduisant la qualité et la durabilité dans vos applications.`,
+    neoprene: 'NÉOPRÈNE',
+    neopreneBody: `Le néoprène pour utilisation industrielle, synonyme de résistance et de polyvalence, se distingue comme le choix idéal pour des applications exigeantes. Avec sa durabilité exceptionnelle et sa résistance aux huiles, solvants et intempéries, notre néoprène industriel offre des solutions fiables pour l'étanchéité, l'isolation et les composants résistants à l'usure. Découvrez l'excellence encapsulée dans le néoprène de qualité industrielle, améliorant la performance et la fiabilité dans les environnements industriels.`,
+    title: 'STEELPLAST',
+    home: 'ACCUEIL',
+    products: 'PRODUITS',
+    about: 'PROPOS',
+    values: 'VALEURS D\'ENTREPRISE',
+    contact: 'CONTACT',
+    language: 'LANGUE',
+    aboutBody: `Bienvenue chez Steelplast, une organisation dédiée à l'excellence et à l'innovation. Depuis notre fondation en 2000, nous avons travaillé sans relâche pour offrir des solutions exceptionnelles et établir des relations solides avec nos clients, collaborateurs et partenaires.`,
+    contactBody: "Remplissez le formulaire et nous reviendrons vers vous bientôt.",
+    companyValues: `Qualité sans compromis : Nous nous engageons à offrir uniquement des matériaux d'ingénierie qui répondent aux normes de qualité les plus élevées, assurant la satisfaction et la confiance de nos clients.`,
+    companyValues2: `Innovation Continue : Nous stimulons la créativité et la recherche constante de solutions innovantes, visant à améliorer nos processus et anticiper les besoins du marché.`,
+    companyValues3: `Connexion Globale : Nous croyons en la force des connexions mondiales et l'importance d'intégrer le Brésil dans le scénario international, en promouvant un échange de connaissances et de technologies.`,
+    companyValues4: `Relations de confiance : Nous valorisons la transparence et l'intégrité dans toutes nos relations, cultivant des partenariats à long terme basés sur la confiance et le respect mutuels.`,
+    companyValues5: `Service Personnalisé : Nous donnons la priorité à la satisfaction du client, offrant un service personnalisé et consultatif, s'adaptant aux besoins spécifiques de chaque projet.`,
+    toastTime: 'maintenant',
+    toastTitle: 'Salut, je suis le Steel-bot !',
+    toastBody: 'En accédant au site, vous acceptez les règles de confidentialité.',
+    formBtn: 'Devis',
+    formQuestion: 'Votre entreprise importe-t-elle déjà ?',
+    formAnswer: 'Oui, j\'importe !',
+    formAnswer2: 'Je n\'importe pas !',
+    formResponse: `Désolé, mais à l'instant nous servons uniquement les entreprises qui sont autorisées par l'Administration Fédérale des Recettes à importer des matériaux.`,
+    form: 'Formulaire',
+    close: 'Fermer',
+    loading: 'Chargement...',
+    thanks: 'Merci !',
+    error: 'Une erreur est survenue lors de l\'envoi du formulaire. Veuillez réessayer plus tard.',
+    send: 'Envoyer',
+    companyName: 'Nom de l\'entreprise',
+    companyPhone: 'Téléphone de l\'entreprise',
+    message: 'Message',
+    mission: `Fournir des solutions d'ingénierie innovantes et des matériaux de haute qualité, connectant le Brésil au monde. Nous cherchons à conduire le succès de nos clients en promouvant l'excellence dans tous les aspects de nos opérations.`,
+    missionTitle: 'Notre Mission',
+  },
   en_US: {
     steel: 'STEEL',
     stainlessSteel: 'STAINLESS STEEL',
@@ -324,10 +395,74 @@ const translate = {
     conectando Brasil con el mundo. Buscamos impulsar el éxito de nuestros clientes promoviendo 
     la excelencia en todos los aspectos de nuestras operaciones.`,
     missionTitle: 'Nuestra Mision',
-  }
+  },
 }
 
-const availableLanguages = ['pt_BR', 'en_US', 'es_ES'];
+const translateProdukt = {
+  pt_BR : {
+    inox: {
+      workWith: 'Trabalhamos com o aço Inox 304 e 304L nos seguintes formatos',
+      norms: 'Normas ASTM A240 e A240M',
+      bars: 'Diâmetros de 3mm a 200mm por 1 metro e 3 metros.',
+      barsTitle: 'Barras',
+      tubes: 'Diâmetros de 6mm a 200mm por 1 metro e 3 metros.',
+      tubesTitle: 'Tubos',
+      plate: 'Espessura de 0,40mm a 25,4mm por 1000 x 2000mm e 1000 x 3000mm',
+      plateTitle: 'Placas',
+    },
+    carbon: {
+      workWith: 'Trabalhamos com o aço carbono 4140, 1045, 1018, 1080 e 1095',
+      norms: 'Normas ASTM A322, A108, A36, A516 e A106',
+      bars: 'Diâmetros de 3mm a 200mm por 1 metro e 3 metros.',
+      barsTitle: 'Barras',
+    },
+    galvanized: {
+      workWith: '',
+      norms: 'Normas ASTM A653/A653M',
+      bars: 'Diâmetros de 3mm a 200mm por 1 metro e 3 metros.',
+      barsTitle: 'Barras',
+    },
+    flanges: {
+      workWith: '',
+      norms: 'As normas ASTM relacionadas a flanges e conexões de aço variam dependendo do tipo específico e da aplicação. Aqui estão algumas das normas comuns:',
+      normsLoop: {
+        1: 'Flanges de aço carbono: ASTM A105/A105M',
+        2: 'Flanges de aço inoxidável: ASTM A182/A182M',
+        3: 'Flanges de aço de baixa liga: ASTM A182/A182M'
+      },
+      connections: {
+        1: 'Conexões forjadas de aço carbono e aço de liga: ASTM A105/A105M',
+        2: 'Conexões forjadas de aço inoxidável: ASTM A182/A182M',
+        3: 'Conexões de tubo de aço carbono e aço de liga: ASTM A234/A234M'
+      },
+      connectionsTitle: 'Conexões',
+      bars: 'Diâmetros de 3mm a 200mm por 1 metro e 3 metros.',
+      barsTitle: 'Barras',
+    },
+    bronze: {
+      workWith: '',
+      norms: 'Normas ASTM B584/584M, B505/B505, SAE J461 e J462',
+    },
+    copper: {
+      workWith: '',
+      norms: 'Normas ASTM B5/B5M, B187/B187M, B152/B152M e B133/B133M ',
+    },
+    aluminum: {
+      workWith: '',
+      norms: 'Normas ASTM B221, B209, AMS 4027',
+    },
+    brass: {
+      workWith: '',
+      norms: 'Normas ASTM B16, B124, B135/B135M',
+    },
+    teflon: {
+      workWith: '',
+      norms: 'Norma ASTM D1710',
+    }
+  }
+};
+
+const availableLanguages = ['pt_BR', 'en_US', 'es_ES', 'fr_FR'];
 
 function setCookie(name, value, days) {
   let expires = "";

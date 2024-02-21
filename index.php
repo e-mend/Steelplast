@@ -86,6 +86,10 @@
                         <div class="" class="lang"  @click="changeLanguage('es_ES')">
                             <img src="public\images\icon\icons8-espanha-2-48.png" alt="">
                         </div>
+
+                        <div class="" class="lang"  @click="changeLanguage('fr_FR')">
+                            <img src="public\images\icon\icons8-frança-48.png" alt="">
+                        </div>
                     </div>
                 </div>
             </nav>
