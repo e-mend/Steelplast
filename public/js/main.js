@@ -1055,6 +1055,7 @@ Vue.component('main-component', {
             src: `public/images/products/M2R.png`,
             styles: {
               objectPosition: '50% 50%',
+              marginBottom: '100px'
             },
             img: {
               styles: {

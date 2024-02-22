@@ -146,15 +146,15 @@
 
     <script type="text/x-template" id="main-template">
         <div class="container mx-auto text-black presentation fs-4" id="item">
-            <div v-for="(item, key) in activeItens" class="" :class="item.class">
-                <div class='row' :style="item.styles">
-                    <div class="col-3 massive mt-5 text-center">
+            <div v-for="(item, key) in activeItens" class="mt-1" :class="item.class">
+                <div class='row mt-5' :style="item.styles">
+                    <div class="col-12 col-md-3 massive mt-5 text-center">
                         <img :src="item.src" v-if="item.src != '' " :style="item.img.styles" 
                         class="icon rounded" alt="">
                         <button v-if="!item.btn" @click="loadProdukt(key, item.type)" :class="{disabled: item.disabled}" class="btn btn-danger w-100">{{ item.title }}</button>
                         <p v-else>{{ item.title }}</p>
                     </div>
-                    <div class="col-9 mt-5" :class="item.bodyClass">
+                    <div class="col-12 col-md-9 mt-5" :class="item.bodyClass">
                         {{ item.body }}
                     </div>
                 </div>
