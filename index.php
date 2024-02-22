@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steelplast | Revenda de Materiais</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="public/images/favicon/apple-touch-icon.png">
@@ -43,11 +42,11 @@
     <script type="text/x-template" id="header-template">
         <header id="header">
             <nav class="navbar navbar-expand-lg navbar-light py-4 bk big">
-                <div class="container">
+                <div class="container-fluid">
                     <a class="navbar-brand massive" href="#" id="logo-container">
                         <img class="gear-container" id="logo" src="public/images/logo/Logotipo Horizontal-04-modified.png">
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse d-flex" id="navbarNav">
@@ -180,13 +179,17 @@
                             {{ b }}
                         </div>
                     </div>
-                    <div class="col-12">
-                        {{ item.extra['barsTitle'] }} {{ item.extra['bars'] }}
+                    <div class="col-12" v-if="item.extra['bars']">
+                       <img src="public/images/icon/Barra.png" alt=""
+                       class="icony"> {{ item.extra['barsTitle'] }} {{ item.extra['bars'] }}
                     </div>
-                    <div class="col-12">
-                        {{ item.extra['tubeTitle'] }} {{ item.extra['tube'] }}
+                    <div class="col-12" v-if="item.extra['tube']">
+                        <img src="public/images/icon/coil-steel-production-color-icon-illustration-vector.jpg"
+                         alt="" class="icony"> {{ item.extra['tubeTitle'] }} {{ item.extra['tube'] }}
                     </div>
-                    <div class="col-12">
+                    <div class="col-12" v-if="item.extra['plate']">
+                        <img src="public/images/icon/black-bar-square-3d.png"
+                        class="icony" alt="">
                         {{ item.extra['plateTitle'] }} {{ item.extra['plate'] }}
                     </div>
                 </div>
