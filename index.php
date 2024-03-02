@@ -36,7 +36,6 @@
         <carousel-component></carousel-component>
         <main-component></main-component>
         <form-component></form-component>
-        <!-- <footer-component></footer-component> -->
     </div>
 
     <script type="text/x-template" id="header-template">
@@ -146,15 +145,15 @@
 
     <script type="text/x-template" id="main-template">
         <div class="container mx-auto text-black presentation fs-4" id="item">
-            <div v-for="(item, key) in activeItens" class="mt-1" :class="item.class">
-                <div class='row mt-5' :style="item.styles">
-                    <div class="col-12 col-md-3 massive mt-5 text-center">
+            <div v-for="(item, key) in activeItens" class="mt-1" :class="item.class" class="w-100">
+                <div class='row mt-3' :style="item.styles">
+                    <div class="col-12 col-md-3 massive mt-3 text-center">
                         <img :src="item.src" v-if="item.src != '' " :style="item.img.styles" 
                         class="icon rounded" alt="">
                         <button v-if="!item.btn" @click="loadProdukt(key, item.type)" :class="{disabled: item.disabled}" class="btn btn-danger w-100">{{ item.title }}</button>
                         <p v-else>{{ item.title }}</p>
                     </div>
-                    <div class="col-12 col-md-9 mt-5" :class="item.bodyClass">
+                    <div class="col-12 col-md-9 mt-3" :class="item.bodyClass">
                         {{ item.body }}
                     </div>
                 </div>
@@ -163,31 +162,31 @@
                     <div class="col-12">
                         {{ item.extra['workWith'] }}
                     </div>
-                    <div class="col-12">
+                    <div class="col-12" class="col-12 mt-1">
                         {{ item.extra['norms'] }}
                     </div>
-                    <div v-if="item.extra['normsLoop']">
-                        <div class="col-12" v-for="a as item.extra['normsLoop']">
+                    <div v-if="item.extra['normsLoop']" class="col-12 mt-3">
+                        <div class="col-12" v-for="a in item.extra['normsLoop']">
                             {{ a }}
                         </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 mt-1">
                         {{ item.extra['connectionsTitle'] }}
                     </div>
-                    <div v-if="item.extra['connections']">
-                        <div class="col-12" v-for="b as item.extra['connections']">
+                    <div v-if="item.extra['connections']" class="mt-3">
+                        <div class="col-12" v-for="b in item.extra['connections']">
                             {{ b }}
                         </div>
                     </div>
-                    <div class="col-12" v-if="item.extra['bars']">
+                    <div class="col-12 mt-2" v-if="item.extra['bars']">
                        <img src="public/images/icon/Barra.png" alt=""
                        class="icony"> {{ item.extra['barsTitle'] }} {{ item.extra['bars'] }}
                     </div>
-                    <div class="col-12" v-if="item.extra['tube']">
+                    <div class="col-12 mt-1" v-if="item.extra['tubes']">
                         <img src="public/images/icon/coil-steel-production-color-icon-illustration-vector.jpg"
-                         alt="" class="icony"> {{ item.extra['tubeTitle'] }} {{ item.extra['tube'] }}
+                         alt="" class="icony"> {{ item.extra['tubesTitle'] }} {{ item.extra['tubes'] }}
                     </div>
-                    <div class="col-12" v-if="item.extra['plate']">
+                    <div class="col-12 mt-2" v-if="item.extra['plate']">
                         <img src="public/images/icon/black-bar-square-3d.png"
                         class="icony" alt="">
                         {{ item.extra['plateTitle'] }} {{ item.extra['plate'] }}

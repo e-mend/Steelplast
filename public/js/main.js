@@ -400,7 +400,7 @@ const translate = {
 
 const translateProdukt = {
   pt_BR : {
-    inox: {
+    stainlessSteel: {
       workWith: 'Trabalhamos com o aço Inox 304 e 304L nos seguintes formatos',
       norms: 'Normas ASTM A240 e A240M',
       bars: 'Diâmetros de 3mm a 200mm por 1 metro e 3 metros.',
@@ -458,6 +458,12 @@ const translateProdukt = {
     teflon: {
       workWith: '',
       norms: 'Norma ASTM D1710',
+      barsTitle: 'Barras',
+      bars: 'Diâmetros de 10mm a 500mm por 1 metro e 3 metros.',
+      tubesTitle: 'Tubos',
+      tubes: 'Diâmetros de 50mm a 200mm por 1 metro e 3 metros.',
+      plateTitle: 'Placas',
+      plate: "Espessura de 1 mm a 100mm por 1000 x 1000mm e 1000 x 2000mm."
     },
     p46g: {
       barsTitle: 'Barras',
@@ -484,16 +490,12 @@ const translateProdukt = {
       plate: "Espessura de 0,6 mm a 100mm por 1000 x 2000mm"
     },
     nbr: {
-      barsTitle: 'Barras',
-      bars: 'Diâmetros de 6mm a 200mm por 1000mm',
       tubesTitle: 'Tubos',
       tubes: 'Diâmetros de 9,5mm a 300mm por 1000mm',
-      plateTitle: 'Placas',
-      plate: "Espessura de 0,6 mm a 100mm por 1000 x 2000mm"
     }
   },
   es_ES: {
-    inox: {
+    stainlessSteel: {
       workWith: 'Trabajamos con acero Inox 304 y 304L en los siguientes formatos',
       norms: 'Normas ASTM A240 y A240M',
       bars: 'Diámetros de 3mm a 200mm por 1 metro y 3 metros.',
@@ -551,6 +553,12 @@ const translateProdukt = {
     teflon: {
       workWith: '',
       norms: 'Norma ASTM D1710',
+      barsTitle: 'Barras',
+      bars: 'Diámetros de 10mm a 500mm por 1 metro y 3 metros.',
+      tubesTitle: 'Tubos',
+      tubes: 'Diámetros de 50mm a 200mm por 1 metro y 3 metros.',
+      plateTitle: 'Placas',
+      plate: "Espessura de 1 mm a 100mm por 1000 x 1000mm y 1000 x 2000mm."
     },
     p46g: {
       barsTitle: 'Barras',
@@ -577,16 +585,12 @@ const translateProdukt = {
       plate: "Espesor de 0,6 mm a 100mm por 1000 x 2000mm"
     },
     nbr: {
-      barsTitle: 'Barras',
-      bars: 'Diámetros de 6mm a 200mm por 1000mm',
       tubesTitle: 'Tubos',
       tubes: 'Diámetros de 9,5mm a 300mm por 1000mm',
-      plateTitle: 'Placas',
-      plate: "Espesor de 0,6 mm a 100mm por 1000 x 2000mm"
     }
   },
   en_US: {
-    inox: {
+    stainlessSteel: {
       workWith: 'We work with 304 and 304L stainless steel in the following formats',
       norms: 'ASTM A240 and A240M standards',
       bars: 'Diameters from 3mm to 200mm by 1 meter and 3 meters.',
@@ -644,6 +648,12 @@ const translateProdukt = {
     teflon: {
       workWith: '',
       norms: 'ASTM D1710 standard',
+      barsTitle: 'Bars',
+      bars: 'Diameters from 10mm to 500mm in 1 meter and 3 meters lengths.',
+      tubesTitle: 'Tubes',
+      tubes: 'Diameters from 50mm to 200mm in 1 meter and 3 meters lengths.',
+      plateTitle: 'Plates',
+      plate: 'Thickness from 1mm to 100mm in 1000 x 1000mm and 1000 x 2000mm sizes.'
     },
     p46g: {
       barsTitle: 'Bars',
@@ -670,16 +680,12 @@ const translateProdukt = {
       plate: "Thickness from 0.6mm to 100mm by 1000 x 2000mm"
     },
     nbr: {
-      barsTitle: 'Bars',
-      bars: 'Diameters from 6mm to 200mm by 1000mm',
       tubesTitle: 'Tubes',
       tubes: 'Diameters from 9.5mm to 300mm by 1000mm',
-      plateTitle: 'Plates',
-      plate: "Thickness from 0.6mm to 100mm by 1000 x 2000mm"
     }
   },
   fr_FR: {
-    inox: {
+    stainlessSteel: {
       workWith: 'Nous travaillons avec l\'acier inoxydable 304 et 304L dans les formats suivants',
       norms: 'Normes ASTM A240 et A240M',
       bars: 'Diamètres de 3mm à 200mm par 1 mètre et 3 mètres.',
@@ -737,6 +743,12 @@ const translateProdukt = {
     teflon: {
       workWith: '',
       norms: 'Norme ASTM D1710',
+      barsTitle: 'Barres',
+      bars: 'Diamètres de 10mm à 500mm en longueurs de 1 mètre et 3 mètres.',
+      tubesTitle: 'Tubes',
+      tubes: 'Diamètres de 50mm à 200mm en longueurs de 1 mètre et 3 mètres.',
+      plateTitle: 'Plaques',
+      plate: 'Épaisseurs de 1mm à 100mm en tailles de 1000 x 1000mm et 1000 x 2000mm.'
     },
     p46g: {
       barsTitle: 'Barres',
@@ -763,12 +775,8 @@ const translateProdukt = {
       plate: 'Épaisseur de 0,6 mm à 100mm pour 1000 x 2000mm'
     },
     nbr: {
-      barsTitle: 'Barres',
-      bars: 'Diamètres de 6mm à 200mm par 1000mm',
       tubesTitle: 'Tubes',
       tubes: 'Diamètres de 9,5mm à 300mm par 1000mm',
-      plateTitle: 'Plaques',
-      plate: 'Épaisseur de 0,6 mm à 100mm pour 1000 x 2000mm'
     }
   }  
 };
@@ -1115,7 +1123,7 @@ Vue.component('main-component', {
             body: translate[language].siliconeBody,
             type: 'rubber',
             id: 2,
-            src: `public/images/products/rubber/C15.png`,
+            src: `public/images/products/B2.png`,
             styles: {
               objectPosition: '50% 50%',
             },
@@ -1274,13 +1282,13 @@ Vue.component('main-component', {
             body: translate[language].flangesBody,
             type: 'steel',
             id: 8,
-            src: `public/images/products/B2.png`,
+            src: `public/images/products/A4.jpg`,
             styles: {
               objectPosition: '50% 50%',
             },
             img: {
               styles: {
-                transform: 'scaleX(1)'
+                transform: 'scaleX(-1)'
               }
             }
           }
@@ -1403,7 +1411,6 @@ Vue.component('main-component', {
       this.activeItens = this.items[item];
     },
     loadProdukt(material, type){
-
       this.activeItens = {
         1: {
           id: 1,
