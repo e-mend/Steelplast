@@ -1046,14 +1046,15 @@ Vue.component('main-component', {
             id: 1,
             src: `public/images/products/M1B.jpeg`,
             styles: {
-
+              marginLeft:'-100px'
             },
             img: {
               styles: {
                 ObjectPosition: '100% 100%',
                 objectFit: 'cover',
               }
-            }
+            },
+            noLine: true
           },
           copper: {
             title: translate[language].copper,
@@ -1063,13 +1064,14 @@ Vue.component('main-component', {
             src: `public/images/products/M2R.png`,
             styles: {
               objectPosition: '50% 50%',
-              marginBottom: '100px'
+              marginLeft:'0px'
             },
             img: {
               styles: {
                 transform: 'scaleX(-1)'
               }
-            }
+            },
+            noLine: true
           },
           aluminum: {
             title: translate[language].aluminum,
@@ -1079,12 +1081,14 @@ Vue.component('main-component', {
             src: `public/images/products/M3R.jpg`,
             styles: {
               objectPosition: '50% 50%',
+              marginLeft:'100px'
             },
             img: {
               styles: {
-                transform: 'scaleX(-1)'
+                transform: 'scaleX(-1)',
               }
-            }
+            },
+            noLine: true
           },
           brass: {
             title: translate[language].brass,
@@ -1094,12 +1098,13 @@ Vue.component('main-component', {
             src: `public/images/products/M4C2.png`,
             styles: {
               objectPosition: '50% 50%',
+              marginLeft:'200px'
             },
             img: {
               styles: {
-                
               }
-            }
+            },
+            noLine: true
           },
         },
         rubber: {
@@ -1111,12 +1116,14 @@ Vue.component('main-component', {
             src: `public/images/products/b1.png`,
             styles: {
               objectPosition: '50% 50%',
+              marginLeft:'-100px'
             },
             img: {
               styles: {
                 objectFit: 'cover',
               }
-            }
+            },
+            noLine: true
           },
           silicone: {
             title: translate[language].silicone,
@@ -1126,12 +1133,14 @@ Vue.component('main-component', {
             src: `public/images/products/B2.png`,
             styles: {
               objectPosition: '50% 50%',
+              marginLeft:'0px'
             },
             img: {
               styles: {
                 objectFit: 'cover',
               }
-            }
+            },
+            noLine: true
           },
           geomembrane: {
             title: translate[language].geomembrane,
@@ -1141,13 +1150,15 @@ Vue.component('main-component', {
             src: `public/images/products/rubber/c4.png`,
             styles: {
               objectPosition: '50% 50%',
+              marginLeft:'100px'
             },
             img: {
               styles: {
                 objectFit: 'cover',
                 transform: 'scaleX(-1)'
               }
-            }
+            },
+            noLine: true
           },
           neoprene: {
             title: translate[language].neoprene,
@@ -1157,13 +1168,15 @@ Vue.component('main-component', {
             src: `public/images/products/B4.png`,
             styles: {
               objectPosition: '0% 50%',
+              marginLeft:'200px'
             },
             img: {
               styles: {
                 objectFit: 'cover',
                 transform: 'scaleX(-1)'
               }
-            }
+            },
+            noLine: true
           }
         },
         plastic: {
@@ -1175,12 +1188,14 @@ Vue.component('main-component', {
             src: `public/images/products/P1R.png`,
             styles: {
               objectPosition: '50% 50%',
+              marginLeft:'-100px'
             },
             img: {
               styles: {
                 objectFit: 'cover',
               }
-            }
+            },
+            noLine: true
           },
           pa6g: {
             title: translate[language].pa6g,
@@ -1190,12 +1205,14 @@ Vue.component('main-component', {
             src: `public/images/products/P2R.jpeg`,
             styles: {
               objectPosition: '50% 50%',
+              marginLeft:'0px'
             },
             img: {
               styles: {
                 objectFit: 'cover',
               }
-            }
+            },
+            noLine: true
           },
           pu: {
             title: translate[language].pu,
@@ -1205,13 +1222,15 @@ Vue.component('main-component', {
             src: `public/images/products/P3R.png`,
             styles: {
               objectPosition: '50% 50%',
+              marginLeft:'100px'
             },
             img: {
               styles: {
                 objectFit: 'cover',
                 transform: 'scaleX(-1)'
               }
-            }
+            },
+            noLine: true
           },
           celeron: {
             title: translate[language].celeron,
@@ -1221,13 +1240,15 @@ Vue.component('main-component', {
             src: `public/images/products/P4R.png`,
             styles: {
               objectPosition: '50% 50%',
+              marginLeft:'200px'
             },
             img: {
               styles: {
                 objectFit: 'cover',
                 transform: 'scaleX(-1)'
               }
-            }
+            },
+            noLine: true
           }
         },
         steel: {
@@ -1239,12 +1260,14 @@ Vue.component('main-component', {
             src: `public/images/products/A1B.png`,
             styles: {
               objectPosition: '50% 50%',
+              marginLeft:'-100px'
             },
             img: {
               styles: {
                 transform: 'scaleX(1)'
               }
-            }
+            },
+            noLine: true
           },
           carbon: {
             title: translate[language].carbon,
@@ -1254,13 +1277,15 @@ Vue.component('main-component', {
             src: `public/images/products/A2TQ31.jpeg`,
             styles: {
               objectPosition: '50% 50%',
+              marginLeft:'0px'
             },
             img: {
               styles: {
                 transform: 'scaleX(-1)',
                 objectFit: 'cover',
               }
-            }
+            },
+            noLine: true
           },
           galvanized: {
             title: translate[language].galvanized,
@@ -1270,12 +1295,14 @@ Vue.component('main-component', {
             src: `public/images/products/A3B6.jpeg`,
             styles: {
               objectPosition: '50% 50%',
+              marginLeft:'100px'
             },
             img: {
               styles: {
                 transform: 'scaleX(-1)'
               }
-            }
+            },
+            noLine: true
           },
           flanges: {
             title: translate[language].flanges,
@@ -1285,12 +1312,14 @@ Vue.component('main-component', {
             src: `public/images/products/A4.jpg`,
             styles: {
               objectPosition: '50% 50%',
+              marginLeft:'200px'
             },
             img: {
               styles: {
                 transform: 'scaleX(-1)'
               }
-            }
+            },
+            noLine: true
           }
         },
         about: {
