@@ -1111,6 +1111,7 @@ Vue.component('main-component', {
             src: `public/images/products/M4C2.png`,
             styles: {
               objectPosition: '50% 50%',
+              width: '1000px'
             },
             img: {
               styles: {
@@ -1193,6 +1194,7 @@ Vue.component('main-component', {
             },
             styles: {
               objectPosition: '0% 50%',
+              width: '1000px'
             },
             img: {
               styles: {
@@ -1277,6 +1279,7 @@ Vue.component('main-component', {
             },
             styles: {
               objectPosition: '50% 50%',
+              width: '1000px'
             },
             img: {
               styles: {
@@ -1361,6 +1364,7 @@ Vue.component('main-component', {
             },
             styles: {
               objectPosition: '50% 50%',
+              width: '1000px'
             },
             img: {
               styles: {

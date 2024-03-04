@@ -40,57 +40,58 @@
 
     <script type="text/x-template" id="header-template">
         <header id="header">
-            <nav class="navbar navbar-expand-lg navbar-light py-4 bk big">
-                <div class="container-fluid">
-                    <a class="navbar-brand massive" href="#" id="logo-container">
-                        <img class="gear-container" id="logo" src="public/images/logo/Logotipo Horizontal-04-modified.png">
+        <nav class="navbar navbar-expand-lg navbar-light py-4 bk big">
+    <div class="container-fluid">
+        <a class="navbar-brand massive" href="#" id="logo-container">
+            <img class="gear-container" id="logo" src="public/images/logo/Logotipo Horizontal-04-modified.png">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav"> <!-- Added 'collapse' class here -->
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link fs-4" href="#item">
+                        {{ homeTitle }}
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse d-flex" id="navbarNav">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <a class="nav-link fs-4" href="#item">
-                                    {{ homeTitle }}
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link fs-4" href="#item">
-                                    {{ productsTitle }}
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link fs-4" href="#item" @click="changeItens('about')">
-                                    {{ aboutTitle }}
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link fs-4" href="#btn" data-bs-toggle="modal" data-bs-target="#budgetModal">
-                                    {{ contactTitle }}
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="d-flex" id="lang-container">
-                        <div class="" class="lang" @click="changeLanguage('pt_BR')">
-                            <img src="public\images\icon\icons8-brasil-48.png"  alt="">
-                        </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-4" href="#item">
+                        {{ productsTitle }}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-4" href="#item" @click="changeItens('about')">
+                        {{ aboutTitle }}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-4" href="#btn" data-bs-toggle="modal" data-bs-target="#budgetModal">
+                        {{ contactTitle }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="d-flex" id="lang-container">
+            <div class="" class="lang" @click="changeLanguage('pt_BR')">
+                <img src="public\images\icon\icons8-brasil-48.png"  alt="">
+            </div>
 
-                        <div class="" class="lang" @click="changeLanguage('en_US')">
-                            <img src="public\images\icon\icons8-eua-48.png" alt="">
-                        </div>
+            <div class="" class="lang" @click="changeLanguage('en_US')">
+                <img src="public\images\icon\icons8-eua-48.png" alt="">
+            </div>
 
-                        <div class="" class="lang"  @click="changeLanguage('es_ES')">
-                            <img src="public\images\icon\icons8-espanha-2-48.png" alt="">
-                        </div>
+            <div class="" class="lang"  @click="changeLanguage('es_ES')">
+                <img src="public\images\icon\icons8-espanha-2-48.png" alt="">
+            </div>
 
-                        <div class="" class="lang"  @click="changeLanguage('fr_FR')">
-                            <img src="public\images\icon\icons8-frança-48.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </nav>
+            <div class="" class="lang"  @click="changeLanguage('fr_FR')">
+                <img src="public\images\icon\icons8-frança-48.png" alt="">
+            </div>
+        </div>
+    </div>
+</nav>
+
         </header>
     </script>
 
@@ -146,7 +147,7 @@
     <script type="text/x-template" id="main-template">
         <div class="container mx-auto text-black presentation fs-4" id="item">
             <div v-for="(item, key) in activeItens" class="mt-1" :class="item.class">
-                <div class='row mt-5' :style="item.styles" :class="item.rowClass">
+                <div v-if="item.body != ''" class='row mt-5' :style="item.styles" :class="item.rowClass">
                     <div class="col-12 col-md-3 massive mt-5 text-center">
                         <img :src="item.src" v-if="item.src != '' " :style="item.img.styles" 
                         class="icon rounded" alt="">
@@ -158,8 +159,23 @@
                     </div>
                 </div>
 
-                <div v-if="item.extra" class='row mx-auto text-center text-black presentation fs-4'>
-                    <div class="col-12">
+                <div v-if="item.extra" class='row mx-auto text-center text-black presentation fs-4 justify-content-center'>
+                   <div class="row my-2">
+                        <div class="col-12 col-md-4  mt-2 py-3 rounded shadow-lg bg-light" v-if="item.extra['bars']">
+                        <img src="public/images/icon/Barra.png" alt=""
+                        class="icony"> {{ item.extra['barsTitle'] }} {{ item.extra['bars'] }}
+                        </div>
+                        <div class="col-12 col-md-4  mt-2 py-3 rounded shadow-lg bg-light" v-if="item.extra['tubes']">
+                            <img src="public/images/icon/coil-steel-production-color-icon-illustration-vector-removebg-preview.png"
+                            alt="" class="icony"> {{ item.extra['tubesTitle'] }} {{ item.extra['tubes'] }}
+                        </div>
+                        <div class="col-12 col-md-4  mt-2 py-3 rounded shadow-lg bg-light" v-if="item.extra['plate']">
+                            <img src="public/images/icon/black-bar-square-3d.png"
+                            class="icony" alt="">
+                            {{ item.extra['plateTitle'] }} {{ item.extra['plate'] }}
+                        </div>
+                   </div>
+                   <div class="col-12 mt-2">
                         {{ item.extra['workWith'] }}
                     </div>
                     <div class="col-12" class="col-12 mt-1">
@@ -177,19 +193,6 @@
                         <div class="col-12" v-for="b in item.extra['connections']">
                             {{ b }}
                         </div>
-                    </div>
-                    <div class="col-12 mt-2" v-if="item.extra['bars']">
-                       <img src="public/images/icon/Barra.png" alt=""
-                       class="icony"> {{ item.extra['barsTitle'] }} {{ item.extra['bars'] }}
-                    </div>
-                    <div class="col-12 mt-1" v-if="item.extra['tubes']">
-                        <img src="public/images/icon/coil-steel-production-color-icon-illustration-vector.jpg"
-                         alt="" class="icony"> {{ item.extra['tubesTitle'] }} {{ item.extra['tubes'] }}
-                    </div>
-                    <div class="col-12 mt-2" v-if="item.extra['plate']">
-                        <img src="public/images/icon/black-bar-square-3d.png"
-                        class="icony" alt="">
-                        {{ item.extra['plateTitle'] }} {{ item.extra['plate'] }}
                     </div>
                 </div>
 
