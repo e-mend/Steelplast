@@ -289,11 +289,27 @@
 }
 
 .hellback{
-    width: 150px;
-}
+    width: 100%;   
+   }
 
 .w-85{
     width: 90%;
+}
+
+.one{
+    margin-left: -100px;
+}
+
+.two{
+    margin-left: 0px;
+}
+
+.three{
+    margin-left: 100px;
+}
+
+.four{
+    margin-left: 200px;
 }
 
 @media screen and (max-width: 768px) {
@@ -322,6 +338,22 @@
         width:300px !important;
         height: 300px !important;
         overflow: hidden;
+    }
+
+    .one{
+        margin-left: 0px;
+    }
+    
+    .two{
+        margin-left: 0px;
+    }
+    
+    .three{
+        margin-left: 0px;
+    }
+    
+    .four{
+        margin-left: 0px;
     }
     
 }

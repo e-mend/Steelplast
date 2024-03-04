@@ -1045,8 +1045,11 @@ Vue.component('main-component', {
             type: 'metal',
             id: 1,
             src: `public/images/products/M1B.jpeg`,
+            rowClass: {
+              'hellback': true,
+              'one': true
+            },
             styles: {
-              marginLeft:'-100px'
             },
             img: {
               styles: {
@@ -1064,7 +1067,10 @@ Vue.component('main-component', {
             src: `public/images/products/M2R.png`,
             styles: {
               objectPosition: '50% 50%',
-              marginLeft:'0px'
+            },
+            rowClass: {
+              'hellback': true,
+              'two': true
             },
             img: {
               styles: {
@@ -1081,7 +1087,10 @@ Vue.component('main-component', {
             src: `public/images/products/M3R.jpg`,
             styles: {
               objectPosition: '50% 50%',
-              marginLeft:'100px'
+            },
+            rowClass: {
+              'hellback': true,
+              'three': true
             },
             img: {
               styles: {
@@ -1095,10 +1104,13 @@ Vue.component('main-component', {
             body: translate[language].brassBody,
             type: 'metal',
             id: 4,
+            rowClass: {
+              'hellback': true,
+              'four': true
+            },
             src: `public/images/products/M4C2.png`,
             styles: {
               objectPosition: '50% 50%',
-              marginLeft:'200px'
             },
             img: {
               styles: {
@@ -1114,9 +1126,12 @@ Vue.component('main-component', {
             type: 'rubber',
             id: 1,
             src: `public/images/products/b1.png`,
+            rowClass: {
+              'hellback': true,
+              'one': true
+            },
             styles: {
               objectPosition: '50% 50%',
-              marginLeft:'-100px'
             },
             img: {
               styles: {
@@ -1131,9 +1146,12 @@ Vue.component('main-component', {
             type: 'rubber',
             id: 2,
             src: `public/images/products/B2.png`,
+            rowClass: {
+              'hellback': true,
+              'two': true
+            },
             styles: {
               objectPosition: '50% 50%',
-              marginLeft:'0px'
             },
             img: {
               styles: {
@@ -1148,9 +1166,12 @@ Vue.component('main-component', {
             type: 'rubber',
             id: 3,
             src: `public/images/products/rubber/c4.png`,
+            rowClass: {
+              'hellback': true,
+              'three': true
+            },
             styles: {
               objectPosition: '50% 50%',
-              marginLeft:'100px'
             },
             img: {
               styles: {
@@ -1166,9 +1187,12 @@ Vue.component('main-component', {
             type: 'rubber',
             id: 4,
             src: `public/images/products/B4.png`,
+            rowClass: {
+              'hellback': true,
+              'four': true
+            },
             styles: {
               objectPosition: '0% 50%',
-              marginLeft:'200px'
             },
             img: {
               styles: {
@@ -1186,9 +1210,12 @@ Vue.component('main-component', {
             type: 'plastic',
             id: 1,
             src: `public/images/products/P1R.png`,
+            rowClass: {
+              'hellback': true,
+              'one': true
+            },
             styles: {
               objectPosition: '50% 50%',
-              marginLeft:'-100px'
             },
             img: {
               styles: {
@@ -1203,9 +1230,12 @@ Vue.component('main-component', {
             type: 'plastic',
             id: 2,
             src: `public/images/products/P2R.jpeg`,
+            rowClass: {
+              'hellback': true,
+              'two': true
+            },
             styles: {
               objectPosition: '50% 50%',
-              marginLeft:'0px'
             },
             img: {
               styles: {
@@ -1220,9 +1250,12 @@ Vue.component('main-component', {
             type: 'plastic',
             id: 3,
             src: `public/images/products/P3R.png`,
+            rowClass: {
+              'hellback': true,
+              'three': true
+            },
             styles: {
               objectPosition: '50% 50%',
-              marginLeft:'100px'
             },
             img: {
               styles: {
@@ -1238,9 +1271,12 @@ Vue.component('main-component', {
             type: 'plastic',
             id: 4,
             src: `public/images/products/P4R.png`,
+            rowClass: {
+              'hellback': true,
+              'four': true
+            },
             styles: {
               objectPosition: '50% 50%',
-              marginLeft:'200px'
             },
             img: {
               styles: {
@@ -1258,9 +1294,12 @@ Vue.component('main-component', {
             type: 'steel',
             id: 5,
             src: `public/images/products/A1B.png`,
+            rowClass: {
+              'hellback': true,
+              'one': true
+            },
             styles: {
               objectPosition: '50% 50%',
-              marginLeft:'-100px'
             },
             img: {
               styles: {
@@ -1275,9 +1314,12 @@ Vue.component('main-component', {
             type: 'steel',
             id: 6,
             src: `public/images/products/A2TQ31.jpeg`,
+            rowClass: {
+              'hellback': true,
+              'two': true
+            },
             styles: {
               objectPosition: '50% 50%',
-              marginLeft:'0px'
             },
             img: {
               styles: {
@@ -1293,9 +1335,12 @@ Vue.component('main-component', {
             type: 'steel',
             id: 7,
             src: `public/images/products/A3B6.jpeg`,
+            rowClass: {
+              'hellback': true,
+              'three': true
+            },
             styles: {
               objectPosition: '50% 50%',
-              marginLeft:'100px'
             },
             img: {
               styles: {
@@ -1310,9 +1355,12 @@ Vue.component('main-component', {
             type: 'steel',
             id: 8,
             src: `public/images/products/A4.jpg`,
+            rowClass: {
+              'hellback': true,
+              'four': true
+            },
             styles: {
               objectPosition: '50% 50%',
-              marginLeft:'200px'
             },
             img: {
               styles: {
@@ -1328,6 +1376,9 @@ Vue.component('main-component', {
             title: translate[language].about,
             src: 'public/images/logo/Icone 02.jpg',
             body: translate[language].aboutBody,
+            rowClass: {
+              'hellback': true
+            },
             styles: {
               
             },
@@ -1346,7 +1397,9 @@ Vue.component('main-component', {
             src: 'public/images/logo/Icone-01.jpg',
             body: translate[language].companyValues,
             styles: {
-              height: '150px'
+            },
+            rowClass: {
+              'hellback': true
             },
             img: {
               styles: {
@@ -1363,8 +1416,8 @@ Vue.component('main-component', {
             title: '',
             src: '',
             body: translate[language].companyValues2,
-            styles: {
-              height: '150px'
+            rowClass: {
+              'hellback': true
             },
             img: {
               styles: {
@@ -1380,8 +1433,8 @@ Vue.component('main-component', {
             title: '',
             src: '',
             body: translate[language].companyValues3,
-            styles: {
-              height: '150px'
+            rowClass: {
+              'hellback': true
             },
             img: {
               styles: {
@@ -1396,8 +1449,8 @@ Vue.component('main-component', {
             title: '',
             src: '',
             body: translate[language].companyValues4,
-            styles: {
-              height: '150px'
+            rowClass: {
+              'hellback': true
             },
             img: {
               styles: {
@@ -1412,8 +1465,8 @@ Vue.component('main-component', {
             title: '',
             src: 'public/images/logo/QR_CODE.png',
             body: translate[language].companyValues5,
-            styles: {
-              height: '150px'
+            rowClass: {
+              'hellback': true
             },
             img: {
               styles: {
