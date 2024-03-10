@@ -409,18 +409,32 @@ const translateProdukt = {
       tubesTitle: 'Tubos',
       plate: 'Espessura de 0,40mm a 25,4mm por 1000 x 2000mm e 1000 x 3000mm',
       plateTitle: 'Placas',
+      coil: 'Espessura de 0,30mm a 3mm com largura de 600mm',
+      coilTitle: 'Bobinas',
     },
     carbon: {
       workWith: 'Trabalhamos com o aço carbono 4140, 1045, 1018, 1080 e 1095',
       norms: 'Normas ASTM A322, A108, A36, A516 e A106',
-      bars: 'Diâmetros de 3mm a 200mm por 1 metro e 3 metros.',
+      bars: 'Espessura de 0,40mm a 25,4mm por 1000 x 2000mm e 1000 x 3000mm',
       barsTitle: 'Barras',
+      tubes: 'Diâmetros de 10,2mm a 400mm por 3 e 6 metros',
+      tubesTitle: 'Tubos',
+      plate: 'Espessura de 0,40mm a 25,4mm por 1000 x 2000mm e 1000 x 3000mm',
+      plateTitle: 'Placas',
+      coil: 'Espessura de 0,30mm a 5mm com largura de 600mm',
+      coilTitle: 'Bobinas',
     },
     galvanized: {
       workWith: '',
       norms: 'Normas ASTM A653/A653M',
       bars: 'Diâmetros de 3mm a 200mm por 1 metro e 3 metros.',
       barsTitle: 'Barras',
+      tubes: 'Diâmetros de 12mm a 400mm por 3 e 6 metros',
+      tubesTitle: 'Tubos',
+      plate: 'Espessura de 0,40mm a 25,4mm por 1000 x 2000mm e 1000 x 3000mm',
+      plateTitle: 'Placas',
+      coil: 'Espessura de 0,30mm a 5mm com largura de 600mm',
+      coilTitle: 'Bobinas',
     },
     flanges: {
       workWith: '',
@@ -436,24 +450,54 @@ const translateProdukt = {
         3: 'Conexões de tubo de aço carbono e aço de liga: ASTM A234/A234M'
       },
       connectionsTitle: 'Conexões',
-      bars: 'Diâmetros de 3mm a 200mm por 1 metro e 3 metros.',
-      barsTitle: 'Barras',
     },
     bronze: {
       workWith: '',
       norms: 'Normas ASTM B584/584M, B505/B505, SAE J461 e J462',
+      bars: 'Diametro de 6,35mm a 400mm por 1000mm ou 3000mm.',
+      barsTitle: 'Barras',
+      tubes: 'Diametro de 76,20mm a 127mm por 1000mm ou 3000mm.',
+      tubesTitle: 'Tubos',
+      plate: 'Espessura de 1,5mm a 3,17mm com largura de 290mm ou 580mm.',
+      plateTitle: 'Placas',
+      coil: 'Espessura de 0,10mm a 1,40mm com largura de 290mm ou 580mm.',
+      coilTitle: 'Bobinas',
     },
     copper: {
       workWith: '',
       norms: 'Normas ASTM B5/B5M, B187/B187M, B152/B152M e B133/B133M ',
+      bars: 'Diametro de 3,17mm a 304,80mm por 1000mm ou 3000mmm.',
+      barsTitle: 'Barras',
+      tubes: 'Diametro de 76,20mm a 127mm por 1000mm ou 3000mm.',
+      tubesTitle: 'Tubos',
+      plate: 'Espessura de 1mm a 3,17mm  por 600 x 1200mm ou 1000 x 2000mm.',
+      plateTitle: 'Placas',
+      coil: 'Espessura de 0,10mm a 1,40mm com largura de 305mm ou 600mm.',
+      coilTitle: 'Bobinas',
     },
     aluminum: {
       workWith: '',
       norms: 'Normas ASTM B221, B209, AMS 4027',
+      bars: 'Diametro de  6,35mm a 165,10mm por 1000mm ou 3000mm.',
+      barsTitle: 'Barras',
+      tubes: 'Diametro de 9,52mm a 168,28mm por 1000mm ou 3000mm.',
+      tubesTitle: 'Tubos',
+      plate: 'Espessura de 5mm a 203,2mm por 1000 x 2000mm ou 1000 x 3000mm.',
+      plateTitle: 'Placas',
+      coil: 'Espessura de 0,30mm a 3mm com largura de 305mm ou 600mm.',
+      coilTitle: 'Bobinas',
     },
     brass: {
       workWith: '',
       norms: 'Normas ASTM B16, B124, B135/B135M',
+      bars: 'Diametro de 28,57mm a 203,20mm por 1000mm ou 3000mm.',
+      barsTitle: 'Barras',
+      tubes: 'Diamentro 6,35mm a 203,20mm por 1000mm ou 3000mm.',
+      tubesTitle: 'Tubos',
+      plate: 'Espessura 3,97mm a 76,20mm de 600mm x 1200mm ou 1000 x 2000mm.',
+      plateTitle: 'Placas',
+      coil: 'Espessura de 0,10mm a 3mm por 305mm ou 600mm.',
+      coilTitle: 'Bobinas',
     },
     teflon: {
       workWith: '',
@@ -465,7 +509,7 @@ const translateProdukt = {
       plateTitle: 'Placas',
       plate: "Espessura de 1 mm a 100mm por 1000 x 1000mm e 1000 x 2000mm."
     },
-    p46g: {
+    pa6g: {
       barsTitle: 'Barras',
       bars: 'Diâmetros de 60mm a 500mm por 1000 e 3000mm.',
       tubesTitle: 'Tubos',
@@ -488,15 +532,11 @@ const translateProdukt = {
       tubes: 'Diâmetros de 9,5mm a 300mm por 1000mm',
       plateTitle: 'Placas',
       plate: "Espessura de 0,6 mm a 100mm por 1000 x 2000mm"
-    },
-    nbr: {
-      tubesTitle: 'Tubos',
-      tubes: 'Diâmetros de 9,5mm a 300mm por 1000mm',
     }
   },
   es_ES: {
     stainlessSteel: {
-      workWith: 'Trabajamos con acero Inox 304 y 304L en los siguientes formatos',
+      workWith: 'Trabajamos con acero inoxidable 304 y 304L en los siguientes formatos',
       norms: 'Normas ASTM A240 y A240M',
       bars: 'Diámetros de 3mm a 200mm por 1 metro y 3 metros.',
       barsTitle: 'Barras',
@@ -504,26 +544,40 @@ const translateProdukt = {
       tubesTitle: 'Tubos',
       plate: 'Espesor de 0,40mm a 25,4mm por 1000 x 2000mm y 1000 x 3000mm',
       plateTitle: 'Placas',
+      coil: 'Espesor de 0,30mm a 3mm con ancho de 600mm',
+      coilTitle: 'Bobinas',
     },
     carbon: {
       workWith: 'Trabajamos con acero al carbono 4140, 1045, 1018, 1080 y 1095',
       norms: 'Normas ASTM A322, A108, A36, A516 y A106',
-      bars: 'Diámetros de 3mm a 200mm por 1 metro y 3 metros.',
+      bars: 'Espesor de 0,40mm a 25,4mm por 1000 x 2000mm y 1000 x 3000mm',
       barsTitle: 'Barras',
+      tubes: 'Diámetros de 10,2mm a 400mm por 3 y 6 metros',
+      tubesTitle: 'Tubos',
+      plate: 'Espesor de 0,40mm a 25,4mm por 1000 x 2000mm y 1000 x 3000mm',
+      plateTitle: 'Placas',
+      coil: 'Espesor de 0,30mm a 5mm con ancho de 600mm',
+      coilTitle: 'Bobinas',
     },
     galvanized: {
       workWith: '',
       norms: 'Normas ASTM A653/A653M',
       bars: 'Diámetros de 3mm a 200mm por 1 metro y 3 metros.',
       barsTitle: 'Barras',
+      tubes: 'Diámetros de 12mm a 400mm por 3 y 6 metros',
+      tubesTitle: 'Tubos',
+      plate: 'Espesor de 0,40mm a 25,4mm por 1000 x 2000mm y 1000 x 3000mm',
+      plateTitle: 'Placas',
+      coil: 'Espesor de 0,30mm a 5mm con ancho de 600mm',
+      coilTitle: 'Bobinas',
     },
     flanges: {
       workWith: '',
-      norms: 'Las normas ASTM relacionadas a flanges y conexiones de acero varían dependiendo del tipo específico y de la aplicación. Aquí están algunas de las normas comunes:',
+      norms: 'Las normas ASTM relacionadas con bridas y conexiones de acero varían dependiendo del tipo específico y la aplicación. Aquí están algunas de las normas comunes:',
       normsLoop: {
-        1: 'Flanges de acero al carbono: ASTM A105/A105M',
-        2: 'Flanges de acero inoxidable: ASTM A182/A182M',
-        3: 'Flanges de acero de baja aleación: ASTM A182/A182M'
+        1: 'Bridas de acero al carbono: ASTM A105/A105M',
+        2: 'Bridas de acero inoxidable: ASTM A182/A182M',
+        3: 'Bridas de acero de baja aleación: ASTM A182/A182M'
       },
       connections: {
         1: 'Conexiones forjadas de acero al carbono y acero de aleación: ASTM A105/A105M',
@@ -531,24 +585,54 @@ const translateProdukt = {
         3: 'Conexiones de tubo de acero al carbono y acero de aleación: ASTM A234/A234M'
       },
       connectionsTitle: 'Conexiones',
-      bars: 'Diámetros de 3mm a 200mm por 1 metro y 3 metros.',
-      barsTitle: 'Barras',
     },
     bronze: {
       workWith: '',
       norms: 'Normas ASTM B584/584M, B505/B505, SAE J461 y J462',
+      bars: 'Diámetro de 6,35mm a 400mm por 1000mm o 3000mm.',
+      barsTitle: 'Barras',
+      tubes: 'Diámetro de 76,20mm a 127mm por 1000mm o 3000mm.',
+      tubesTitle: 'Tubos',
+      plate: 'Espesor de 1,5mm a 3,17mm con ancho de 290mm o 580mm.',
+      plateTitle: 'Placas',
+      coil: 'Espesor de 0,10mm a 1,40mm con ancho de 290mm o 580mm.',
+      coilTitle: 'Bobinas',
     },
     copper: {
       workWith: '',
-      norms: 'Normas ASTM B5/B5M, B187/B187M, B152/B152M y B133/B133M',
+      norms: 'Normas ASTM B5/B5M, B187/B187M, B152/B152M y B133/B133M ',
+      bars: 'Diámetro de 3,17mm a 304,80mm por 1000mm o 3000mmm.',
+      barsTitle: 'Barras',
+      tubes: 'Diámetro de 76,20mm a 127mm por 1000mm o 3000mm.',
+      tubesTitle: 'Tubos',
+      plate: 'Espesor de 1mm a 3,17mm  por 600 x 1200mm o 1000 x 2000mm.',
+      plateTitle: 'Placas',
+      coil: 'Espesor de 0,10mm a 1,40mm con ancho de 305mm o 600mm.',
+      coilTitle: 'Bobinas',
     },
     aluminum: {
       workWith: '',
       norms: 'Normas ASTM B221, B209, AMS 4027',
+      bars: 'Diámetro de  6,35mm a 165,10mm por 1000mm o 3000mm.',
+      barsTitle: 'Barras',
+      tubes: 'Diámetro de 9,52mm a 168,28mm por 1000mm o 3000mm.',
+      tubesTitle: 'Tubos',
+      plate: 'Espesor de 5mm a 203,2mm por 1000 x 2000mm o 1000 x 3000mm.',
+      plateTitle: 'Placas',
+      coil: 'Espesor de 0,30mm a 3mm con ancho de 305mm o 600mm.',
+      coilTitle: 'Bobinas',
     },
     brass: {
       workWith: '',
       norms: 'Normas ASTM B16, B124, B135/B135M',
+      bars: 'Diámetro de 28,57mm a 203,20mm por 1000mm o 3000mm.',
+      barsTitle: 'Barras',
+      tubes: 'Diámetro de 6,35mm a 203,20mm por 1000mm o 3000mm.',
+      tubesTitle: 'Tubos',
+      plate: 'Espesor de 3,97mm a 76,20mm de 600mm x 1200mm o 1000 x 2000mm.',
+      plateTitle: 'Placas',
+      coil: 'Espesor de 0,10mm a 3mm por 305mm o 600mm.',
+      coilTitle: 'Bobinas',
     },
     teflon: {
       workWith: '',
@@ -558,15 +642,15 @@ const translateProdukt = {
       tubesTitle: 'Tubos',
       tubes: 'Diámetros de 50mm a 200mm por 1 metro y 3 metros.',
       plateTitle: 'Placas',
-      plate: "Espessura de 1 mm a 100mm por 1000 x 1000mm y 1000 x 2000mm."
+      plate: 'Espesor de 1 mm a 100mm por 1000 x 1000mm y 1000 x 2000mm.'
     },
-    p46g: {
+    pa6g: {
       barsTitle: 'Barras',
       bars: 'Diámetros de 60mm a 500mm por 1000 y 3000mm.',
       tubesTitle: 'Tubos',
       tubes: 'Diámetros de 80mm a 200mm por 1000 y 3000mm.',
       plateTitle: 'Placas',
-      plate: "Espesor de 10 mm a 100mm por 1000 x 2000mm y 1000 x 3000mm"
+      plate: 'Espesor de 10 mm a 100mm por 1000 x 2000mm y 1000 x 3000mm'
     },
     pu: {
       barsTitle: 'Barras',
@@ -574,7 +658,7 @@ const translateProdukt = {
       tubesTitle: 'Tubos',
       tubes: 'Diámetros de 50mm a 300mm por 300mm.',
       plateTitle: 'Placas',
-      plate: "Espesor de 10 mm a 100mm por 500 x 500mm"
+      plate: 'Espesor de 10 mm a 100mm por 500 x 500mm'
     },
     celeron: {
       barsTitle: 'Barras',
@@ -582,16 +666,12 @@ const translateProdukt = {
       tubesTitle: 'Tubos',
       tubes: 'Diámetros de 9,5mm a 300mm por 1000mm',
       plateTitle: 'Placas',
-      plate: "Espesor de 0,6 mm a 100mm por 1000 x 2000mm"
-    },
-    nbr: {
-      tubesTitle: 'Tubos',
-      tubes: 'Diámetros de 9,5mm a 300mm por 1000mm',
+      plate: 'Espesor de 0,6 mm a 100mm por 1000 x 2000mm'
     }
   },
   en_US: {
     stainlessSteel: {
-      workWith: 'We work with 304 and 304L stainless steel in the following formats',
+      workWith: 'We work with Stainless Steel 304 and 304L in the following formats',
       norms: 'ASTM A240 and A240M standards',
       bars: 'Diameters from 3mm to 200mm by 1 meter and 3 meters.',
       barsTitle: 'Bars',
@@ -599,69 +679,113 @@ const translateProdukt = {
       tubesTitle: 'Tubes',
       plate: 'Thickness from 0.40mm to 25.4mm by 1000 x 2000mm and 1000 x 3000mm',
       plateTitle: 'Plates',
+      coil: 'Thickness from 0.30mm to 3mm with a width of 600mm',
+      coilTitle: 'Coils',
     },
     carbon: {
-      workWith: 'We work with 4140, 1045, 1018, 1080, and 1095 carbon steel',
+      workWith: 'We work with carbon steel 4140, 1045, 1018, 1080, and 1095',
       norms: 'ASTM A322, A108, A36, A516, and A106 standards',
-      bars: 'Diameters from 3mm to 200mm by 1 meter and 3 meters.',
+      bars: 'Thickness from 0.40mm to 25.4mm by 1000 x 2000mm and 1000 x 3000mm',
       barsTitle: 'Bars',
+      tubes: 'Diameters from 10.2mm to 400mm by 3 and 6 meters',
+      tubesTitle: 'Tubes',
+      plate: 'Thickness from 0.40mm to 25.4mm by 1000 x 2000mm and 1000 x 3000mm',
+      plateTitle: 'Plates',
+      coil: 'Thickness from 0.30mm to 5mm with a width of 600mm',
+      coilTitle: 'Coils',
     },
     galvanized: {
       workWith: '',
       norms: 'ASTM A653/A653M standards',
       bars: 'Diameters from 3mm to 200mm by 1 meter and 3 meters.',
       barsTitle: 'Bars',
+      tubes: 'Diameters from 12mm to 400mm by 3 and 6 meters',
+      tubesTitle: 'Tubes',
+      plate: 'Thickness from 0.40mm to 25.4mm by 1000 x 2000mm and 1000 x 3000mm',
+      plateTitle: 'Plates',
+      coil: 'Thickness from 0.30mm to 5mm with a width of 600mm',
+      coilTitle: 'Coils',
     },
     flanges: {
       workWith: '',
-      norms: 'The ASTM standards related to flanges and steel connections vary depending on the specific type and application. Here are some of the common standards:',
+      norms: 'ASTM standards related to flanges and steel fittings vary depending on the specific type and application. Here are some common standards:',
       normsLoop: {
         1: 'Carbon steel flanges: ASTM A105/A105M',
         2: 'Stainless steel flanges: ASTM A182/A182M',
         3: 'Low alloy steel flanges: ASTM A182/A182M'
       },
       connections: {
-        1: 'Forged carbon steel and alloy steel connections: ASTM A105/A105M',
-        2: 'Forged stainless steel connections: ASTM A182/A182M',
-        3: 'Carbon steel and alloy steel pipe fittings: ASTM A234/A234M'
+        1: 'Forged carbon and alloy steel fittings: ASTM A105/A105M',
+        2: 'Forged stainless steel fittings: ASTM A182/A182M',
+        3: 'Carbon and alloy steel tube fittings: ASTM A234/A234M'
       },
       connectionsTitle: 'Connections',
-      bars: 'Diameters from 3mm to 200mm by 1 meter and 3 meters.',
-      barsTitle: 'Bars',
     },
     bronze: {
       workWith: '',
-      norms: 'ASTM B584/584M, B505/B505M, SAE J461, and J462 standards',
+      norms: 'ASTM B584/584M, B505/B505, SAE J461, and J462 standards',
+      bars: 'Diameters from 6.35mm to 400mm by 1000mm or 3000mm.',
+      barsTitle: 'Bars',
+      tubes: 'Diameters from 76.20mm to 127mm by 1000mm or 3000mm.',
+      tubesTitle: 'Tubes',
+      plate: 'Thickness from 1.5mm to 3.17mm with a width of 290mm or 580mm.',
+      plateTitle: 'Plates',
+      coil: 'Thickness from 0.10mm to 1.40mm with a width of 290mm or 580mm.',
+      coilTitle: 'Coils',
     },
     copper: {
       workWith: '',
       norms: 'ASTM B5/B5M, B187/B187M, B152/B152M, and B133/B133M standards',
+      bars: 'Diameters from 3.17mm to 304.80mm by 1000mm or 3000mmm.',
+      barsTitle: 'Bars',
+      tubes: 'Diameters from 76.20mm to 127mm by 1000mm or 3000mm.',
+      tubesTitle: 'Tubes',
+      plate: 'Thickness from 1mm to 3.17mm by 600 x 1200mm or 1000 x 2000mm.',
+      plateTitle: 'Plates',
+      coil: 'Thickness from 0.10mm to 1.40mm with a width of 305mm or 600mm.',
+      coilTitle: 'Coils',
     },
     aluminum: {
       workWith: '',
       norms: 'ASTM B221, B209, AMS 4027 standards',
+      bars: 'Diameters from 6.35mm to 165.10mm by 1000mm or 3000mm.',
+      barsTitle: 'Bars',
+      tubes: 'Diameters from 9.52mm to 168.28mm by 1000mm or 3000mm.',
+      tubesTitle: 'Tubes',
+      plate: 'Thickness from 5mm to 203.2mm by 1000 x 2000mm or 1000 x 3000mm.',
+      plateTitle: 'Plates',
+      coil: 'Thickness from 0.30mm to 3mm with a width of 305mm or 600mm.',
+      coilTitle: 'Coils',
     },
     brass: {
       workWith: '',
       norms: 'ASTM B16, B124, B135/B135M standards',
+      bars: 'Diameters from 28.57mm to 203.20mm by 1000mm or 3000mm.',
+      barsTitle: 'Bars',
+      tubes: 'Diameters from 6.35mm to 203.20mm by 1000mm or 3000mm.',
+      tubesTitle: 'Tubes',
+      plate: 'Thickness from 3.97mm to 76.20mm by 600mm x 1200mm or 1000 x 2000mm.',
+      plateTitle: 'Plates',
+      coil: 'Thickness from 0.10mm to 3mm by 305mm or 600mm.',
+      coilTitle: 'Coils',
     },
     teflon: {
       workWith: '',
-      norms: 'ASTM D1710 standard',
+      norms: 'ASTM D1710 standards',
       barsTitle: 'Bars',
-      bars: 'Diameters from 10mm to 500mm in 1 meter and 3 meters lengths.',
+      bars: 'Diameters from 10mm to 500mm by 1 meter and 3 meters.',
       tubesTitle: 'Tubes',
-      tubes: 'Diameters from 50mm to 200mm in 1 meter and 3 meters lengths.',
+      tubes: 'Diameters from 50mm to 200mm by 1 meter and 3 meters.',
       plateTitle: 'Plates',
-      plate: 'Thickness from 1mm to 100mm in 1000 x 1000mm and 1000 x 2000mm sizes.'
+      plate: 'Thickness from 1mm to 100mm by 1000 x 1000mm and 1000 x 2000mm.'
     },
-    p46g: {
+    pa6g: {
       barsTitle: 'Bars',
       bars: 'Diameters from 60mm to 500mm by 1000 and 3000mm.',
       tubesTitle: 'Tubes',
       tubes: 'Diameters from 80mm to 200mm by 1000 and 3000mm.',
       plateTitle: 'Plates',
-      plate: "Thickness from 10mm to 100mm by 1000 x 2000mm and 1000 x 3000mm"
+      plate: 'Thickness from 10mm to 100mm by 1000 x 2000mm and 1000 x 3000mm'
     },
     pu: {
       barsTitle: 'Bars',
@@ -669,7 +793,7 @@ const translateProdukt = {
       tubesTitle: 'Tubes',
       tubes: 'Diameters from 50mm to 300mm by 300mm.',
       plateTitle: 'Plates',
-      plate: "Thickness from 10mm to 100mm by 500 x 500mm"
+      plate: 'Thickness from 10mm to 100mm by 500 x 500mm'
     },
     celeron: {
       barsTitle: 'Bars',
@@ -677,86 +801,126 @@ const translateProdukt = {
       tubesTitle: 'Tubes',
       tubes: 'Diameters from 9.5mm to 300mm by 1000mm',
       plateTitle: 'Plates',
-      plate: "Thickness from 0.6mm to 100mm by 1000 x 2000mm"
-    },
-    nbr: {
-      tubesTitle: 'Tubes',
-      tubes: 'Diameters from 9.5mm to 300mm by 1000mm',
+      plate: 'Thickness from 0.6mm to 100mm by 1000 x 2000mm'
     }
   },
   fr_FR: {
     stainlessSteel: {
-      workWith: 'Nous travaillons avec l\'acier inoxydable 304 et 304L dans les formats suivants',
+      workWith: 'Nous travaillons avec de l\'acier inoxydable 304 et 304L dans les formats suivants',
       norms: 'Normes ASTM A240 et A240M',
       bars: 'Diamètres de 3mm à 200mm par 1 mètre et 3 mètres.',
       barsTitle: 'Barres',
       tubes: 'Diamètres de 6mm à 200mm par 1 mètre et 3 mètres.',
       tubesTitle: 'Tubes',
-      plate: 'Épaisseur de 0,40mm à 25,4mm pour 1000 x 2000mm et 1000 x 3000mm',
+      plate: 'Épaisseur de 0,40mm à 25,4mm par 1000 x 2000mm et 1000 x 3000mm',
       plateTitle: 'Plaques',
+      coil: 'Épaisseur de 0,30mm à 3mm avec une largeur de 600mm',
+      coilTitle: 'Bobines',
     },
     carbon: {
-      workWith: 'Nous travaillons avec l\'acier au carbone 4140, 1045, 1018, 1080 et 1095',
+      workWith: 'Nous travaillons avec de l\'acier au carbone 4140, 1045, 1018, 1080 et 1095',
       norms: 'Normes ASTM A322, A108, A36, A516 et A106',
-      bars: 'Diamètres de 3mm à 200mm par 1 mètre et 3 mètres.',
+      bars: 'Épaisseur de 0,40mm à 25,4mm par 1000 x 2000mm et 1000 x 3000mm',
       barsTitle: 'Barres',
+      tubes: 'Diamètres de 10,2mm à 400mm par 3 et 6 mètres',
+      tubesTitle: 'Tubes',
+      plate: 'Épaisseur de 0,40mm à 25,4mm par 1000 x 2000mm et 1000 x 3000mm',
+      plateTitle: 'Plaques',
+      coil: 'Épaisseur de 0,30mm à 5mm avec une largeur de 600mm',
+      coilTitle: 'Bobines',
     },
     galvanized: {
       workWith: '',
       norms: 'Normes ASTM A653/A653M',
       bars: 'Diamètres de 3mm à 200mm par 1 mètre et 3 mètres.',
       barsTitle: 'Barres',
+      tubes: 'Diamètres de 12mm à 400mm par 3 et 6 mètres',
+      tubesTitle: 'Tubes',
+      plate: 'Épaisseur de 0,40mm à 25,4mm par 1000 x 2000mm et 1000 x 3000mm',
+      plateTitle: 'Plaques',
+      coil: 'Épaisseur de 0,30mm à 5mm avec une largeur de 600mm',
+      coilTitle: 'Bobines',
     },
     flanges: {
       workWith: '',
-      norms: 'Les normes ASTM relatives aux brides et aux connexions d\'acier varient selon le type spécifique et l\'application. Voici certaines des normes communes :',
+      norms: 'Les normes ASTM relatives aux brides et aux raccords en acier varient en fonction du type spécifique et de l\'application. Voici quelques normes courantes :',
       normsLoop: {
         1: 'Brides en acier au carbone : ASTM A105/A105M',
         2: 'Brides en acier inoxydable : ASTM A182/A182M',
-        3: 'Brides en acier faiblement allié : ASTM A182/A182M'
+        3: 'Brides en acier à faible alliage : ASTM A182/A182M'
       },
       connections: {
-        1: 'Connexions forgées en acier au carbone et en acier allié : ASTM A105/A105M',
-        2: 'Connexions forgées en acier inoxydable : ASTM A182/A182M',
-        3: 'Raccords de tuyauterie en acier au carbone et en acier allié : ASTM A234/A234M'
+        1: 'Raccords forgés en acier au carbone et en acier allié : ASTM A105/A105M',
+        2: 'Raccords forgés en acier inoxydable : ASTM A182/A182M',
+        3: 'Raccords de tube en acier au carbone et en acier allié : ASTM A234/A234M'
       },
       connectionsTitle: 'Connexions',
-      bars: 'Diamètres de 3mm à 200mm par 1 mètre et 3 mètres.',
-      barsTitle: 'Barres',
     },
     bronze: {
       workWith: '',
-      norms: 'Normes ASTM B584/584M, B505/B505M, SAE J461 et J462',
+      norms: 'Normes ASTM B584/584M, B505/B505, SAE J461 et J462',
+      bars: 'Diamètre de 6,35mm à 400mm par 1000mm ou 3000mm.',
+      barsTitle: 'Barres',
+      tubes: 'Diamètre de 76,20mm à 127mm par 1000mm ou 3000mm.',
+      tubesTitle: 'Tubes',
+      plate: 'Épaisseur de 1,5mm à 3,17mm avec une largeur de 290mm ou 580mm.',
+      plateTitle: 'Plaques',
+      coil: 'Épaisseur de 0,10mm à 1,40mm avec une largeur de 290mm ou 580mm.',
+      coilTitle: 'Bobines',
     },
     copper: {
       workWith: '',
-      norms: 'Normes ASTM B5/B5M, B187/B187M, B152/B152M et B133/B133M',
+      norms: 'Normes ASTM B5/B5M, B187/B187M, B152/B152M et B133/B133M ',
+      bars: 'Diamètre de 3,17mm à 304,80mm par 1000mm ou 3000mmm.',
+      barsTitle: 'Barres',
+      tubes: 'Diamètre de 76,20mm à 127mm par 1000mm ou 3000mm.',
+      tubesTitle: 'Tubes',
+      plate: 'Épaisseur de 1mm à 3,17mm  par 600 x 1200mm ou 1000 x 2000mm.',
+      plateTitle: 'Plaques',
+      coil: 'Épaisseur de 0,10mm à 1,40mm avec une largeur de 305mm ou 600mm.',
+      coilTitle: 'Bobines',
     },
     aluminum: {
       workWith: '',
       norms: 'Normes ASTM B221, B209, AMS 4027',
+      bars: 'Diamètre de  6,35mm à 165,10mm par 1000mm ou 3000mm.',
+      barsTitle: 'Barres',
+      tubes: 'Diamètre de 9,52mm à 168,28mm par 1000mm ou 3000mm.',
+      tubesTitle: 'Tubes',
+      plate: 'Épaisseur de 5mm à 203,2mm par 1000 x 2000mm ou 1000 x 3000mm.',
+      plateTitle: 'Plaques',
+      coil: 'Épaisseur de 0,30mm à 3mm avec une largeur de 305mm ou 600mm.',
+      coilTitle: 'Bobines',
     },
     brass: {
       workWith: '',
       norms: 'Normes ASTM B16, B124, B135/B135M',
+      bars: 'Diamètre de 28,57mm à 203,20mm par 1000mm ou 3000mm.',
+      barsTitle: 'Barres',
+      tubes: 'Diamètre de 6,35mm à 203,20mm par 1000mm ou 3000mm.',
+      tubesTitle: 'Tubes',
+      plate: 'Épaisseur de 3,97mm à 76,20mm de 600mm x 1200mm ou 1000 x 2000mm.',
+      plateTitle: 'Plaques',
+      coil: 'Épaisseur de 0,10mm à 3mm par 305mm ou 600mm.',
+      coilTitle: 'Bobines',
     },
     teflon: {
       workWith: '',
       norms: 'Norme ASTM D1710',
       barsTitle: 'Barres',
-      bars: 'Diamètres de 10mm à 500mm en longueurs de 1 mètre et 3 mètres.',
+      bars: 'Diamètres de 10mm à 500mm par 1 mètre et 3 mètres.',
       tubesTitle: 'Tubes',
-      tubes: 'Diamètres de 50mm à 200mm en longueurs de 1 mètre et 3 mètres.',
+      tubes: 'Diamètres de 50mm à 200mm par 1 mètre et 3 mètres.',
       plateTitle: 'Plaques',
-      plate: 'Épaisseurs de 1mm à 100mm en tailles de 1000 x 1000mm et 1000 x 2000mm.'
+      plate: 'Épaisseur de 1 mm à 100mm par 1000 x 1000mm et 1000 x 2000mm.'
     },
-    p46g: {
+    pa6g: {
       barsTitle: 'Barres',
       bars: 'Diamètres de 60mm à 500mm par 1000 et 3000mm.',
       tubesTitle: 'Tubes',
       tubes: 'Diamètres de 80mm à 200mm par 1000 et 3000mm.',
       plateTitle: 'Plaques',
-      plate: 'Épaisseur de 10mm à 100mm pour 1000 x 2000mm et 1000 x 3000mm'
+      plate: 'Épaisseur de 10 mm à 100mm par 1000 x 2000mm et 1000 x 3000mm'
     },
     pu: {
       barsTitle: 'Barres',
@@ -764,7 +928,7 @@ const translateProdukt = {
       tubesTitle: 'Tubes',
       tubes: 'Diamètres de 50mm à 300mm par 300mm.',
       plateTitle: 'Plaques',
-      plate: 'Épaisseur de 10mm à 100mm pour 500 x 500mm'
+      plate: 'Épaisseur de 10 mm à 100mm par 500 x 500mm'
     },
     celeron: {
       barsTitle: 'Barres',
@@ -772,11 +936,7 @@ const translateProdukt = {
       tubesTitle: 'Tubes',
       tubes: 'Diamètres de 9,5mm à 300mm par 1000mm',
       plateTitle: 'Plaques',
-      plate: 'Épaisseur de 0,6 mm à 100mm pour 1000 x 2000mm'
-    },
-    nbr: {
-      tubesTitle: 'Tubes',
-      tubes: 'Diamètres de 9,5mm à 300mm par 1000mm',
+      plate: 'Épaisseur de 0,6 mm à 100mm par 1000 x 2000mm'
     }
   }  
 };
@@ -1357,7 +1517,7 @@ Vue.component('main-component', {
             body: translate[language].flangesBody,
             type: 'steel',
             id: 8,
-            src: `public/images/products/A4.jpg`,
+            src: `public/images/products/fotosdaflangesdeinox/A46.png`,
             rowClass: {
               'hellback': true,
               'four': true

@@ -48,7 +48,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav"> <!-- Added 'collapse' class here -->
+        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <a class="nav-link fs-4" href="#item">
@@ -124,7 +124,7 @@
                         </a>
                     </div>
                     <div class="carousel-item rounded">
-                        <img src="public/images/products/plast2/P5.jpg" class="d-block w-100 mirrored-image" alt="..." style="top: 0%;left: 0%;">
+                        <img src="public/images/products/plast2/P5.jpg" class="d-block w-100 mirrored-image" alt="..." style="top: -15%;left: 0%;">
                         <a href="#item">
                             <div class="carousel-inner-inner text-center" @click="changeItens('plastic')">
                                 {{ translate.plastic }}
@@ -161,18 +161,23 @@
 
                 <div v-if="item.extra" class='row mx-auto text-center text-black presentation fs-4 justify-content-center'>
                    <div class="row my-2">
-                        <div class="col-12 col-md-4  mt-2 py-3 rounded shadow-lg bg-light" v-if="item.extra['bars']">
-                        <img src="public/images/icon/Barra.png" alt=""
+                        <div class="col-12 col-md-3  mt-2 py-3 rounded shadow-lg bg-light" v-if="item.extra['bars']">
+                        <img src="public/images/icon/plate-flat-bar.jpg" style="transform: scaleX(-1) !important;" alt=""
                         class="icony"> {{ item.extra['barsTitle'] }} {{ item.extra['bars'] }}
                         </div>
-                        <div class="col-12 col-md-4  mt-2 py-3 rounded shadow-lg bg-light" v-if="item.extra['tubes']">
-                            <img src="public/images/icon/coil-steel-production-color-icon-illustration-vector-removebg-preview.png"
-                            alt="" class="icony"> {{ item.extra['tubesTitle'] }} {{ item.extra['tubes'] }}
+                        <div class="col-12 col-md-3  mt-2 py-3 rounded shadow-lg bg-light" v-if="item.extra['tubes']">
+                            <img src="public/images/icon/Tubos.png"
+                            alt="" class="icony" style="transform: scaleX(-1) !important;"> {{ item.extra['tubesTitle'] }} {{ item.extra['tubes'] }}
                         </div>
-                        <div class="col-12 col-md-4  mt-2 py-3 rounded shadow-lg bg-light" v-if="item.extra['plate']">
+                        <div class="col-12 col-md-3  mt-2 py-3 rounded shadow-lg bg-light" v-if="item.extra['plate']">
                             <img src="public/images/icon/black-bar-square-3d.png"
                             class="icony" alt="">
                             {{ item.extra['plateTitle'] }} {{ item.extra['plate'] }}
+                        </div>
+                        <div class="col-12 col-md-3  mt-2 py-3 rounded shadow-lg bg-light" v-if="item.extra['coil']">
+                            <img src="public/images/icon/black-bar-square-3d.png"
+                            class="icony" alt="">
+                            {{ item.extra['coilsTitle'] }} {{ item.extra['coil'] }}
                         </div>
                    </div>
                    <div class="col-12 mt-2">
@@ -182,16 +187,18 @@
                         {{ item.extra['norms'] }}
                     </div>
                     <div v-if="item.extra['normsLoop']" class="col-12 mt-3">
+                    <img src="public/images/icon/flg.png" alt="">
                         <div class="col-12" v-for="a in item.extra['normsLoop']">
-                            {{ a }}
+                             {{ a }}
                         </div>
                     </div>
                     <div class="col-12 mt-1">
                         {{ item.extra['connectionsTitle'] }}
                     </div>
                     <div v-if="item.extra['connections']" class="mt-3">
+                    <img src="public/images/icon/round-wall-flange.webp" alt="">
                         <div class="col-12" v-for="b in item.extra['connections']">
-                            {{ b }}
+                        {{ b }}
                         </div>
                     </div>
                 </div>
@@ -216,8 +223,9 @@
     </script>
 
     <script type="text/x-template" id="form-template">
-        <div class="bk py-5 rounded" id="btn">
-            <div class="d-flex">
+        <div class="bk rounded" id="btn">
+            <img src="public/images/icon/Stock.png" alt="" class="rounded" id="stok">
+            <div class="d-flex rounded" id="btn12">
                 <div class="row mt-5 mx-auto col-12">
                     <div class="btn btn-danger mx-auto col-3 fs-4" data-bs-toggle="modal" data-bs-target="#budgetModal">
                         {{ formBtn }}
@@ -293,7 +301,8 @@
                                         <label for="message" class="form-label fs-5">
                                             {{ translation.message }}:
                                         </label>
-                                        <input id="message" type="text" class="form-control fs-5">
+                                        <textarea name="message" id="message" cols="30" rows="10" class="form-control fs-5">
+                                        </textarea>
                                     </div>
                                 </div>
                             </div>

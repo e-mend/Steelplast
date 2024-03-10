@@ -312,6 +312,31 @@
     margin-left: 200px;
 }
 
+#btn{
+    height: 200px !important;
+}
+
+#stok{
+    width: 100% !important;
+    max-height: 200px !important;
+    filter: grayscale(100%);
+    position: absolute;
+    object-position: 100% 50%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.2;
+}
+
+#stok img{
+    max-height: 200px !important;
+}
+
+#btn12{
+    z-index: 1000 !important;
+    position: relative;
+}
+
+
 @media screen and (max-width: 768px) {
 
     #logo{
