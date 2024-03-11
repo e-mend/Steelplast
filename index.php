@@ -151,7 +151,7 @@
                     <div class="col-12 col-md-3 massive mt-5 text-center">
                         <img :src="item.src" v-if="item.src != '' " :style="item.img.styles" 
                         class="icon rounded" alt="">
-                        <button v-if="!item.btn" @click="loadProdukt(key, item.type)" :class="{disabled: item.disabled}" class="btn btn-danger w-100">{{ item.title }}</button>
+                        <button v-if="!item.btn" @click="loadProdukt(key, item.type)" :class="{disabled: item.disabled}" class="btn btn-danger-play w-100">{{ item.title }}</button>
                         <p v-else>{{ item.title }}</p>
                     </div>
                     <div class="col-12 col-md-9 mt-3" :class="item.bodyClass">
@@ -162,22 +162,23 @@
                 <div v-if="item.extra" class='row mx-auto text-center text-black presentation fs-4 justify-content-center'>
                    <div class="row my-2">
                         <div class="col-12 col-md-3  mt-2 py-3 rounded shadow-lg bg-light" v-if="item.extra['bars']">
-                        <img src="public/images/icon/plate-flat-bar.jpg" style="transform: scaleX(-1) !important;" alt=""
-                        class="icony"> {{ item.extra['barsTitle'] }} {{ item.extra['bars'] }}
+                        <img src="public/images/icon/Barra.png"
+                            class="icony" alt="">
+                         {{ item.extra['barsTitle'] }} {{ item.extra['bars'] }}
                         </div>
                         <div class="col-12 col-md-3  mt-2 py-3 rounded shadow-lg bg-light" v-if="item.extra['tubes']">
                             <img src="public/images/icon/Tubos.png"
                             alt="" class="icony" style="transform: scaleX(-1) !important;"> {{ item.extra['tubesTitle'] }} {{ item.extra['tubes'] }}
                         </div>
                         <div class="col-12 col-md-3  mt-2 py-3 rounded shadow-lg bg-light" v-if="item.extra['plate']">
-                            <img src="public/images/icon/black-bar-square-3d.png"
-                            class="icony" alt="">
+                        <img src="public/images/icon/plate-flat-bar.jpg" style="transform: scaleX(-1) !important;" alt=""
+                        class="icony">
                             {{ item.extra['plateTitle'] }} {{ item.extra['plate'] }}
                         </div>
                         <div class="col-12 col-md-3  mt-2 py-3 rounded shadow-lg bg-light" v-if="item.extra['coil']">
-                            <img src="public/images/icon/black-bar-square-3d.png"
+                            <img src="public/images/icon/Bobina.png"
                             class="icony" alt="">
-                            {{ item.extra['coilsTitle'] }} {{ item.extra['coil'] }}
+                            {{ item.extra['coilTitle'] }} {{ item.extra['coil'] }}
                         </div>
                    </div>
                    <div class="col-12 mt-2">
@@ -186,19 +187,25 @@
                     <div class="col-12" class="col-12 mt-1">
                         {{ item.extra['norms'] }}
                     </div>
-                    <div v-if="item.extra['normsLoop']" class="col-12 mt-3">
-                    <img src="public/images/icon/flg.png" alt="">
-                        <div class="col-12" v-for="a in item.extra['normsLoop']">
-                             {{ a }}
+                    <div v-if="item.extra['normsLoop']" class="mt-3 row">
+                        <img src="public/images/icon/round-wall-flange.webp" class="col-3" style="max-height: 138px; object-fit: cover" alt="">
+                        <div class="col-9">
+                            <aa v-for="a in item.extra['normsLoop']">
+                                {{ a }}
+                                <br>
+                            </aa>
                         </div>
                     </div>
                     <div class="col-12 mt-1">
                         {{ item.extra['connectionsTitle'] }}
                     </div>
-                    <div v-if="item.extra['connections']" class="mt-3">
-                    <img src="public/images/icon/round-wall-flange.webp" alt="">
-                        <div class="col-12" v-for="b in item.extra['connections']">
-                        {{ b }}
+                    <div v-if="item.extra['connections']" class="mt-3 row">
+                        <img src="public/images/icon/flg.png" alt="" class="col-3">
+                        <div class="col-9">
+                            <aa class="" v-for="b in item.extra['connections']">
+                            {{ b }}
+                            <br>
+                            </aa>
                         </div>
                     </div>
                 </div>
@@ -227,7 +234,7 @@
             <img src="public/images/icon/Stock.png" alt="" class="rounded" id="stok">
             <div class="d-flex rounded" id="btn12">
                 <div class="row mt-5 mx-auto col-12">
-                    <div class="btn btn-danger mx-auto col-3 fs-4" data-bs-toggle="modal" data-bs-target="#budgetModal">
+                    <div class="btn btn-danger-play mx-auto col-3 fs-5" data-bs-toggle="modal" data-bs-target="#budgetModal">
                         {{ formBtn }}
                     </div>
                 </div>
@@ -247,15 +254,15 @@
                                 {{ formQuestion }}
                             </div>
                             <div class="row mt-2 mx-auto justify-content-center red-btn">
-                                <div class="btn btn-danger col-6 fs-5" @click="showResponse(1)">
+                                <div class="btn btn-danger-play col-6 fs-5" @click="showResponse(1)">
                                     {{ translation.yes }}
                                 </div>
-                                <div class="btn btn-outline-danger col-6 fs-5"  @click="showResponse(2)">
+                                <div class="btn btn-danger-play col-6 fs-5"  @click="showResponse(2)">
                                     {{ translation.no }}
                                 </div>
                             </div>
                             <div class="row mt-2 mx-auto justify-content-center" v-if="choice == 2">
-                                <div class="btn btn-danger col-12 fs-5">
+                                <div class="btn btn-danger-play col-12 fs-5">
                                     {{ translation.response }}
                                 </div>
                             </div>
@@ -265,43 +272,43 @@
                                         <label for="companyName" class="form-label fs-5">
                                             {{ translation.companyName }}:
                                         </label>
-                                        <input id="companyName" type="text" class="form-control fs-5">
+                                        <input id="companyName" v-model="formData.companyName" type="text" class="form-control fs-5">
                                     </div>
                                     <div class="col-12">
                                         <label for="email" class="form-label fs-5">
                                             EMAIL:
                                         </label>
-                                        <input id="email" type="text" class="form-control fs-5">
+                                        <input id="email" type="text" v-model="formData.email" class="form-control fs-5">
                                     </div>
                                     <div class="col-12">
                                         <label for="cellphone" class="form-label fs-5">
                                             {{ translation.companyPhone }}:
                                         </label>
-                                        <input id="cellphone" type="text" class="form-control fs-5">
+                                        <input id="cellphone" v-model="formData.companyPhone" type="text" class="form-control fs-5">
                                     </div>
                                     <div class="col-12">
                                         <label for="taxId" class="form-label fs-5">
                                             CNPJ/ TAX ID:
                                         </label>
-                                        <input id="taxId" type="text" class="form-control fs-5">
+                                        <input id="taxId" type="text" v-model="formData.taxId" class="form-control fs-5">
                                     </div>
                                     <div class="col-12">
                                         <label for="website" class="form-label fs-5">
                                             WEBSITE:
                                         </label>
-                                        <input id="website" type="text" class="form-control fs-5">
+                                        <input id="website" v-model="formData.website" type="text" class="form-control fs-5">
                                     </div>
                                     <div class="col-12">
                                         <label for="material" class="form-label fs-5">
                                             MATERIAL:
                                         </label>
-                                        <input id="material" type="text" class="form-control fs-5">
+                                        <input id="material" v-model="formData.material" type="text" class="form-control fs-5">
                                     </div>
                                     <div class="col-12">
                                         <label for="message" class="form-label fs-5">
                                             {{ translation.message }}:
                                         </label>
-                                        <textarea name="message" id="message" cols="30" rows="10" class="form-control fs-5">
+                                        <textarea name="message" v-model="formData.message" id="message" cols="20" rows="10" class="form-control fs-5">
                                         </textarea>
                                     </div>
                                 </div>
@@ -311,7 +318,7 @@
                             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                                 {{ translation.close }}
                             </button>
-                            <button type="button" class="btn btn-danger">
+                            <button type="button" class="btn btn-danger-play" @click="fuckTaxes">
                                 {{ translation.send }}
                             </button>
                         </div>

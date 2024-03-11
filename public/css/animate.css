@@ -327,6 +327,16 @@
     opacity: 0.2;
 }
 
+.btn-danger-play{
+    background-color: rgb(238, 28, 37);
+    color: aliceblue !important;
+}
+
+.btn-danger-play:hover{
+    background-color: rgba(238, 28, 37, 0.8);
+    color: aliceblue !important;
+}
+
 #stok img{
     max-height: 200px !important;
 }

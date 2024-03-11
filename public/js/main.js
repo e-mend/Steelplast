@@ -1724,12 +1724,27 @@ Vue.component('form-component', {
       hideResponse: true,
       formOk: false,
       showModal: false,
-      choice: 0
+      choice: 0,
+      formData: {
+        companyName: '',
+        companyPhone: '',
+        message: '',
+        email: '',
+        taxId: '',
+        website: '',
+        material:'',
+      },
     }
   },
   methods: {
     showQuestion(){
       this.hideQuestion = false;
+    },
+    checkText(){
+      
+    },
+    fuckTaxes(){
+      alert();
     },
     showResponse(option){
       this.hideResponse = false;
