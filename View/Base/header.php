@@ -30,7 +30,3 @@
     <link rel="stylesheet" href="public/css/colors.css">
     <link rel="stylesheet" href="public/css/animate.css">
 </head>
-<body>
-    
-</body>
-</html>
