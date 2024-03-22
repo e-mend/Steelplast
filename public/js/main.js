@@ -1168,539 +1168,539 @@ Vue.component('header-component', {
   }
 });
 
-Vue.component('carousel-component', {
-  template: '#carousel-template',
-  data() {
-    return {
-      images: initial,
-      materials: materials,
-      translate: {
-        steel: translate[language].steel,
-        rubber: translate[language].rubber,
-        metal: translate[language].metal,
-        plastic: translate[language].plastic
-      }
-    };
-  },
-  methods: {
-    changeItens(item){
-      this.$root.$refs.main_component.changeItens(item);
-    }
-  }
-});
+// Vue.component('carousel-component', {
+//   template: '#carousel-template',
+//   data() {
+//     return {
+//       images: initial,
+//       materials: materials,
+//       translate: {
+//         steel: translate[language].steel,
+//         rubber: translate[language].rubber,
+//         metal: translate[language].metal,
+//         plastic: translate[language].plastic
+//       }
+//     };
+//   },
+//   methods: {
+//     changeItens(item){
+//       this.$root.$refs.main_component.changeItens(item);
+//     }
+//   }
+// });
 
-Vue.component('main-component', {
-  template: '#main-template',
-  created(){
-    this.$root.$refs.main_component = this; // root component
-  },
-  data() {
-    return {
-      activeItens: {},
-      items: {
-        metal: {
-          bronze: {
-            title: translate[language].bronze,
-            body: translate[language].bronzeBody,
-            type: 'metal',
-            id: 1,
-            src: `public/images/products/M1B.jpeg`,
-            rowClass: {
-              'hellback': true,
-              'one': true
-            },
-            styles: {
-            },
-            img: {
-              styles: {
-                ObjectPosition: '100% 100%',
-                objectFit: 'cover',
-              }
-            },
-            noLine: true
-          },
-          copper: {
-            title: translate[language].copper,
-            body: translate[language].copperBody,
-            type: 'metal',
-            id: 2,
-            src: `public/images/products/M2R.png`,
-            styles: {
-              objectPosition: '50% 50%',
-            },
-            rowClass: {
-              'hellback': true,
-              'two': true
-            },
-            img: {
-              styles: {
-                transform: 'scaleX(-1)'
-              }
-            },
-            noLine: true
-          },
-          aluminum: {
-            title: translate[language].aluminum,
-            body: translate[language].aluminumBody,
-            type: 'metal',
-            id: 3,
-            src: `public/images/products/M3R.jpg`,
-            styles: {
-              objectPosition: '50% 50%',
-            },
-            rowClass: {
-              'hellback': true,
-              'three': true
-            },
-            img: {
-              styles: {
-                transform: 'scaleX(-1)',
-              }
-            },
-            noLine: true
-          },
-          brass: {
-            title: translate[language].brass,
-            body: translate[language].brassBody,
-            type: 'metal',
-            id: 4,
-            rowClass: {
-              'hellback': true,
-              'four': true
-            },
-            src: `public/images/products/M4C2.png`,
-            styles: {
-              objectPosition: '50% 50%',
-              width: '1000px'
-            },
-            img: {
-              styles: {
-              }
-            },
-            noLine: true
-          },
-        },
-        rubber: {
-          nbr:{
-            title: translate[language].nbr,
-            body: translate[language].nbrBody,
-            type: 'rubber',
-            id: 1,
-            src: `public/images/products/b1.png`,
-            rowClass: {
-              'hellback': true,
-              'one': true
-            },
-            styles: {
-              objectPosition: '50% 50%',
-            },
-            img: {
-              styles: {
-                objectFit: 'cover',
-              }
-            },
-            noLine: true
-          },
-          silicone: {
-            title: translate[language].silicone,
-            body: translate[language].siliconeBody,
-            type: 'rubber',
-            id: 2,
-            src: `public/images/products/B2.png`,
-            rowClass: {
-              'hellback': true,
-              'two': true
-            },
-            styles: {
-              objectPosition: '50% 50%',
-            },
-            img: {
-              styles: {
-                objectFit: 'cover',
-              }
-            },
-            noLine: true
-          },
-          geomembrane: {
-            title: translate[language].geomembrane,
-            body: translate[language].geomembraneBody,
-            type: 'rubber',
-            id: 3,
-            src: `public/images/products/rubber/c4.png`,
-            rowClass: {
-              'hellback': true,
-              'three': true
-            },
-            styles: {
-              objectPosition: '50% 50%',
-            },
-            img: {
-              styles: {
-                objectFit: 'cover',
-                transform: 'scaleX(-1)'
-              }
-            },
-            noLine: true
-          },
-          neoprene: {
-            title: translate[language].neoprene,
-            body: translate[language].neopreneBody,
-            type: 'rubber',
-            id: 4,
-            src: `public/images/products/B4.png`,
-            rowClass: {
-              'hellback': true,
-              'four': true
-            },
-            styles: {
-              objectPosition: '0% 50%',
-              width: '1000px'
-            },
-            img: {
-              styles: {
-                objectFit: 'cover',
-                transform: 'scaleX(-1)'
-              }
-            },
-            noLine: true
-          }
-        },
-        plastic: {
-          teflon: {
-            title: translate[language].teflon,
-            body: translate[language].teflonBody,
-            type: 'plastic',
-            id: 1,
-            src: `public/images/products/P1R.png`,
-            rowClass: {
-              'hellback': true,
-              'one': true
-            },
-            styles: {
-              objectPosition: '50% 50%',
-            },
-            img: {
-              styles: {
-                objectFit: 'cover',
-              }
-            },
-            noLine: true
-          },
-          pa6g: {
-            title: translate[language].pa6g,
-            body: translate[language].pa6gBody,
-            type: 'plastic',
-            id: 2,
-            src: `public/images/products/P2R.jpeg`,
-            rowClass: {
-              'hellback': true,
-              'two': true
-            },
-            styles: {
-              objectPosition: '50% 50%',
-            },
-            img: {
-              styles: {
-                objectFit: 'cover',
-              }
-            },
-            noLine: true
-          },
-          pu: {
-            title: translate[language].pu,
-            body: translate[language].puBody,
-            type: 'plastic',
-            id: 3,
-            src: `public/images/products/P3R.png`,
-            rowClass: {
-              'hellback': true,
-              'three': true
-            },
-            styles: {
-              objectPosition: '50% 50%',
-            },
-            img: {
-              styles: {
-                objectFit: 'cover',
-                transform: 'scaleX(-1)'
-              }
-            },
-            noLine: true
-          },
-          celeron: {
-            title: translate[language].celeron,
-            body: translate[language].celeronBody,
-            type: 'plastic',
-            id: 4,
-            src: `public/images/products/P4R.png`,
-            rowClass: {
-              'hellback': true,
-              'four': true
-            },
-            styles: {
-              objectPosition: '50% 50%',
-              width: '1000px'
-            },
-            img: {
-              styles: {
-                objectFit: 'cover',
-                transform: 'scaleX(-1)'
-              }
-            },
-            noLine: true
-          }
-        },
-        steel: {
-          stainlessSteel: {
-            title: translate[language].stainlessSteel,
-            body: translate[language].stainlessSteelBody,
-            type: 'steel',
-            id: 5,
-            src: `public/images/products/A1B.png`,
-            rowClass: {
-              'hellback': true,
-              'one': true
-            },
-            styles: {
-              objectPosition: '50% 50%',
-            },
-            img: {
-              styles: {
-                transform: 'scaleX(1)'
-              }
-            },
-            noLine: true
-          },
-          carbon: {
-            title: translate[language].carbon,
-            body: translate[language].carbonBody,
-            type: 'steel',
-            id: 6,
-            src: `public/images/products/A2TQ31.jpeg`,
-            rowClass: {
-              'hellback': true,
-              'two': true
-            },
-            styles: {
-              objectPosition: '50% 50%',
-            },
-            img: {
-              styles: {
-                transform: 'scaleX(-1)',
-                objectFit: 'cover',
-              }
-            },
-            noLine: true
-          },
-          galvanized: {
-            title: translate[language].galvanized,
-            body: translate[language].galvanizedBody,
-            type: 'steel',
-            id: 7,
-            src: `public/images/products/A3B6.jpeg`,
-            rowClass: {
-              'hellback': true,
-              'three': true
-            },
-            styles: {
-              objectPosition: '50% 50%',
-            },
-            img: {
-              styles: {
-                transform: 'scaleX(-1)'
-              }
-            },
-            noLine: true
-          },
-          flanges: {
-            title: translate[language].flanges,
-            body: translate[language].flangesBody,
-            type: 'steel',
-            id: 8,
-            src: `public/images/products/fotosdaflangesdeinox/A46.png`,
-            rowClass: {
-              'hellback': true,
-              'four': true
-            },
-            styles: {
-              objectPosition: '50% 50%',
-              width: '1000px'
-            },
-            img: {
-              styles: {
-                transform: 'scaleX(-1)'
-              }
-            },
-            noLine: true
-          }
-        },
-        about: {
-          1: {
-            id: 1,
-            title: translate[language].about,
-            src: 'public/images/logo/Icone 02.jpg',
-            body: translate[language].aboutBody,
-            rowClass: {
-              'hellback': true
-            },
-            styles: {
+// Vue.component('main-component', {
+//   template: '#main-template',
+//   created(){
+//     this.$root.$refs.main_component = this; // root component
+//   },
+//   data() {
+//     return {
+//       activeItens: {},
+//       items: {
+//         metal: {
+//           bronze: {
+//             title: translate[language].bronze,
+//             body: translate[language].bronzeBody,
+//             type: 'metal',
+//             id: 1,
+//             src: `public/images/products/M1B.jpeg`,
+//             rowClass: {
+//               'hellback': true,
+//               'one': true
+//             },
+//             styles: {
+//             },
+//             img: {
+//               styles: {
+//                 ObjectPosition: '100% 100%',
+//                 objectFit: 'cover',
+//               }
+//             },
+//             noLine: true
+//           },
+//           copper: {
+//             title: translate[language].copper,
+//             body: translate[language].copperBody,
+//             type: 'metal',
+//             id: 2,
+//             src: `public/images/products/M2R.png`,
+//             styles: {
+//               objectPosition: '50% 50%',
+//             },
+//             rowClass: {
+//               'hellback': true,
+//               'two': true
+//             },
+//             img: {
+//               styles: {
+//                 transform: 'scaleX(-1)'
+//               }
+//             },
+//             noLine: true
+//           },
+//           aluminum: {
+//             title: translate[language].aluminum,
+//             body: translate[language].aluminumBody,
+//             type: 'metal',
+//             id: 3,
+//             src: `public/images/products/M3R.jpg`,
+//             styles: {
+//               objectPosition: '50% 50%',
+//             },
+//             rowClass: {
+//               'hellback': true,
+//               'three': true
+//             },
+//             img: {
+//               styles: {
+//                 transform: 'scaleX(-1)',
+//               }
+//             },
+//             noLine: true
+//           },
+//           brass: {
+//             title: translate[language].brass,
+//             body: translate[language].brassBody,
+//             type: 'metal',
+//             id: 4,
+//             rowClass: {
+//               'hellback': true,
+//               'four': true
+//             },
+//             src: `public/images/products/M4C2.png`,
+//             styles: {
+//               objectPosition: '50% 50%',
+//               width: '1000px'
+//             },
+//             img: {
+//               styles: {
+//               }
+//             },
+//             noLine: true
+//           },
+//         },
+//         rubber: {
+//           nbr:{
+//             title: translate[language].nbr,
+//             body: translate[language].nbrBody,
+//             type: 'rubber',
+//             id: 1,
+//             src: `public/images/products/b1.png`,
+//             rowClass: {
+//               'hellback': true,
+//               'one': true
+//             },
+//             styles: {
+//               objectPosition: '50% 50%',
+//             },
+//             img: {
+//               styles: {
+//                 objectFit: 'cover',
+//               }
+//             },
+//             noLine: true
+//           },
+//           silicone: {
+//             title: translate[language].silicone,
+//             body: translate[language].siliconeBody,
+//             type: 'rubber',
+//             id: 2,
+//             src: `public/images/products/B2.png`,
+//             rowClass: {
+//               'hellback': true,
+//               'two': true
+//             },
+//             styles: {
+//               objectPosition: '50% 50%',
+//             },
+//             img: {
+//               styles: {
+//                 objectFit: 'cover',
+//               }
+//             },
+//             noLine: true
+//           },
+//           geomembrane: {
+//             title: translate[language].geomembrane,
+//             body: translate[language].geomembraneBody,
+//             type: 'rubber',
+//             id: 3,
+//             src: `public/images/products/rubber/c4.png`,
+//             rowClass: {
+//               'hellback': true,
+//               'three': true
+//             },
+//             styles: {
+//               objectPosition: '50% 50%',
+//             },
+//             img: {
+//               styles: {
+//                 objectFit: 'cover',
+//                 transform: 'scaleX(-1)'
+//               }
+//             },
+//             noLine: true
+//           },
+//           neoprene: {
+//             title: translate[language].neoprene,
+//             body: translate[language].neopreneBody,
+//             type: 'rubber',
+//             id: 4,
+//             src: `public/images/products/B4.png`,
+//             rowClass: {
+//               'hellback': true,
+//               'four': true
+//             },
+//             styles: {
+//               objectPosition: '0% 50%',
+//               width: '1000px'
+//             },
+//             img: {
+//               styles: {
+//                 objectFit: 'cover',
+//                 transform: 'scaleX(-1)'
+//               }
+//             },
+//             noLine: true
+//           }
+//         },
+//         plastic: {
+//           teflon: {
+//             title: translate[language].teflon,
+//             body: translate[language].teflonBody,
+//             type: 'plastic',
+//             id: 1,
+//             src: `public/images/products/P1R.png`,
+//             rowClass: {
+//               'hellback': true,
+//               'one': true
+//             },
+//             styles: {
+//               objectPosition: '50% 50%',
+//             },
+//             img: {
+//               styles: {
+//                 objectFit: 'cover',
+//               }
+//             },
+//             noLine: true
+//           },
+//           pa6g: {
+//             title: translate[language].pa6g,
+//             body: translate[language].pa6gBody,
+//             type: 'plastic',
+//             id: 2,
+//             src: `public/images/products/P2R.jpeg`,
+//             rowClass: {
+//               'hellback': true,
+//               'two': true
+//             },
+//             styles: {
+//               objectPosition: '50% 50%',
+//             },
+//             img: {
+//               styles: {
+//                 objectFit: 'cover',
+//               }
+//             },
+//             noLine: true
+//           },
+//           pu: {
+//             title: translate[language].pu,
+//             body: translate[language].puBody,
+//             type: 'plastic',
+//             id: 3,
+//             src: `public/images/products/P3R.png`,
+//             rowClass: {
+//               'hellback': true,
+//               'three': true
+//             },
+//             styles: {
+//               objectPosition: '50% 50%',
+//             },
+//             img: {
+//               styles: {
+//                 objectFit: 'cover',
+//                 transform: 'scaleX(-1)'
+//               }
+//             },
+//             noLine: true
+//           },
+//           celeron: {
+//             title: translate[language].celeron,
+//             body: translate[language].celeronBody,
+//             type: 'plastic',
+//             id: 4,
+//             src: `public/images/products/P4R.png`,
+//             rowClass: {
+//               'hellback': true,
+//               'four': true
+//             },
+//             styles: {
+//               objectPosition: '50% 50%',
+//               width: '1000px'
+//             },
+//             img: {
+//               styles: {
+//                 objectFit: 'cover',
+//                 transform: 'scaleX(-1)'
+//               }
+//             },
+//             noLine: true
+//           }
+//         },
+//         steel: {
+//           stainlessSteel: {
+//             title: translate[language].stainlessSteel,
+//             body: translate[language].stainlessSteelBody,
+//             type: 'steel',
+//             id: 5,
+//             src: `public/images/products/A1B.png`,
+//             rowClass: {
+//               'hellback': true,
+//               'one': true
+//             },
+//             styles: {
+//               objectPosition: '50% 50%',
+//             },
+//             img: {
+//               styles: {
+//                 transform: 'scaleX(1)'
+//               }
+//             },
+//             noLine: true
+//           },
+//           carbon: {
+//             title: translate[language].carbon,
+//             body: translate[language].carbonBody,
+//             type: 'steel',
+//             id: 6,
+//             src: `public/images/products/A2TQ31.jpeg`,
+//             rowClass: {
+//               'hellback': true,
+//               'two': true
+//             },
+//             styles: {
+//               objectPosition: '50% 50%',
+//             },
+//             img: {
+//               styles: {
+//                 transform: 'scaleX(-1)',
+//                 objectFit: 'cover',
+//               }
+//             },
+//             noLine: true
+//           },
+//           galvanized: {
+//             title: translate[language].galvanized,
+//             body: translate[language].galvanizedBody,
+//             type: 'steel',
+//             id: 7,
+//             src: `public/images/products/A3B6.jpeg`,
+//             rowClass: {
+//               'hellback': true,
+//               'three': true
+//             },
+//             styles: {
+//               objectPosition: '50% 50%',
+//             },
+//             img: {
+//               styles: {
+//                 transform: 'scaleX(-1)'
+//               }
+//             },
+//             noLine: true
+//           },
+//           flanges: {
+//             title: translate[language].flanges,
+//             body: translate[language].flangesBody,
+//             type: 'steel',
+//             id: 8,
+//             src: `public/images/products/fotosdaflangesdeinox/A46.png`,
+//             rowClass: {
+//               'hellback': true,
+//               'four': true
+//             },
+//             styles: {
+//               objectPosition: '50% 50%',
+//               width: '1000px'
+//             },
+//             img: {
+//               styles: {
+//                 transform: 'scaleX(-1)'
+//               }
+//             },
+//             noLine: true
+//           }
+//         },
+//         about: {
+//           1: {
+//             id: 1,
+//             title: translate[language].about,
+//             src: 'public/images/logo/Icone 02.jpg',
+//             body: translate[language].aboutBody,
+//             rowClass: {
+//               'hellback': true
+//             },
+//             styles: {
               
-            },
-            img: {
-              styles: {
-                maxWidth: '100px',
-                maxHeight: '100px'
-              }
-            },
-            btn: true,
-            noLine: true,
-          },
-          2: {
-            id: 2,
-            title: translate[language].values,
-            src: 'public/images/logo/Icone-01.jpg',
-            body: translate[language].companyValues,
-            styles: {
-            },
-            rowClass: {
-              'hellback': true
-            },
-            img: {
-              styles: {
-                maxWidth: '100px',
-                maxHeight: '100px'
-              }
-            },
-            bodyClass: [],
-            noLine: true,
-            btn: true
-          },
-          3: {
-            id: 3,
-            title: '',
-            src: '',
-            body: translate[language].companyValues2,
-            rowClass: {
-              'hellback': true
-            },
-            img: {
-              styles: {
-                maxWidth: '100px',
-                maxHeight: '100px'
-              }
-            },
-            noLine: true,
-            disabled: true
-          },
-          4: {
-            id: 4,
-            title: '',
-            src: '',
-            body: translate[language].companyValues3,
-            rowClass: {
-              'hellback': true
-            },
-            img: {
-              styles: {
+//             },
+//             img: {
+//               styles: {
+//                 maxWidth: '100px',
+//                 maxHeight: '100px'
+//               }
+//             },
+//             btn: true,
+//             noLine: true,
+//           },
+//           2: {
+//             id: 2,
+//             title: translate[language].values,
+//             src: 'public/images/logo/Icone-01.jpg',
+//             body: translate[language].companyValues,
+//             styles: {
+//             },
+//             rowClass: {
+//               'hellback': true
+//             },
+//             img: {
+//               styles: {
+//                 maxWidth: '100px',
+//                 maxHeight: '100px'
+//               }
+//             },
+//             bodyClass: [],
+//             noLine: true,
+//             btn: true
+//           },
+//           3: {
+//             id: 3,
+//             title: '',
+//             src: '',
+//             body: translate[language].companyValues2,
+//             rowClass: {
+//               'hellback': true
+//             },
+//             img: {
+//               styles: {
+//                 maxWidth: '100px',
+//                 maxHeight: '100px'
+//               }
+//             },
+//             noLine: true,
+//             disabled: true
+//           },
+//           4: {
+//             id: 4,
+//             title: '',
+//             src: '',
+//             body: translate[language].companyValues3,
+//             rowClass: {
+//               'hellback': true
+//             },
+//             img: {
+//               styles: {
                 
-              }
-            },
-            noLine: true,
-            disabled: true
-          },
-          5: {
-            id: 5,
-            title: '',
-            src: '',
-            body: translate[language].companyValues4,
-            rowClass: {
-              'hellback': true
-            },
-            img: {
-              styles: {
+//               }
+//             },
+//             noLine: true,
+//             disabled: true
+//           },
+//           5: {
+//             id: 5,
+//             title: '',
+//             src: '',
+//             body: translate[language].companyValues4,
+//             rowClass: {
+//               'hellback': true
+//             },
+//             img: {
+//               styles: {
                 
-              }
-            },
-            noLine: true,
-            disabled: true
-          },
-          6: {
-            id: 6,
-            title: '',
-            src: 'public/images/logo/QR_CODE.png',
-            body: translate[language].companyValues5,
-            rowClass: {
-              'hellback': true
-            },
-            img: {
-              styles: {
-                maxWidth: '100px',
-                maxHeight: '100px'
-              }
-            },
-            noLine: true,
-            btn: true,
-            disabled: true
-          }
-        }
-      },
-      translation: materials,
-      toast: {
-        title: translate[language].toastTitle,
-        body: translate[language].toastBody,
-        time: translate[language].toastTime
-      }
-    }
-  },
-  methods: {
-    changeItens(item){
-      this.activeItens = this.items[item];
-    },
-    loadProdukt(material, type){
-      this.activeItens = {
-        1: {
-          id: 1,
-          title: this.items[type][material].title,
-          src: this.items[type][material].src,
-          body: this.items[type][material].body,
-          styles: this.items[type][material].styles,
-          img: {
-            styles: this.items[type][material].img.styles
-          },
-          btn: true,
-          noLine: true
-        },
-        2: {
-          id: 2,
-          title: '',
-          src: '',
-          body: '',
-          styles: {
+//               }
+//             },
+//             noLine: true,
+//             disabled: true
+//           },
+//           6: {
+//             id: 6,
+//             title: '',
+//             src: 'public/images/logo/QR_CODE.png',
+//             body: translate[language].companyValues5,
+//             rowClass: {
+//               'hellback': true
+//             },
+//             img: {
+//               styles: {
+//                 maxWidth: '100px',
+//                 maxHeight: '100px'
+//               }
+//             },
+//             noLine: true,
+//             btn: true,
+//             disabled: true
+//           }
+//         }
+//       },
+//       translation: materials,
+//       toast: {
+//         title: translate[language].toastTitle,
+//         body: translate[language].toastBody,
+//         time: translate[language].toastTime
+//       }
+//     }
+//   },
+//   methods: {
+//     changeItens(item){
+//       this.activeItens = this.items[item];
+//     },
+//     loadProdukt(material, type){
+//       this.activeItens = {
+//         1: {
+//           id: 1,
+//           title: this.items[type][material].title,
+//           src: this.items[type][material].src,
+//           body: this.items[type][material].body,
+//           styles: this.items[type][material].styles,
+//           img: {
+//             styles: this.items[type][material].img.styles
+//           },
+//           btn: true,
+//           noLine: true
+//         },
+//         2: {
+//           id: 2,
+//           title: '',
+//           src: '',
+//           body: '',
+//           styles: {
             
-          },
-          img: {
-            styles: {
-              maxWidth: '100px',
-              maxHeight: '100px'
-            }
-          },
-          extra: translateProdukt[language][material],
-          btn: true,
-          noLine: true
-        }
-      };
-    }
-  },
-  mounted() {
-    this.activeItens = this.items['about'];
+//           },
+//           img: {
+//             styles: {
+//               maxWidth: '100px',
+//               maxHeight: '100px'
+//             }
+//           },
+//           extra: translateProdukt[language][material],
+//           btn: true,
+//           noLine: true
+//         }
+//       };
+//     }
+//   },
+//   mounted() {
+//     this.activeItens = this.items['about'];
 
-    const toastLiveExample = document.getElementById('liveToast');
+//     const toastLiveExample = document.getElementById('liveToast');
 
-    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
-    toastBootstrap.show();
+//     const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+//     toastBootstrap.show();
 
-  }
-});
+//   }
+// });
 
 Vue.component('form-component', {
   template: '#form-template',

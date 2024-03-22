@@ -1,5 +1,5 @@
 
-<script type="text/x-template" id="form-template">
+    <script type="text/x-template" id="form-template">
         <div class="bk rounded" id="btn">
             <img src="public/images/icon/Stock.png" alt="" class="rounded" id="stok">
             <div class="d-flex rounded" id="btn12">
@@ -97,3 +97,4 @@
             </div>
         </div>
     </script>
+</body>
