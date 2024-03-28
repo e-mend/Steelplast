@@ -1,0 +1,5 @@
+# Allow access to all files and directories
+Order allow,deny
+Allow from all
+
+Require all granted

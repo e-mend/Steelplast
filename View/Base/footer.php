@@ -1,7 +1,7 @@
 
     <script type="text/x-template" id="form-template">
         <div class="bk rounded" id="btn">
-            <img src="public/images/icon/Stock.png" alt="" class="rounded" id="stok">
+            <img src="../../public/images/icon/Stock.png" alt="" class="rounded" id="stok">
             <div class="d-flex rounded" id="btn12">
                 <div class="row mt-5 mx-auto col-12">
                     <div class="btn btn-danger-play mx-auto col-3 fs-5" data-bs-toggle="modal" data-bs-target="#budgetModal">
@@ -88,7 +88,7 @@
                             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                                 {{ translation.close }}
                             </button>
-                            <button type="button" class="btn btn-danger-play" @click="fuckTaxes">
+                            <button type="button" class="btn btn-danger-play" @click="sendForm">
                                 {{ translation.send }}
                             </button>
                         </div>
@@ -98,3 +98,4 @@
         </div>
     </script>
 </body>
+</html>

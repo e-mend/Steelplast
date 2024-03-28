@@ -1,5 +1,4 @@
 
-<body>
     <div id="app">
         <header-component></header-component>
         <carousel-component></carousel-component>
@@ -10,57 +9,56 @@
     <script type="text/x-template" id="header-template">
         <header id="header">
         <nav class="navbar navbar-expand-lg navbar-light py-4 bk big">
-    <div class="container-fluid">
-        <a class="navbar-brand massive" href="#" id="logo-container">
-            <img class="gear-container" id="logo" src="public/images/logo/Logotipo Horizontal-04-modified.png">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link fs-4" href="#item">
-                        {{ homeTitle }}
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link fs-4" href="#item">
-                        {{ productsTitle }}
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link fs-4" href="#item" @click="changeItens('about')">
-                        {{ aboutTitle }}
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link fs-4" href="#btn" data-bs-toggle="modal" data-bs-target="#budgetModal">
-                        {{ contactTitle }}
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="d-flex" id="lang-container">
-            <div class="" class="lang" @click="changeLanguage('pt_BR')">
-                <img src="public\images\icon\icons8-brasil-48.png"  alt="">
-            </div>
+            <div class="container-fluid">
+                <a class="navbar-brand massive" href="#" id="logo-container">
+                    <img class="gear-container" id="logo" src="public/images/logo/Logotipo Horizontal-04-modified.png">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link fs-4" href="#item">
+                                {{ homeTitle }}
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-4" href="#item">
+                                {{ productsTitle }}
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-4" href="#item" @click="changeItens('about')">
+                                {{ aboutTitle }}
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-4" href="#btn" data-bs-toggle="modal" data-bs-target="#budgetModal">
+                                {{ contactTitle }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex" id="lang-container">
+                    <div class="" class="lang" @click="changeLanguage('pt_BR')">
+                        <img src="public\images\icon\icons8-brasil-48.png"  alt="">
+                    </div>
 
-            <div class="" class="lang" @click="changeLanguage('en_US')">
-                <img src="public\images\icon\icons8-eua-48.png" alt="">
-            </div>
+                    <div class="" class="lang" @click="changeLanguage('en_US')">
+                        <img src="public\images\icon\icons8-eua-48.png" alt="">
+                    </div>
 
-            <div class="" class="lang"  @click="changeLanguage('es_ES')">
-                <img src="public\images\icon\icons8-espanha-2-48.png" alt="">
-            </div>
+                    <div class="" class="lang"  @click="changeLanguage('es_ES')">
+                        <img src="public\images\icon\icons8-espanha-2-48.png" alt="">
+                    </div>
 
-            <div class="" class="lang"  @click="changeLanguage('fr_FR')">
-                <img src="public\images\icon\icons8-frança-48.png" alt="">
+                    <div class="" class="lang"  @click="changeLanguage('fr_FR')">
+                        <img src="public\images\icon\icons8-frança-48.png" alt="">
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</nav>
-
+        </nav>
         </header>
     </script>
 
@@ -197,6 +195,5 @@
                 </div>
             </div>
     </script>
-</body>
-</html>
+
 
