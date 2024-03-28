@@ -45,17 +45,17 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link fs-4" href="#item">
+                            <a class="nav-link fs-4" href="/">
                                 {{ homeTitle }}
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fs-4" href="#item">
+                            <a class="nav-link fs-4" href="/#item" @click="changeItens('metal')">
                                 {{ productsTitle }}
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fs-4" href="#item" @click="changeItens('about')">
+                            <a class="nav-link fs-4" href="/#item" @click="changeItens('about')">
                                 {{ aboutTitle }}
                             </a>
                         </li>
