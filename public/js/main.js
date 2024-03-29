@@ -92,11 +92,11 @@ const translate = {
     toastTitle: 'Oi, eu sou o Steel-bot!',
     toastBody: 'Acessando o site, você concorda com as regras de privacidade.',
     formBtn: 'Cotação',
-    formQuestion: 'Sua empresa já faz importação?',
-    formAnswer: 'Sim, já faço importação!',
-    formAnswer2: 'Não faço importação!',
-    formResponse: `Sentimos muito, mas no momento só atendemos empresas que são habilitadas 
-    junto à Receita Federal para importação de materiais.`,
+    formQuestion: 'Sua cotação ultrapassa R$ 10.000,00/USD 2,000,00?',
+    formAnswer: 'Sim, ultrapassa!',
+    formAnswer2: 'Não, não ultrapassa!',
+    formResponse: `Sentimos muito, mas devido questões internas só enviamos
+    orçamentos a partir de USD 2,000.`,
     form: 'Formulário',
     close: 'Fechar',
     loading: 'Carregando...',
@@ -166,10 +166,10 @@ const translate = {
     toastTitle: 'Salut, je suis le Steel-bot !',
     toastBody: 'En accédant au site, vous acceptez les règles de confidentialité.',
     formBtn: 'Devis',
-    formQuestion: 'Votre entreprise importe-t-elle déjà ?',
-    formAnswer: 'Oui, j\'importe !',
-    formAnswer2: 'Je n\'importe pas !',
-    formResponse: `Désolé, mais à l'instant nous servons uniquement les entreprises qui sont autorisées par l'Administration Fédérale des Recettes à importer des matériaux.`,
+    formQuestion: 'Votre devis dépasse-t-il 10 000 R$ / 2 000 USD ?',
+    formAnswer: 'Oui, il dépasse !',
+    formAnswer2: 'Non, il ne dépasse pas !',
+    formResponse: `Nous sommes désolés, mais en raison de problèmes internes, nous n'envoyons des devis qu'à partir de 2 000 USD.`,
     form: 'Formulaire',
     close: 'Fermer',
     loading: 'Chargement...',
@@ -268,11 +268,11 @@ const translate = {
     toastTitle: 'Hi, I am the Steel-bot!',
     toastBody: 'Accessing the site, you agree with the privacy rules.',
     formBtn: 'Budget',
-    formQuestion: 'Does your company already imports?',
-    formAnswer: 'Yes, I am importing!',
-    formAnswer2: 'I do not import!',
-    formResponse: `Sorry, but at the moment we only serve businesses that are 
-    licensed with the Federal Revenue Administration to import materials.`,
+    formQuestion: 'Does your quote exceed R$ 10,000.00/USD 2,000.00?',
+    formAnswer: 'Yes, it exceeds!',
+    formAnswer2: 'No, it does not exceed!',
+    formResponse: `We are sorry, but due to internal issues, we only send
+    quotes starting from USD 2,000.`,
     form: 'Form',
     close: 'Close',
     loading: 'Loading...',
@@ -377,11 +377,11 @@ const translate = {
     toastTitle: 'Hola, soy el Steel-bot!',
     toastBody: 'Accediendo al sitio, aceptas las normas de privacidad.',
     formBtn: 'Cotización',
-    formQuestion: 'Tu empresa ya importó?',
-    formAnswer: 'Si, estoy importando!',
-    formAnswer2: 'No importo!',
-    formResponse: `Lo siento, pero en este momento solo atendemos empresas que 
-    son habilitadas junto a la Recepcion Federal para importar materiales.`,
+    formQuestion: '¿Su cotización supera R$ 10,000.00/USD 2,000.00?',
+    formAnswer: 'Sí, la supera!',
+    formAnswer2: 'No, no la supera!',
+    formResponse: `Lo sentimos mucho, pero debido a cuestiones internas solo enviamos
+    presupuestos a partir de USD 2,000.`,
     form: 'Formular',
     close: 'Cerrar',
     loading: 'Cargando...',
@@ -1326,7 +1326,7 @@ Vue.component('main-component', {
             body: translate[language].geomembraneBody,
             type: 'rubber',
             id: 3,
-            src: `public/images/products/rubber/c4.png`,
+            src: `public/images/products/rubber/C4.png`,
             rowClass: {
               'hellback': true,
               'three': true
@@ -1687,6 +1687,8 @@ Vue.component('form-component', {
         companyName: translate[language].companyName,
         companyPhone: translate[language].companyPhone,
         message: translate[language].message,
+        thanks: translate[language].thanks,
+        error: translate[language].error
       },
       formAnswer: '',
       hideQuestion: true,
@@ -1703,6 +1705,7 @@ Vue.component('form-component', {
         website: '',
         material:'',
       },
+      e: false
     }
   },
   methods: {
@@ -1712,8 +1715,34 @@ Vue.component('form-component', {
     checkText(){
       
     },
-    sendForm(){
-      alert();
+    async sendForm(){
+      
+      try {
+        const response = await fetch('/send', {
+          method: 'POST',
+          headers: {
+           'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(this.formData)
+        });
+
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+
+        const responseData = await response.json();
+
+        if(responseData['success'] === true){
+          this.choice = 3;  
+        }else{
+          this.e = true;
+        }
+      } catch (error) {
+        console.error('Error sending data:', error);
+        this.e = true;
+      }
+
+
     },
     showResponse(option){
       this.hideResponse = false;

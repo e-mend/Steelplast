@@ -81,7 +81,17 @@
                                         <textarea name="message" v-model="formData.message" id="message" cols="20" rows="10" class="form-control fs-5">
                                         </textarea>
                                     </div>
+                                    <div v-if="e === true">
+                                        <div class="btn btn-danger-play col-12 fs-5 mt-3">
+                                            {{ translation.error }}  
+                                        </div>
+                                    </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2 mx-auto justify-content-center" v-if="choice == 3">
+                            <div class="btn btn-danger-play col-12 fs-5">
+                                {{ translation.thanks }}  
                             </div>
                         </div>
                         <div class="modal-footer">

@@ -115,7 +115,7 @@
         <div class="container mx-auto text-black presentation fs-4" id="item">
             <div v-for="(item, key) in activeItens" class="mt-1" :class="item.class">
                 <div v-if="item.body != ''" class='row mt-5' :style="item.styles" :class="item.rowClass">
-                    <div class="col-12 col-md-3 massive mt-5 text-center">
+                    <div class="col-12 col-md-3 massive text-center">
                         <img :src="item.src" v-if="item.src != '' " :style="item.img.styles" 
                         class="icon rounded" alt="">
                         <button v-if="!item.btn" @click="loadProdukt(key, item.type)" :class="{disabled: item.disabled}" class="btn btn-danger-play w-100">{{ item.title }}</button>
